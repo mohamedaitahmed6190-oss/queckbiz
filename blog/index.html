@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <script>/*theme-init*/(function(){try{var t=localStorage.getItem('theme')||((window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light');if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QueckBiz Blog — Business Tips, Invoicing & Entrepreneurship</title>
+  <meta name="description" content="Expert guides on invoicing, receipts, business documents, and entrepreneurship. Free tips for freelancers and small businesses.">
+  <link rel="canonical" href="https://queckbiz.com/blog/">
+  <link rel="alternate" hreflang="en" href="https://queckbiz.com/blog/">
+  <link rel="alternate" hreflang="ar" href="https://queckbiz.com/ar/blog/">
+  <link rel="alternate" hreflang="fr" href="https://queckbiz.com/fr/blog/">
+  <link rel="alternate" hreflang="x-default" href="https://queckbiz.com/blog/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://queckbiz.com/blog/">
+  <meta property="og:title" content="QueckBiz Blog — Business Tips, Invoicing & Entrepreneurship">
+  <meta property="og:description" content="Expert guides on invoicing, receipts, business documents, and entrepreneurship. Free tips for freelancers and small businesses.">
+  <meta property="og:image" content="https://queckbiz.com/og-image.png">
+  <meta property="og:site_name" content="QueckBiz">
+  <style>
+    :root{--bg:#f8fafc;--surface:#fff;--text:#0f172a;--text2:#475569;--primary:#2563eb;--primary2:#1d4ed8;--border:#e2e8f0;--shadow:0 1px 3px rgba(0,0,0,0.1);--radius:10px;--radius-lg:14px;      --footer-bg:#f1f5f9;--footer-border:#e2e8f0;--footer-text:#475569;--footer-heading:#0f172a;--footer-muted:#64748b;
+    }
+    [data-theme="dark"]{--bg:#0f172a;--surface:#1e293b;--text:#f1f5f9;--text2:#94a3b8;--primary:#3b82f6;--primary2:#60a5fa;--border:#334155;--shadow:0 1px 3px rgba(0,0,0,0.3);      --footer-bg:#0f172a;--footer-border:#1e293b;--footer-text:#94a3b8;--footer-heading:#f1f5f9;--footer-muted:#64748b;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:background .2s,color .2s}
+    header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+    .h-inner{max-width:1100px;margin:0 auto;padding:.75rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .logo{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.25rem;color:var(--primary);text-decoration:none}
+    .logo svg{width:28px;height:28px}
+    .h-actions{display:flex;align-items:center;gap:.5rem}
+    .back-btn{display:flex;align-items:center;gap:.4rem;padding:.4rem .8rem;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text2);text-decoration:none;font-size:.875rem}
+    .back-btn:hover{border-color:var(--primary);color:var(--primary)}
+    main{max-width:1100px;margin:0 auto;padding:2rem 1rem}
+    .blog-header{text-align:center;padding:3rem 1rem 2rem}
+    .blog-header h1{font-size:2rem;font-weight:800;margin-bottom:1rem;background:linear-gradient(135deg,var(--primary),#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .blog-header p{color:var(--text2);font-size:1.125rem;max-width:600px;margin:0 auto}
+    .posts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:2rem}
+    .post-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;transition:transform .2s,box-shadow .2s;text-decoration:none;color:inherit;display:block}
+    .post-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--primary)}
+    .post-card .category{display:inline-block;background:linear-gradient(135deg,var(--primary),#7c3aed);color:#fff;padding:.25rem .75rem;border-radius:9999px;font-size:.75rem;font-weight:600;margin-bottom:.75rem}
+    .post-card h2{font-size:1.25rem;font-weight:700;margin-bottom:.5rem;color:var(--text)}
+    .post-card p{color:var(--text2);font-size:.9375rem;line-height:1.5;margin-bottom:1rem}
+    .post-card .meta{display:flex;align-items:center;gap:.5rem;font-size:.875rem;color:var(--text2)}
+    .post-card .meta svg{width:16px;height:16px}
+    .site-footer{background:var(--footer-bg);color:var(--footer-text);border-top:1px solid var(--footer-border);margin-top:3rem}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:3rem 1.5rem;display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:start}
+    .footer-brand{max-width:280px}
+    .footer-logo{display:flex;align-items:center;gap:.75rem;font-weight:800;font-size:1.25rem;color:var(--footer-heading);text-decoration:none;margin-bottom:1rem}
+    .footer-logo svg{width:32px;height:32px}
+    .footer-tagline{font-size:.875rem;line-height:1.6;color:var(--footer-muted)}
+    .footer-links{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+    .footer-col h4{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--footer-heading);margin-bottom:1rem}
+    .footer-col ul{list-style:none}
+    .footer-col li{margin-bottom:.75rem}
+    .footer-col a{color:var(--footer-text);text-decoration:none;font-size:.875rem;transition:color .2s}
+    .footer-col a:hover{color:#3b82f6}
+    .footer-bottom{border-top:1px solid var(--footer-border);text-align:center;padding:1.5rem;font-size:.875rem;color:var(--footer-muted)}
+    @media(max-width:768px){.footer-inner{grid-template-columns:1fr;gap:2rem}.footer-links{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.footer-links{grid-template-columns:1fr}}
+  .theme-toggle{display:inline-flex;align-items:center;justify-content:center;padding:.4rem;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text2);cursor:pointer;line-height:0}.theme-toggle svg{width:18px;height:18px}</style>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9121502081229374" crossorigin="anonymous"></script>
+  <style>
+    .ad-placeholder { width:100%; max-width:100%; overflow:hidden; text-align:center; background:transparent; }
+    .ad-top { margin: 0.75rem 0 1.25rem; }
+    .ad-bottom { margin: 1.25rem 0 0.75rem; }
+  </style>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GT-55X3TZ2M');</script>
+  <!-- End Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BS0FSQVQ9V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BS0FSQVQ9V');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/design.css?v=1">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-55X3TZ2M"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="h-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="20" fill="#2563eb"/><text x="50" y="68" font-size="55" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">Q</text></svg>
+        QueckBiz
+      </a>
+      <div class="h-actions">
+      <a href="/blog/how-to-invoice-international-clients" class="post-card">
+        <span class="category">Getting Paid</span>
+        <h2>How to Invoice International Clients: Currency, Taxes and Getting Paid</h2>
+        <p>How to invoice clients abroad: choosing the currency, stating taxes, payment methods, fees, and clear terms so you get paid on time.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          October 9, 2026 · 6 min read
+        </div>
+      </a>
+      <a href="/blog/invoice-numbering-system" class="post-card">
+        <span class="category">Invoicing</span>
+        <h2>How to Number Your Invoices: A Simple System That Scales</h2>
+        <p>A clear invoice numbering system: formats, rules, examples, and mistakes to avoid so your records stay tax-ready and easy to search.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          October 9, 2026 · 5 min read
+        </div>
+      </a>
+        <details class="lang-select-wrap"><summary class="lang-switch" title="Choose language">EN</summary><div class="lang-menu"><a href="/blog/" class="active">English</a><a href="/ar/blog/">العربية</a><a href="/fr/blog/">Français</a></div></details>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg id="moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg id="sun" style="display:none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </button>
+        <a href="/" class="back-btn">← Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+  <!-- Ad Top -->
+  <div class="ad-placeholder ad-top">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9121502081229374"
+         data-ad-slot="5050505050"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+    <div class="blog-header">
+      <h1>QueckBiz Blog</h1>
+      <p>Expert guides on invoicing, business documents, and entrepreneurship for freelancers and small businesses.</p>
+    </div>
+
+    <div class="posts-grid">
+      <a href="/blog/how-to-create-professional-invoice" class="post-card">
+        <span class="category">Invoicing</span>
+        <h2>How to Create a Professional Invoice: Complete Guide 2026</h2>
+        <p>Learn how to create professional invoices that get paid faster. Complete guide with templates, best practices, and legal requirements for 2026.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 12 min read
+        </div>
+      </a>
+      <a href="/blog/freelancer-tax-guide" class="post-card">
+        <span class="category">Taxes</span>
+        <h2>Freelancer Tax Guide: Deductions, Forms & Filing Tips 2026</h2>
+        <p>Everything freelancers need to know about taxes, including deductible expenses, quarterly payments, and tax forms explained simply.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 10 min read
+        </div>
+      </a>
+      <a href="/blog/receipt-vs-invoice-difference" class="post-card">
+        <span class="category">Business Docs</span>
+        <h2>Receipt vs Invoice: Key Differences Every Business Owner Must Know</h2>
+        <p>Understand when to use a receipt versus an invoice, their legal implications, and how they affect your bookkeeping and taxes.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 8 min read
+        </div>
+      </a>
+      <a href="/blog/small-business-bookkeeping-basics" class="post-card">
+        <span class="category">Finance</span>
+        <h2>Small Business Bookkeeping Basics for Beginners 2026</h2>
+        <p>Step-by-step guide to setting up bookkeeping for your small business, including tools, templates, and common mistakes to avoid.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 15 min read
+        </div>
+      </a>
+      <a href="/blog/payment-terms-net-30-explained" class="post-card">
+        <span class="category">Payments</span>
+        <h2>Net 30, Net 15, Net 60: Payment Terms Explained for Freelancers</h2>
+        <p>Decode common payment terms, negotiate better terms with clients, and protect your cash flow as a freelancer or small business.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 9 min read
+        </div>
+      </a>
+      <a href="/blog/estimate-vs-quote-vs-proposal" class="post-card">
+        <span class="category">Business Docs</span>
+        <h2>Estimate vs Quote vs Proposal: When to Use Each</h2>
+        <p>Clear explanation of the differences between estimates, quotes, and proposals, plus templates and best practices for each.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 11 min read
+        </div>
+      </a>
+      <a href="/blog/how-to-write-receipt" class="post-card">
+        <span class="category">Business Docs</span>
+        <h2>How to Write a Receipt: Best Practices for Businesses 2026</h2>
+        <p>Learn how to create proper receipts for retail, services, and online sales. Includes receipt templates and legal requirements.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 7 min read
+        </div>
+      </a>
+      <a href="/blog/credit-note-explained" class="post-card">
+        <span class="category">Business Docs</span>
+        <h2>Credit Note Explained: When and How to Use One</h2>
+        <p>Learn what credit notes are, when to issue them, and how they differ from refunds and debit notes.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 8 min read
+        </div>
+      </a>
+      <a href="/blog/purchase-order-guide" class="post-card">
+        <span class="category">Business Docs</span>
+        <h2>Purchase Order Guide: How to Create and Manage POs</h2>
+        <p>Complete guide to purchase orders for small businesses. Learn when to use POs, what to include, and how to track them.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 9 min read
+        </div>
+      </a>
+      <a href="/blog/proforma-invoice-guide" class="post-card">
+        <span class="category">Business Docs</span>
+        <h2>Proforma Invoice Guide: Uses, Format, and Best Practices</h2>
+        <p>Learn when to use proforma invoices, how they differ from commercial invoices, and how to create them properly.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 8 min read
+        </div>
+      </a>
+      <a href="/blog/cash-flow-management-tips" class="post-card">
+        <span class="category">Finance</span>
+        <h2>Cash Flow Management Tips for Small Businesses</h2>
+        <p>Practical strategies to maintain healthy cash flow, avoid shortages, and keep your business financially stable.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 10 min read
+        </div>
+      </a>
+      <a href="/blog/how-to-price-freelance-services" class="post-card">
+        <span class="category">Freelancing</span>
+        <h2>How to Price Freelance Services: Strategies That Work</h2>
+        <p>Learn effective pricing strategies for freelancers including hourly rates, project rates, value-based pricing, and retainers.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 11 min read
+        </div>
+      </a>
+      <a href="/blog/business-registration-guide" class="post-card">
+        <span class="category">Entrepreneurship</span>
+        <h2>Business Registration Guide for First-Time Entrepreneurs</h2>
+        <p>Step-by-step guide to registering your business, choosing a structure, and meeting legal requirements.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 12 min read
+        </div>
+      </a>
+      <a href="/blog/client-contract-essentials" class="post-card">
+        <span class="category">Freelancing</span>
+        <h2>Client Contract Essentials: Protecting Your Freelance Business</h2>
+        <p>Learn what to include in freelance contracts, how to handle disputes, and why written agreements are essential.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 10 min read
+        </div>
+      </a>
+      <a href="/blog/digital-tools-small-business" class="post-card">
+        <span class="category">Tools</span>
+        <h2>Essential Digital Tools for Small Business Success in 2026</h2>
+        <p>Discover the best free and affordable digital tools for invoicing, accounting, project management, and communication.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 9 min read
+        </div>
+      </a>
+      <a href="/blog/how-to-track-expenses" class="post-card">
+        <span class="category">Finance</span>
+        <h2>How to Track Business Expenses: A Simple System That Works</h2>
+        <p>Build an expense tracking system that saves money at tax time and keeps your business finances organized.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 8 min read
+        </div>
+      </a>
+      <a href="/blog/freelancer-vs-employee-taxes" class="post-card">
+        <span class="category">Taxes</span>
+        <h2>Freelancer vs Employee Taxes: What You Need to Know</h2>
+        <p>Understand the tax differences between freelancing and employment, and how to plan for self-employment tax obligations.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 9 min read
+        </div>
+      </a>
+      <a href="/blog/how-to-send-payment-reminders" class="post-card">
+        <span class="category">Payments</span>
+        <h2>How to Send Payment Reminders Without Losing Clients</h2>
+        <p>Professional strategies for following up on unpaid invoices while maintaining positive client relationships.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 7 min read
+        </div>
+      </a>
+      <a href="/blog/invoice-template-elements" class="post-card">
+        <span class="category">Invoicing</span>
+        <h2>Invoice Template Elements: Building Blocks of a Perfect Invoice</h2>
+        <p>Discover the essential elements every invoice template needs, from headers to payment terms and footer notes.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 8 min read
+        </div>
+      </a>
+      <a href="/blog/how-to-start-freelancing" class="post-card">
+        <span class="category">Freelancing</span>
+        <h2>How to Start Freelancing: A Beginner's Guide to Going Solo</h2>
+        <p>Everything you need to know to launch your freelance career, from finding clients to setting rates and managing projects.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 13 min read
+        </div>
+      </a>
+      <a href="/blog/understanding-sales-tax" class="post-card">
+        <span class="category">Taxes</span>
+        <h2>Understanding Sales Tax for Small Businesses and Freelancers</h2>
+        <p>Learn when to charge sales tax, how to calculate it, and how to comply with tax requirements in your jurisdiction.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 10 min read
+        </div>
+      </a>
+      <a href="/blog/retainer-agreements-explained" class="post-card">
+        <span class="category">Freelancing</span>
+        <h2>Retainer Agreements Explained: Steady Income for Freelancers</h2>
+        <p>Learn how retainer agreements work, how to structure them, and how to manage ongoing client relationships.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 9 min read
+        </div>
+      </a>
+      <a href="/blog/why-business-needs-website" class="post-card">
+        <span class="category">Entrepreneurship</span>
+        <h2>Why Every Small Business Needs a Professional Website in 2026</h2>
+        <p>Discover the benefits of having a business website, from credibility to lead generation and customer service.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 8 min read
+        </div>
+      </a>
+      <a href="/blog/invoice-vs-bill-vs-statement" class="post-card">
+        <span class="category">Business Docs</span>
+        <h2>Invoice vs Bill vs Statement: Understanding the Differences</h2>
+        <p>Clear explanations of when to use invoices, bills, and statements, and how they function in business transactions.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 7 min read
+        </div>
+      </a>
+      <a href="/blog/how-to-organize-business-documents" class="post-card">
+        <span class="category">Business Docs</span>
+        <h2>How to Organize Business Documents: A System That Scales</h2>
+        <p>Build a document organization system that keeps invoices, receipts, contracts, and records accessible and secure.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 9 min read
+        </div>
+      </a>
+      <a href="/blog/late-payment-fees-guide" class="post-card">
+        <span class="category">Payments</span>
+        <h2>Late Payment Fees: How to Set Them and Enforce Them Fairly</h2>
+        <p>Learn how to structure late payment fees that encourage on-time payment without damaging client relationships.</p>
+        <div class="meta">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          June 11, 2026 · 7 min read
+        </div>
+      </a>
+    </div>
+  <!-- Ad Bottom -->
+  <div class="ad-placeholder ad-bottom">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9121502081229374"
+         data-ad-slot="6060606060"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="20" fill="#3b82f6"/><text x="50" y="68" font-size="55" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">Q</text></svg>
+          <span>QueckBiz</span>
+        </a>
+        <p class="footer-tagline">Free online tools for invoices, receipts, estimates, and more.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>TOOLS</h4>
+          <ul>
+            <li><a href="/invoice">Invoice</a></li>
+            <li><a href="/receipt">Receipt</a></li>
+            <li><a href="/estimate">Estimate</a></li>
+            <li><a href="/proforma">Proforma</a></li>
+            <li><a href="/creditnote">Credit Note</a></li>
+            <li><a href="/purchaseorder">Purchase Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>COMPANY</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>LEGAL</h4>
+          <ul>
+            <li><a href="/cookies">Cookies</a></li>
+            <li><a href="/adsettings">Ad Settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 QueckBiz. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Cookie Consent + Consent Mode v2 -->
+  <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:1000;font-size:.875rem;box-shadow:0 -4px 6px rgba(0,0,0,0.1);">
+    <p style="margin:0;flex:1;min-width:200px;">We use cookies and Google AdSense to improve your experience and support our free tools. <a href="/cookies" style="color:#60a5fa;text-decoration:underline;">Learn more</a></p>
+    <div style="display:flex;gap:.75rem;flex-shrink:0;">
+      <button onclick="declineCookies()" style="padding:.5rem 1rem;border-radius:8px;border:1px solid #475569;background:transparent;color:#94a3b8;cursor:pointer;font-size:.875rem;">Decline</button>
+      <button onclick="acceptCookies()" style="padding:.5rem 1.25rem;border-radius:8px;border:none;background:#2563eb;color:#fff;cursor:pointer;font-size:.875rem;font-weight:600;">Accept</button>
+    </div>
+  </div>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied',
+      analytics_storage:'denied',
+      ad_user_data:'denied',
+      ad_personalization:'denied',
+      wait_for_update:500
+    });
+    function acceptCookies(){
+      document.getElementById('cookieBanner').style.display='none';
+      localStorage.setItem('cookiesAccepted','true');
+      gtag('consent','update',{
+        ad_storage:'granted',
+        analytics_storage:'granted',
+        ad_user_data:'granted',
+        ad_personalization:'granted'
+      });
+    }
+    function declineCookies(){
+      document.getElementById('cookieBanner').style.display='none';
+      localStorage.setItem('cookiesAccepted','false');
+    }
+    (function(){
+      var v=localStorage.getItem('cookiesAccepted');
+      if(v!==null){
+        document.getElementById('cookieBanner').style.display='none';
+        if(v==='true'){
+          gtag('consent','update',{
+            ad_storage:'granted',analytics_storage:'granted',
+            ad_user_data:'granted',ad_personalization:'granted'
+          });
+        }
+      }
+    })();
+  </script>
+  <script>/*theme-toggle*/(function(){var b=document.getElementById('themeToggle');if(!b)return;var moon=document.getElementById('moon'),sun=document.getElementById('sun');function sync(){var d=document.documentElement.getAttribute('data-theme')==='dark';if(moon)moon.style.display=d?'none':'block';if(sun)sun.style.display=d?'block':'none';}sync();b.addEventListener('click',function(){var d=document.documentElement.getAttribute('data-theme')==='dark';if(d){document.documentElement.removeAttribute('data-theme');localStorage.setItem('theme','light');}else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme','dark');}sync();});})();</script>
+</body>
+</html>

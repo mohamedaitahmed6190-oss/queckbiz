@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <script>/*theme-init*/(function(){try{var t=localStorage.getItem('theme')||((window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light');if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purchase Order Guide (PO) | QueckBiz Blog</title>
+  <meta name="description" content="A complete guide to purchase orders: when to use a PO, what to include, and how to track them for your business.">
+  <link rel="canonical" href="https://queckbiz.com/blog/purchase-order-guide">
+  <link rel="alternate" hreflang="en" href="https://queckbiz.com/blog/purchase-order-guide">
+  <link rel="alternate" hreflang="ar" href="https://queckbiz.com/ar/blog/purchase-order-guide">
+  <link rel="alternate" hreflang="fr" href="https://queckbiz.com/fr/blog/purchase-order-guide">
+  <link rel="alternate" hreflang="x-default" href="https://queckbiz.com/blog/purchase-order-guide">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://queckbiz.com/blog/purchase-order-guide">
+  <meta property="og:title" content="Purchase Order Guide (PO) | QueckBiz Blog">
+  <meta property="og:description" content="A complete guide to purchase orders: when to use a PO, what to include, and how to track them for your business.">
+  <meta property="og:image" content="https://queckbiz.com/og-image.png">
+  <meta property="og:site_name" content="QueckBiz">
+  <style>
+    :root{--bg:#f8fafc;--surface:#fff;--text:#0f172a;--text2:#475569;--primary:#2563eb;--primary2:#1d4ed8;--border:#e2e8f0;--shadow:0 1px 3px rgba(0,0,0,0.1);--radius:10px;--radius-lg:14px;      --footer-bg:#f1f5f9;--footer-border:#e2e8f0;--footer-text:#475569;--footer-heading:#0f172a;--footer-muted:#64748b;
+    }
+    [data-theme="dark"]{--bg:#0f172a;--surface:#1e293b;--text:#f1f5f9;--text2:#94a3b8;--primary:#3b82f6;--primary2:#60a5fa;--border:#334155;--shadow:0 1px 3px rgba(0,0,0,0.3);      --footer-bg:#0f172a;--footer-border:#1e293b;--footer-text:#94a3b8;--footer-heading:#f1f5f9;--footer-muted:#64748b;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:background .2s,color .2s}
+    header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+    .h-inner{max-width:1100px;margin:0 auto;padding:.75rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .logo{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.25rem;color:var(--primary);text-decoration:none}
+    .logo svg{width:28px;height:28px}
+    .h-actions{display:flex;align-items:center;gap:.5rem}
+    .back-btn{display:flex;align-items:center;gap:.4rem;padding:.4rem .8rem;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text2);text-decoration:none;font-size:.875rem}
+    .back-btn:hover{border-color:var(--primary);color:var(--primary)}
+    main{max-width:800px;margin:0 auto;padding:2rem 1rem}
+    .article-header{padding:2rem 0;border-bottom:1px solid var(--border);margin-bottom:2rem}
+    .article-header .category{display:inline-block;background:linear-gradient(135deg,var(--primary),#7c3aed);color:#fff;padding:.25rem .75rem;border-radius:9999px;font-size:.75rem;font-weight:600;margin-bottom:1rem}
+    .article-header h1{font-size:2rem;font-weight:800;line-height:1.2;margin-bottom:1rem}
+    .article-header .meta{display:flex;align-items:center;gap:1rem;color:var(--text2);font-size:.875rem}
+    .article-content{font-size:1.125rem;line-height:1.8}
+    .article-content h2{font-size:1.5rem;font-weight:700;margin-top:2.5rem;margin-bottom:1rem;color:var(--text)}
+    .article-content h3{font-size:1.25rem;font-weight:600;margin-top:2rem;margin-bottom:.75rem;color:var(--text2)}
+    .article-content p{margin-bottom:1.5rem}
+    .article-content ul,.article-content ol{margin-left:2rem;margin-bottom:1.5rem}
+    .article-content li{margin-bottom:.5rem}
+    .article-content strong{color:var(--text)}
+    .article-content a{color:var(--primary);text-decoration:none}
+    .article-content a:hover{text-decoration:underline}
+    .tip-box{background:linear-gradient(135deg,#dbeafe,#ede9fe);border-left:4px solid var(--primary);padding:1.5rem;border-radius:var(--radius);margin:2rem 0}
+    .tip-box h4{font-size:1rem;font-weight:700;margin-bottom:.5rem;color:var(--primary)}
+    .cta-box{background:var(--surface);border:2px solid var(--primary);border-radius:var(--radius-lg);padding:2rem;text-align:center;margin:3rem 0}
+    .cta-box h3{font-size:1.25rem;font-weight:700;margin-bottom:1rem}
+    .cta-box p{color:var(--text2);margin-bottom:1.5rem}
+    .article-content a.cta-btn,.article-content a.cta-btn:hover{color:#fff;text-decoration:none}
+    .cta-btn{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--primary),#7c3aed);color:#fff;padding:.875rem 2rem;border-radius:var(--radius);font-weight:600;text-decoration:none;transition:transform .2s}
+    .cta-btn:hover{transform:translateY(-2px)}
+    .site-footer{background:var(--footer-bg);color:var(--footer-text);border-top:1px solid var(--footer-border);margin-top:3rem}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:3rem 1.5rem;display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:start}
+    .footer-brand{max-width:280px}
+    .footer-logo{display:flex;align-items:center;gap:.75rem;font-weight:800;font-size:1.25rem;color:var(--footer-heading);text-decoration:none;margin-bottom:1rem}
+    .footer-logo svg{width:32px;height:32px}
+    .footer-tagline{font-size:.875rem;line-height:1.6;color:var(--footer-muted)}
+    .footer-links{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+    .footer-col h4{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--footer-heading);margin-bottom:1rem}
+    .footer-col ul{list-style:none}
+    .footer-col li{margin-bottom:.75rem}
+    .footer-col a{color:var(--footer-text);text-decoration:none;font-size:.875rem;transition:color .2s}
+    .footer-col a:hover{color:#3b82f6}
+    .footer-bottom{border-top:1px solid var(--footer-border);text-align:center;padding:1.5rem;font-size:.875rem;color:var(--footer-muted)}
+    @media(max-width:768px){.footer-inner{grid-template-columns:1fr;gap:2rem}.footer-links{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.footer-links{grid-template-columns:1fr}}
+  .theme-toggle{display:inline-flex;align-items:center;justify-content:center;padding:.4rem;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text2);cursor:pointer;line-height:0}.theme-toggle svg{width:18px;height:18px}</style>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9121502081229374" crossorigin="anonymous"></script>
+  <style>
+    .ad-placeholder { width:100%; max-width:100%; overflow:hidden; text-align:center; background:transparent; }
+    .ad-top { margin: 0.75rem 0 1.25rem; }
+    .ad-bottom { margin: 1.25rem 0 0.75rem; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BlogPosting",
+    "headline":"Purchase Order Guide: How to Create and Use POs for Your Business",
+    "description":"Learn what a purchase order is, how to create one, and how POs protect both buyers and sellers in business transactions of any size.",
+    "url":"https://queckbiz.com/blog/purchase-order-guide.html",
+    "datePublished":"2026-06-11",
+    "dateModified":"2026-10-09",
+    "author":{"@type":"Organization","name":"QueckBiz","url":"https://queckbiz.com"},
+    "publisher":{"@type":"Organization","name":"QueckBiz","logo":{"@type":"ImageObject","url":"https://queckbiz.com/favicon-512.png"}},
+    "image":"https://queckbiz.com/og-image.png",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://queckbiz.com/blog/purchase-order-guide.html"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What is a purchase order (PO)?","acceptedAnswer":{"@type":"Answer","text":"A purchase order is a formal document issued by a buyer to a seller that specifies the goods or services to be purchased, the quantity, the agreed price, and the delivery terms. Once the seller accepts the PO, it becomes a legally binding contract. POs create a clear record of what was ordered, protecting both parties if there is a dispute about what was delivered or charged."}},
+      {"@type":"Question","name":"When should a small business use purchase orders?","acceptedAnswer":{"@type":"Answer","text":"Use purchase orders when buying from suppliers on credit terms, when managing inventory purchases, for any significant purchase where you want a clear paper trail, or when your business requires budget approval before spending. For very small or one-off purchases paid immediately, a PO may not be necessary, but for recurring supplier relationships or purchases above a set threshold, POs are highly recommended."}},
+      {"@type":"Question","name":"What is the difference between a purchase order and an invoice?","acceptedAnswer":{"@type":"Answer","text":"A purchase order is created by the buyer and sent to the seller before goods or services are delivered. It is the buyer's commitment to purchase. An invoice is created by the seller and sent to the buyer after goods or services are delivered. It is the seller's request for payment. In a typical transaction, the buyer sends a PO, the seller delivers and then issues an invoice, and the buyer matches the invoice against the original PO before authorizing payment."}}
+    ]
+  }
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GT-55X3TZ2M');</script>
+  <!-- End Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BS0FSQVQ9V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BS0FSQVQ9V');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/design.css?v=1">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-55X3TZ2M"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="h-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="20" fill="#2563eb"/><text x="50" y="68" font-size="55" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">Q</text></svg>
+        QueckBiz
+      </a>
+      <div class="h-actions">
+        <details class="lang-select-wrap"><summary class="lang-switch" title="Choose language">EN</summary><div class="lang-menu"><a href="/blog/purchase-order-guide" class="active">English</a><a href="/ar/blog/purchase-order-guide">العربية</a><a href="/fr/blog/purchase-order-guide">Français</a></div></details>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg id="moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg id="sun" style="display:none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </button>
+        <a href="/blog/" class="back-btn">← Blog</a>
+        <a href="/" class="back-btn">Home</a>
+      </div>
+    </div>
+  </header>
+  <main>
+  <!-- Ad Placeholder Top -->
+  <div class="ad-placeholder ad-top">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9121502081229374"
+         data-ad-slot="1357002468"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+    <article>
+      <div class="article-header">
+        <span class="category">Business Docs</span>
+        <h1>Purchase Order Guide (PO)</h1>
+        <div class="meta">
+          <span>By QueckBiz Team</span><span>·</span><span>June 11, 2026</span><span>·</span><span>8 min read</span>
+        </div>
+      </div>
+      <img src="/blog-images/purchase-order-guide.svg" alt="Purchase Order Guide (PO)" width="1200" height="630" loading="lazy" style="width:100%;height:auto;border-radius:14px;margin:0 0 1.5rem;display:block" />
+      <div class="article-content">
+        <p>Purchase orders are formal documents that businesses use to request goods or services from suppliers. While they may seem like unnecessary paperwork for small businesses, purchase orders provide important legal protection, spending control, and record-keeping benefits. Understanding how to create and manage purchase orders helps you run a more organized and professional business.</p>
+
+<h2>What Is a Purchase Order?</h2>
+<p>A purchase order is a document sent by a buyer to a seller that specifies the products or services being purchased, quantities, agreed prices, delivery dates, and terms. When the seller accepts the purchase order, it becomes a legally binding contract.</p>
+<p>Unlike an informal email or phone order, a purchase order creates a clear paper trail. It documents exactly what was ordered, when it was ordered, and what the agreed terms were. This clarity prevents disputes and provides legal protection if the seller delivers something different from what was expected.</p>
+
+<h2>Why Small Businesses Should Use Purchase Orders</h2>
+<p>Many small business owners skip purchase orders because they seem bureaucratic. However, POs provide several important benefits even for small operations. They create spending controls by requiring approval before purchases are made. They provide documentation for tax deductions and expense tracking.</p>
+<p>Purchase orders also improve vendor relationships by setting clear expectations upfront. They reduce the risk of duplicate orders, incorrect deliveries, and billing disputes. For businesses with multiple employees, POs ensure everyone follows the same purchasing process.</p>
+
+<h2>Essential Elements of a Purchase Order</h2>
+<p>A complete purchase order should include your company name and address as the buyer, the vendor's name and address, and a unique PO number for tracking. Include the date of issue and the requested delivery date or deadline.</p>
+<p>Itemize the products or services being purchased with descriptions, quantities, unit prices, and line totals. Include the subtotal, any taxes, shipping costs, and the grand total. Specify payment terms, delivery instructions, and any special requirements or conditions.</p>
+
+<h2>Purchase Order Numbering Systems</h2>
+<p>Use a sequential numbering system for purchase orders. Simple formats like PO-001, PO-002 work well for small businesses. Larger organizations may use more complex systems that include department codes, date elements, or project identifiers.</p>
+<p>Consistent numbering makes it easy to track orders, match them with invoices, and resolve disputes. Never reuse PO numbers, as this creates confusion in your records. If you use accounting software, it will typically handle PO numbering automatically.</p>
+
+<h2>The Purchase Order Process</h2>
+<p>The standard PO process begins when someone in your organization identifies a need. A purchase requisition may be submitted for approval. Once approved, the buyer creates a purchase order and sends it to the vendor.</p>
+<p>The vendor acknowledges receipt and acceptance of the PO. They fulfill the order and deliver the goods or services. The buyer receives and inspects the delivery. The vendor sends an invoice, which the buyer matches against the PO and delivery receipt before paying.</p>
+
+<h2>Matching POs with Invoices and Receipts</h2>
+<p>Three-way matching is a best practice where you compare the purchase order, delivery receipt, and vendor invoice before paying. This ensures you only pay for what was actually ordered and received. Discrepancies are identified and resolved before payment.</p>
+<p>For small businesses, formal three-way matching may be simplified, but the principle remains important. Always verify that invoices match your expectations before paying. This prevents overpayment, duplicate payment, and payment for undelivered goods.</p>
+
+<h2>Digital Purchase Order Systems</h2>
+<p>Modern businesses increasingly use digital PO systems. These tools automate numbering, approval workflows, and vendor communication. They integrate with accounting software to streamline the entire purchasing process.</p>
+<p>Even without dedicated software, you can create professional POs using templates or document generators. The key is consistency and completeness. A well-designed digital PO template ensures every order includes all necessary information and looks professional.</p>
+
+<h2>Handling Purchase Order Changes</h2>
+<p>Sometimes orders need to be changed after the PO is issued. Perhaps quantities need adjustment, delivery dates change, or items need substitution. When changes are necessary, document them formally.</p>
+<p>Issue a PO amendment or revision that references the original PO number and clearly states the changes. Both parties should acknowledge the amendment. Never make verbal changes to POs without written confirmation, as this creates ambiguity and dispute risk.</p>
+
+<h2>Common Purchase Order Mistakes</h2>
+<p>Vague descriptions are the most common PO mistake. Instead of writing "office supplies," specify exactly what you need. Unclear quantities, missing delivery instructions, and incorrect pricing also cause problems. Always review POs before sending them.</p>
+<p>Another common mistake is failing to track PO status. Know which POs have been acknowledged, which are in production, and which have been delivered. Good tracking prevents duplicate orders and helps you plan around delivery schedules.</p>
+
+<h2>Conclusion</h2>
+<p>Purchase orders are valuable tools for businesses of all sizes. They provide legal protection, spending control, and organizational clarity. By including all essential information, using consistent numbering, and tracking orders properly, you create a purchasing process that supports your business growth.</p>
+<p>Start using purchase orders for your significant purchases today. Even a simple PO process is better than informal ordering. As your business grows, you can refine your process with digital tools and formal workflows. The discipline you establish now will serve you well in the future.</p>
+      </div>
+    
+<h2>Frequently Asked Questions</h2>
+<h3>What is a purchase order (PO)?</h3>
+<p>A purchase order is a formal document issued by a buyer to a seller that specifies the goods or services to be purchased, the quantity, the agreed price, and the delivery terms. Once the seller accepts the PO, it becomes a legally binding contract. POs create a clear record of what was ordered, protecting both parties if there is a dispute about what was delivered or charged.</p>
+
+<h3>When should a small business use purchase orders?</h3>
+<p>Use purchase orders when buying from suppliers on credit terms, when managing inventory purchases, for any significant purchase where you want a clear paper trail, or when your business requires budget approval before spending. For very small or one-off purchases paid immediately, a PO may not be necessary, but for recurring supplier relationships or purchases above a set threshold, POs are highly recommended.</p>
+
+<h3>What is the difference between a purchase order and an invoice?</h3>
+<p>A purchase order is created by the buyer and sent to the seller before goods or services are delivered. It is the buyer's commitment to purchase. An invoice is created by the seller and sent to the buyer after goods or services are delivered. It is the seller's request for payment. In a typical transaction, the buyer sends a PO, the seller delivers and then issues an invoice, and the buyer matches the invoice against the original PO before authorizing payment.</p>
+
+
+    
+      <h2>The Purchase Order Workflow</h2>
+      <p>Understanding the purchase order workflow helps you use POs effectively in your business. The process begins when a buyer identifies a need and decides to procure goods or services from a specific supplier. Before issuing the PO, the buyer may request a quote or proposal from the supplier to agree on pricing, specifications, and delivery terms. Once these are agreed, the buyer issues the formal PO.</p>
+      <p>Upon receiving the PO, the supplier reviews it to confirm they can fulfill the order on the specified terms. If they accept, they typically send a PO acknowledgment or order confirmation back to the buyer. This acknowledgment converts the PO into a binding contract. If the supplier cannot meet the terms — due to stock availability, pricing changes, or timeline constraints — they communicate this to the buyer and negotiate revised terms before accepting.</p>
+      <p>Once the PO is accepted, the supplier fulfills the order and ships the goods or performs the services. With the shipment, they typically include a packing list or delivery note that references the PO number. When the buyer receives the goods, they perform a receiving inspection to verify that what arrived matches what was ordered — the right quantity, the right specifications, undamaged. Any discrepancies are documented and communicated to the supplier immediately.</p>
+      <p>The final step is payment. The supplier issues a commercial invoice referencing the PO number. The buyer's accounts payable team performs a three-way match: comparing the PO (what was ordered), the receiving report (what was received), and the invoice (what is being billed). When all three match, payment is authorized and processed. This three-way match process is a standard internal control that prevents unauthorized purchases, overpayments, and invoice fraud.</p>
+
+      <h2>POs for Service Businesses</h2>
+      <p>While purchase orders are most commonly associated with physical goods procurement, they are equally valuable for service businesses. A service PO defines the scope of services to be provided, the timeline, the agreed rate (hourly, daily, or project-based), and the maximum authorized spend. It serves the same function as a goods PO: creating a documented, authorized commitment before work begins.</p>
+      <p>For freelancers and consultants, receiving a PO from a client is a positive sign — it means the engagement has gone through a formal approval process and the budget has been authorized. Always reference the client's PO number on your invoices; large organizations typically cannot process an invoice without a valid PO number attached, and submitting invoices without this reference is a common cause of payment delays in corporate procurement environments.</p>
+    
+    <!-- data-qb-enh -->
+    <h2>Related articles</h2>
+    <ul><li><a href="/blog/proforma-invoice-guide">Proforma Invoice Guide</a></li><li><a href="/blog/invoice-vs-bill-vs-statement">Invoice vs Bill vs Statement</a></li><li><a href="/blog/how-to-organize-business-documents">How to Organize Business Documents</a></li></ul>
+
+    <div class="cta-box">
+      <h3>Create a purchase order</h3>
+      <p>Numbered purchase orders ready to send — free, no sign-up.</p>
+      <a href="/purchaseorder" class="cta-btn">Create a purchase order →</a>
+    </div>
+  </article>
+    <!-- Ad Placeholder Bottom -->
+  <div class="ad-placeholder ad-bottom">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9121502081229374"
+         data-ad-slot="1357002468"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="20" fill="#3b82f6"/><text x="50" y="68" font-size="55" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">Q</text></svg>
+          <span>QueckBiz</span>
+        </a>
+        <p class="footer-tagline">Free online tools for invoices, receipts, estimates, and more.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>TOOLS</h4>
+          <ul>
+            <li><a href="/invoice">Invoice</a></li>
+            <li><a href="/receipt">Receipt</a></li>
+            <li><a href="/estimate">Estimate</a></li>
+            <li><a href="/proforma">Proforma</a></li>
+            <li><a href="/creditnote">Credit Note</a></li>
+            <li><a href="/purchaseorder">Purchase Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>COMPANY</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>LEGAL</h4>
+          <ul>
+            <li><a href="/cookies">Cookies</a></li>
+            <li><a href="/adsettings">Ad Settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 QueckBiz. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Cookie Consent + Consent Mode v2 -->
+  <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:1000;font-size:.875rem;box-shadow:0 -4px 6px rgba(0,0,0,0.1);">
+    <p style="margin:0;flex:1;min-width:200px;">We use cookies and Google AdSense to improve your experience and support our free tools. <a href="/cookies" style="color:#60a5fa;text-decoration:underline;">Learn more</a></p>
+    <div style="display:flex;gap:.75rem;flex-shrink:0;">
+      <button onclick="declineCookies()" style="padding:.5rem 1rem;border-radius:8px;border:1px solid #475569;background:transparent;color:#94a3b8;cursor:pointer;font-size:.875rem;">Decline</button>
+      <button onclick="acceptCookies()" style="padding:.5rem 1.25rem;border-radius:8px;border:none;background:#2563eb;color:#fff;cursor:pointer;font-size:.875rem;font-weight:600;">Accept</button>
+    </div>
+  </div>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied',
+      analytics_storage:'denied',
+      ad_user_data:'denied',
+      ad_personalization:'denied',
+      wait_for_update:500
+    });
+    function acceptCookies(){
+      document.getElementById('cookieBanner').style.display='none';
+      localStorage.setItem('cookiesAccepted','true');
+      gtag('consent','update',{
+        ad_storage:'granted',
+        analytics_storage:'granted',
+        ad_user_data:'granted',
+        ad_personalization:'granted'
+      });
+    }
+    function declineCookies(){
+      document.getElementById('cookieBanner').style.display='none';
+      localStorage.setItem('cookiesAccepted','false');
+    }
+    (function(){
+      var v=localStorage.getItem('cookiesAccepted');
+      if(v!==null){
+        document.getElementById('cookieBanner').style.display='none';
+        if(v==='true'){
+          gtag('consent','update',{
+            ad_storage:'granted',analytics_storage:'granted',
+            ad_user_data:'granted',ad_personalization:'granted'
+          });
+        }
+      }
+    })();
+  </script>
+  <script>/*theme-toggle*/(function(){var b=document.getElementById('themeToggle');if(!b)return;var moon=document.getElementById('moon'),sun=document.getElementById('sun');function sync(){var d=document.documentElement.getAttribute('data-theme')==='dark';if(moon)moon.style.display=d?'none':'block';if(sun)sun.style.display=d?'block':'none';}sync();b.addEventListener('click',function(){var d=document.documentElement.getAttribute('data-theme')==='dark';if(d){document.documentElement.removeAttribute('data-theme');localStorage.setItem('theme','light');}else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme','dark');}sync();});})();</script>
+</body>
+</html>

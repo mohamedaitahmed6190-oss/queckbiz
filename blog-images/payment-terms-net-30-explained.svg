@@ -1,0 +1,26 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#eff6ff"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="ic" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="80" cy="60" r="140" fill="#2563eb" opacity="0.06"/>
+  <circle cx="1130" cy="580" r="180" fill="#2563eb" opacity="0.06"/>
+  <circle cx="1080" cy="90" r="60" fill="#1d4ed8" opacity="0.08"/>
+  
+  <g transform="translate(460,175)">
+    
+  <rect x="30" y="40" width="230" height="200" rx="18" fill="url(#ic)"/>
+  <rect x="30" y="40" width="230" height="55" rx="18" fill="#1d4ed8"/>
+  <rect x="65" y="15" width="14" height="45" rx="7" fill="#1d4ed8"/>
+  <rect x="211" y="15" width="14" height="45" rx="7" fill="#1d4ed8"/>
+  <text x="145" y="175" font-size="64" font-weight="800" fill="white" text-anchor="middle" font-family="Arial">30</text>
+  
+  </g>
+</svg>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <script>/*theme-init*/(function(){try{var t=localStorage.getItem('theme')||((window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light');if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice vs Bill vs Statement | QueckBiz Blog</title>
+  <meta name="description" content="Clear differences between an invoice, a bill, and a statement, and how each is used in business transactions.">
+  <link rel="canonical" href="https://queckbiz.com/blog/invoice-vs-bill-vs-statement">
+  <link rel="alternate" hreflang="en" href="https://queckbiz.com/blog/invoice-vs-bill-vs-statement">
+  <link rel="alternate" hreflang="ar" href="https://queckbiz.com/ar/blog/invoice-vs-bill-vs-statement">
+  <link rel="alternate" hreflang="fr" href="https://queckbiz.com/fr/blog/invoice-vs-bill-vs-statement">
+  <link rel="alternate" hreflang="x-default" href="https://queckbiz.com/blog/invoice-vs-bill-vs-statement">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://queckbiz.com/blog/invoice-vs-bill-vs-statement">
+  <meta property="og:title" content="Invoice vs Bill vs Statement | QueckBiz Blog">
+  <meta property="og:description" content="Clear differences between an invoice, a bill, and a statement, and how each is used in business transactions.">
+  <meta property="og:image" content="https://queckbiz.com/og-image.png">
+  <meta property="og:site_name" content="QueckBiz">
+  <style>
+    :root{--bg:#f8fafc;--surface:#fff;--text:#0f172a;--text2:#475569;--primary:#2563eb;--primary2:#1d4ed8;--border:#e2e8f0;--shadow:0 1px 3px rgba(0,0,0,0.1);--radius:10px;--radius-lg:14px;      --footer-bg:#f1f5f9;--footer-border:#e2e8f0;--footer-text:#475569;--footer-heading:#0f172a;--footer-muted:#64748b;
+    }
+    [data-theme="dark"]{--bg:#0f172a;--surface:#1e293b;--text:#f1f5f9;--text2:#94a3b8;--primary:#3b82f6;--primary2:#60a5fa;--border:#334155;--shadow:0 1px 3px rgba(0,0,0,0.3);      --footer-bg:#0f172a;--footer-border:#1e293b;--footer-text:#94a3b8;--footer-heading:#f1f5f9;--footer-muted:#64748b;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:background .2s,color .2s}
+    header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+    .h-inner{max-width:1100px;margin:0 auto;padding:.75rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .logo{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.25rem;color:var(--primary);text-decoration:none}
+    .logo svg{width:28px;height:28px}
+    .h-actions{display:flex;align-items:center;gap:.5rem}
+    .back-btn{display:flex;align-items:center;gap:.4rem;padding:.4rem .8rem;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text2);text-decoration:none;font-size:.875rem}
+    .back-btn:hover{border-color:var(--primary);color:var(--primary)}
+    main{max-width:800px;margin:0 auto;padding:2rem 1rem}
+    .article-header{padding:2rem 0;border-bottom:1px solid var(--border);margin-bottom:2rem}
+    .article-header .category{display:inline-block;background:linear-gradient(135deg,var(--primary),#7c3aed);color:#fff;padding:.25rem .75rem;border-radius:9999px;font-size:.75rem;font-weight:600;margin-bottom:1rem}
+    .article-header h1{font-size:2rem;font-weight:800;line-height:1.2;margin-bottom:1rem}
+    .article-header .meta{display:flex;align-items:center;gap:1rem;color:var(--text2);font-size:.875rem}
+    .article-content{font-size:1.125rem;line-height:1.8}
+    .article-content h2{font-size:1.5rem;font-weight:700;margin-top:2.5rem;margin-bottom:1rem;color:var(--text)}
+    .article-content h3{font-size:1.25rem;font-weight:600;margin-top:2rem;margin-bottom:.75rem;color:var(--text2)}
+    .article-content p{margin-bottom:1.5rem}
+    .article-content ul,.article-content ol{margin-left:2rem;margin-bottom:1.5rem}
+    .article-content li{margin-bottom:.5rem}
+    .article-content strong{color:var(--text)}
+    .article-content a{color:var(--primary);text-decoration:none}
+    .article-content a:hover{text-decoration:underline}
+    .tip-box{background:linear-gradient(135deg,#dbeafe,#ede9fe);border-left:4px solid var(--primary);padding:1.5rem;border-radius:var(--radius);margin:2rem 0}
+    .tip-box h4{font-size:1rem;font-weight:700;margin-bottom:.5rem;color:var(--primary)}
+    .cta-box{background:var(--surface);border:2px solid var(--primary);border-radius:var(--radius-lg);padding:2rem;text-align:center;margin:3rem 0}
+    .cta-box h3{font-size:1.25rem;font-weight:700;margin-bottom:1rem}
+    .cta-box p{color:var(--text2);margin-bottom:1.5rem}
+    .article-content a.cta-btn,.article-content a.cta-btn:hover{color:#fff;text-decoration:none}
+    .cta-btn{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--primary),#7c3aed);color:#fff;padding:.875rem 2rem;border-radius:var(--radius);font-weight:600;text-decoration:none;transition:transform .2s}
+    .cta-btn:hover{transform:translateY(-2px)}
+    .site-footer{background:var(--footer-bg);color:var(--footer-text);border-top:1px solid var(--footer-border);margin-top:3rem}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:3rem 1.5rem;display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:start}
+    .footer-brand{max-width:280px}
+    .footer-logo{display:flex;align-items:center;gap:.75rem;font-weight:800;font-size:1.25rem;color:var(--footer-heading);text-decoration:none;margin-bottom:1rem}
+    .footer-logo svg{width:32px;height:32px}
+    .footer-tagline{font-size:.875rem;line-height:1.6;color:var(--footer-muted)}
+    .footer-links{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+    .footer-col h4{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--footer-heading);margin-bottom:1rem}
+    .footer-col ul{list-style:none}
+    .footer-col li{margin-bottom:.75rem}
+    .footer-col a{color:var(--footer-text);text-decoration:none;font-size:.875rem;transition:color .2s}
+    .footer-col a:hover{color:#3b82f6}
+    .footer-bottom{border-top:1px solid var(--footer-border);text-align:center;padding:1.5rem;font-size:.875rem;color:var(--footer-muted)}
+    @media(max-width:768px){.footer-inner{grid-template-columns:1fr;gap:2rem}.footer-links{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.footer-links{grid-template-columns:1fr}}
+  .theme-toggle{display:inline-flex;align-items:center;justify-content:center;padding:.4rem;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text2);cursor:pointer;line-height:0}.theme-toggle svg{width:18px;height:18px}</style>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9121502081229374" crossorigin="anonymous"></script>
+  <style>
+    .ad-placeholder { width:100%; max-width:100%; overflow:hidden; text-align:center; background:transparent; }
+    .ad-top { margin: 0.75rem 0 1.25rem; }
+    .ad-bottom { margin: 1.25rem 0 0.75rem; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BlogPosting",
+    "headline":"Invoice vs Bill vs Statement",
+    "description":"Clarify the differences between an invoice, a bill, and a statement so you can use the right document at the right time and maintain accurate financial records.",
+    "url":"https://queckbiz.com/blog/invoice-vs-bill-vs-statement.html",
+    "datePublished":"2026-06-11",
+    "dateModified":"2026-10-09",
+    "author":{"@type":"Organization","name":"QueckBiz","url":"https://queckbiz.com"},
+    "publisher":{"@type":"Organization","name":"QueckBiz","logo":{"@type":"ImageObject","url":"https://queckbiz.com/favicon-512.png"}},
+    "image":"https://queckbiz.com/og-image.png",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://queckbiz.com/blog/invoice-vs-bill-vs-statement.html"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What is the difference between an invoice and a bill?","acceptedAnswer":{"@type":"Answer","text":"An invoice and a bill describe the same document — a request for payment — but from different perspectives. When you create the document to send to a client, it is your invoice. When the client receives it and needs to pay, it becomes their bill. The document is identical; the terminology reflects who is issuing versus who is receiving it. In accounting software, the same document is typically called a vendor bill when it is something you owe and a customer invoice when it is something owed to you."}},
+      {"@type":"Question","name":"What is a statement and how does it differ from an invoice?","acceptedAnswer":{"@type":"Answer","text":"A statement is a summary of all transactions between you and a client over a period, typically showing all invoices issued, payments received, and the current balance outstanding. Unlike an invoice (which requests payment for specific goods or services), a statement is a financial summary used to reconcile accounts and prompt payment of any overdue balances. Statements are useful for clients with multiple invoices across a billing period."}},
+      {"@type":"Question","name":"When should I send a statement instead of an invoice?","acceptedAnswer":{"@type":"Answer","text":"Send a statement when a client has multiple outstanding invoices and you want to provide a consolidated view of what they owe. Statements are also useful for monthly billing summaries in subscription or retainer relationships. They complement invoices rather than replace them — each invoice is a specific payment request, while the statement shows the overall account balance."}}
+    ]
+  }
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GT-55X3TZ2M');</script>
+  <!-- End Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BS0FSQVQ9V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BS0FSQVQ9V');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/design.css?v=1">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-55X3TZ2M"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="h-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="20" fill="#2563eb"/><text x="50" y="68" font-size="55" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">Q</text></svg>
+        QueckBiz
+      </a>
+      <div class="h-actions">
+        <details class="lang-select-wrap"><summary class="lang-switch" title="Choose language">EN</summary><div class="lang-menu"><a href="/blog/invoice-vs-bill-vs-statement" class="active">English</a><a href="/ar/blog/invoice-vs-bill-vs-statement">العربية</a><a href="/fr/blog/invoice-vs-bill-vs-statement">Français</a></div></details>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg id="moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg id="sun" style="display:none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </button>
+        <a href="/blog/" class="back-btn">← Blog</a>
+        <a href="/" class="back-btn">Home</a>
+      </div>
+    </div>
+  </header>
+  <main>
+  <!-- Ad Placeholder Top -->
+  <div class="ad-placeholder ad-top">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9121502081229374"
+         data-ad-slot="7913568024"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+    <article>
+      <div class="article-header">
+        <span class="category">Business Docs</span>
+        <h1>Invoice vs Bill vs Statement</h1>
+        <div class="meta">
+          <span>By QueckBiz Team</span><span>·</span><span>June 11, 2026</span><span>·</span><span>9 min read</span>
+        </div>
+      </div>
+      <img src="/blog-images/invoice-vs-bill-vs-statement.svg" alt="Invoice vs Bill vs Statement" width="1200" height="630" loading="lazy" style="width:100%;height:auto;border-radius:14px;margin:0 0 1.5rem;display:block" />
+      <div class="article-content">
+        <p>The terms invoice, bill, and statement are often used interchangeably in casual conversation, but they represent distinct financial documents with different purposes. Understanding these differences helps you use the correct terminology, maintain proper records, and communicate clearly with clients and vendors. This guide clarifies what each document is and when to use it.</p>
+
+<h2>What Is an Invoice?</h2>
+<p>An invoice is a formal document issued by a seller to a buyer requesting payment for goods or services. It is typically sent after the work is completed or the goods are delivered but before payment is received. An invoice creates an obligation for the buyer to pay and an accounts receivable entry for the seller.</p>
+<p>Invoices include detailed information about the transaction: itemized products or services, quantities, prices, taxes, total amount due, payment terms, and due dates. They are legally binding documents that serve as evidence of the debt and are used for accounting, tax reporting, and collection purposes.</p>
+
+<h2>What Is a Bill?</h2>
+<p>A bill is a document requesting payment for goods or services, similar to an invoice. The term is often used interchangeably with invoice, but there are subtle differences in usage. Bills are commonly associated with recurring services like utilities, subscriptions, and rent.</p>
+<p>While an invoice is often used for one-time or project-based transactions, a bill frequently represents ongoing or periodic charges. Both documents request payment, but the context and industry conventions often determine which term is used. In practice, the distinction is less important than the function: both request payment for goods or services.</p>
+
+<h2>What Is a Statement?</h2>
+<p>A statement is a summary document that shows the status of an account over a period of time. Unlike an invoice or bill, a statement does not request payment for a specific transaction. Instead, it provides an overview of all transactions, payments, and balances during the statement period.</p>
+<p>Credit card statements, bank statements, and account statements from vendors are common examples. They show opening balances, new charges, payments received, credits applied, and closing balances. Statements help both parties reconcile accounts and verify that all transactions are accurate.</p>
+
+<h2>Key Differences Summarized</h2>
+<p>An invoice requests payment for a specific transaction or project. It is issued when work is completed and payment is expected. A bill also requests payment but is often used for recurring charges. A statement summarizes account activity over time without requesting payment for a specific new charge.</p>
+<p>Invoices and bills create payment obligations. Statements provide information. You pay an invoice or bill. You review a statement to understand your account status. All three are important for financial management, but they serve different functions.</p>
+
+<h2>When Businesses Use Each Document</h2>
+<p>Businesses send invoices when they complete work for clients. Freelancers invoice after delivering projects. Product suppliers invoice after shipping goods. The invoice initiates the payment process for that specific transaction.</p>
+<p>Bills are sent for recurring services. Your electricity company sends a bill monthly. Your software subscription provider bills you periodically. The bill represents an ongoing relationship rather than a one-time transaction.</p>
+<p>Statements are sent periodically to summarize account status. Your credit card company sends a monthly statement showing all charges and payments. Your vendor might send a quarterly statement showing all invoices and payments for the period.</p>
+
+<h2>Customer Perspective</h2>
+<p>From the customer's perspective, receiving an invoice means you need to pay for a specific purchase. Receiving a bill means you need to pay for ongoing services. Receiving a statement means you should review your account to verify accuracy and understand your current balance.</p>
+<p>Customers should match invoices and bills to their purchase orders and delivery receipts before paying. They should review statements to catch errors, unauthorized charges, or missed payments. Proper document handling on both sides prevents disputes and maintains good business relationships.</p>
+
+<h2>Accounting Treatment</h2>
+<p>In accounting, invoices are recorded as accounts receivable by the seller and accounts payable by the buyer. Bills for recurring services are recorded similarly. Statements are not recorded as journal entries because they are informational summaries rather than transaction records.</p>
+<p>Accountants use statements to reconcile accounts. They compare the statement balance to the internal ledger balance and investigate discrepancies. This reconciliation process ensures that all transactions are recorded and that no errors or fraud have occurred.</p>
+
+<h2>Digital Documents and Automation</h2>
+<p>Modern accounting systems automate the creation and delivery of invoices, bills, and statements. Invoices are generated when orders are fulfilled. Bills are generated on recurring schedules. Statements are generated automatically at period end.</p>
+<p>Electronic delivery via email or client portals is now standard. Digital documents are legally valid in most jurisdictions and are easier to store, search, and retrieve than paper documents. Automation reduces errors and ensures timely delivery of all financial documents.</p>
+
+<h2>Best Practices for Document Management</h2>
+<p>Send invoices promptly after work is completed. Delayed invoicing delays payment and can make collection more difficult. Send bills on consistent schedules so customers can anticipate and budget for them. Send statements regularly to help customers manage their accounts.</p>
+<p>Keep copies of all documents sent and received. Organize them by customer, date, and document type. Good document management supports accounting accuracy, tax compliance, and dispute resolution. Digital storage with automatic backups is the most reliable approach.</p>
+
+<h2>Conclusion</h2>
+<p>While invoices, bills, and statements are related financial documents, they serve distinct purposes. Invoices request payment for specific transactions. Bills request payment for recurring services. Statements summarize account activity over time. Using the right document at the right time ensures clear communication and proper financial management.</p>
+<p>Understanding these differences helps you communicate professionally with clients, maintain accurate records, and manage your business finances effectively. Whether you are sending or receiving these documents, knowing what each one means helps you handle them appropriately.</p>
+      </div>
+    
+<h2>Frequently Asked Questions</h2>
+<h3>What is the difference between an invoice and a bill?</h3>
+<p>An invoice and a bill describe the same document — a request for payment — but from different perspectives. When you create the document to send to a client, it is your invoice. When the client receives it and needs to pay, it becomes their bill. The document is identical; the terminology reflects who is issuing versus who is receiving it. In accounting software, the same document is typically called a vendor bill when it is something you owe and a customer invoice when it is something owed to you.</p>
+
+<h3>What is a statement and how does it differ from an invoice?</h3>
+<p>A statement is a summary of all transactions between you and a client over a period, typically showing all invoices issued, payments received, and the current balance outstanding. Unlike an invoice (which requests payment for specific goods or services), a statement is a financial summary used to reconcile accounts and prompt payment of any overdue balances. Statements are useful for clients with multiple invoices across a billing period.</p>
+
+<h3>When should I send a statement instead of an invoice?</h3>
+<p>Send a statement when a client has multiple outstanding invoices and you want to provide a consolidated view of what they owe. Statements are also useful for monthly billing summaries in subscription or retainer relationships. They complement invoices rather than replace them — each invoice is a specific payment request, while the statement shows the overall account balance.</p>
+
+
+    
+      <h2>How These Documents Work Together in Accounting</h2>
+      <p>Invoices, bills, and statements are interconnected documents that together create a complete picture of financial relationships between businesses. In a typical ongoing B2B relationship, the workflow looks like this: you issue invoices throughout the month as you complete work or deliver products. The client receives these invoices and records them as bills to pay. At month end, you issue a statement summarizing all invoices, payments received, and the outstanding balance. The client uses the statement to reconcile their accounts payable records with your records.</p>
+      <p>This reconciliation step — matching your statement against the client's accounts payable records — is where discrepancies are discovered and resolved. A payment that you recorded but the client did not, an invoice the client received but you have no record of sending, or a credit note that was applied in one system but not the other — all of these appear as discrepancies on the statement reconciliation. Regular statement issuance and prompt reconciliation prevents these discrepancies from accumulating into serious accounting problems.</p>
+      <p>In double-entry accounting, each of these documents corresponds to specific journal entries. An invoice you issue creates a debit in accounts receivable and a credit in revenue. A payment received creates a debit in cash and a credit in accounts receivable. A credit note creates a debit in revenue (or a contra-revenue account) and a credit in accounts receivable. Understanding how each document type maps to accounting entries helps you use them correctly and ensures your books reflect reality accurately.</p>
+
+      <h2>When to Use Each Document — Decision Guide</h2>
+      <p>Choosing the right document for each situation becomes intuitive with practice, but a clear decision framework helps when you are getting started. Issue an invoice when you have completed work or delivered products and are requesting payment for the first time. Issue a receipt when payment has been received — either immediately (for cash sales) or after collecting payment on an invoice. Issue a statement when a client has multiple invoices over a period and you want to provide a consolidated summary of their account with you.</p>
+      <p>There are situations where the lines blur. For subscription businesses that bill the same amount every month, the invoice functions almost like a recurring bill, and some businesses use the terms interchangeably in this context. For point-of-sale retail transactions, the receipt often incorporates the invoice function because payment is immediate — there is no gap between requesting payment and receiving it. In these cases, the combined receipt-invoice simply documents a completed transaction from start to finish.</p>
+      <p>The most important principle is consistency: whatever terminology you use, use it consistently so that your clients always know what to expect from each document they receive from you. Clients who work with multiple vendors appreciate suppliers who are clear and consistent in their documentation — it reduces the administrative work of processing your invoices and statements, which in turn creates goodwill and often results in faster payment.</p>
+    
+    <!-- data-qb-enh -->
+    <h2>Related articles</h2>
+    <ul><li><a href="/blog/receipt-vs-invoice-difference">Receipt vs Invoice: Key Differences</a></li><li><a href="/blog/how-to-create-professional-invoice">How to Create a Professional Invoice</a></li><li><a href="/blog/how-to-send-payment-reminders">How to Send Payment Reminders</a></li></ul>
+
+    <div class="cta-box">
+      <h3>Create a free invoice</h3>
+      <p>Professional invoices in 150+ currencies — free, no sign-up.</p>
+      <a href="/invoice" class="cta-btn">Create a free invoice →</a>
+    </div>
+  </article>
+    <!-- Ad Placeholder Bottom -->
+  <div class="ad-placeholder ad-bottom">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9121502081229374"
+         data-ad-slot="7913568024"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="20" fill="#3b82f6"/><text x="50" y="68" font-size="55" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">Q</text></svg>
+          <span>QueckBiz</span>
+        </a>
+        <p class="footer-tagline">Free online tools for invoices, receipts, estimates, and more.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>TOOLS</h4>
+          <ul>
+            <li><a href="/invoice">Invoice</a></li>
+            <li><a href="/receipt">Receipt</a></li>
+            <li><a href="/estimate">Estimate</a></li>
+            <li><a href="/proforma">Proforma</a></li>
+            <li><a href="/creditnote">Credit Note</a></li>
+            <li><a href="/purchaseorder">Purchase Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>COMPANY</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>LEGAL</h4>
+          <ul>
+            <li><a href="/cookies">Cookies</a></li>
+            <li><a href="/adsettings">Ad Settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 QueckBiz. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Cookie Consent + Consent Mode v2 -->
+  <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:1000;font-size:.875rem;box-shadow:0 -4px 6px rgba(0,0,0,0.1);">
+    <p style="margin:0;flex:1;min-width:200px;">We use cookies and Google AdSense to improve your experience and support our free tools. <a href="/cookies" style="color:#60a5fa;text-decoration:underline;">Learn more</a></p>
+    <div style="display:flex;gap:.75rem;flex-shrink:0;">
+      <button onclick="declineCookies()" style="padding:.5rem 1rem;border-radius:8px;border:1px solid #475569;background:transparent;color:#94a3b8;cursor:pointer;font-size:.875rem;">Decline</button>
+      <button onclick="acceptCookies()" style="padding:.5rem 1.25rem;border-radius:8px;border:none;background:#2563eb;color:#fff;cursor:pointer;font-size:.875rem;font-weight:600;">Accept</button>
+    </div>
+  </div>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied',
+      analytics_storage:'denied',
+      ad_user_data:'denied',
+      ad_personalization:'denied',
+      wait_for_update:500
+    });
+    function acceptCookies(){
+      document.getElementById('cookieBanner').style.display='none';
+      localStorage.setItem('cookiesAccepted','true');
+      gtag('consent','update',{
+        ad_storage:'granted',
+        analytics_storage:'granted',
+        ad_user_data:'granted',
+        ad_personalization:'granted'
+      });
+    }
+    function declineCookies(){
+      document.getElementById('cookieBanner').style.display='none';
+      localStorage.setItem('cookiesAccepted','false');
+    }
+    (function(){
+      var v=localStorage.getItem('cookiesAccepted');
+      if(v!==null){
+        document.getElementById('cookieBanner').style.display='none';
+        if(v==='true'){
+          gtag('consent','update',{
+            ad_storage:'granted',analytics_storage:'granted',
+            ad_user_data:'granted',ad_personalization:'granted'
+          });
+        }
+      }
+    })();
+  </script>
+  <script>/*theme-toggle*/(function(){var b=document.getElementById('themeToggle');if(!b)return;var moon=document.getElementById('moon'),sun=document.getElementById('sun');function sync(){var d=document.documentElement.getAttribute('data-theme')==='dark';if(moon)moon.style.display=d?'none':'block';if(sun)sun.style.display=d?'block':'none';}sync();b.addEventListener('click',function(){var d=document.documentElement.getAttribute('data-theme')==='dark';if(d){document.documentElement.removeAttribute('data-theme');localStorage.setItem('theme','light');}else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme','dark');}sync();});})();</script>
+</body>
+</html>

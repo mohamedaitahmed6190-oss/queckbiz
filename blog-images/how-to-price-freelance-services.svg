@@ -1,0 +1,27 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#eff6ff"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="ic" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="80" cy="60" r="140" fill="#2563eb" opacity="0.06"/>
+  <circle cx="1130" cy="580" r="180" fill="#2563eb" opacity="0.06"/>
+  <circle cx="1080" cy="90" r="60" fill="#1d4ed8" opacity="0.08"/>
+  
+  <g transform="translate(460,175)">
+    
+  <ellipse cx="90" cy="220" rx="80" ry="24" fill="#1d4ed8" opacity="0.9"/>
+  <ellipse cx="90" cy="200" rx="80" ry="24" fill="#2563eb"/>
+  <text x="90" y="210" font-size="26" font-weight="700" fill="white" text-anchor="middle" font-family="Arial">$</text>
+  <ellipse cx="200" cy="150" rx="70" ry="22" fill="#1d4ed8" opacity="0.9"/>
+  <ellipse cx="200" cy="130" rx="70" ry="22" fill="url(#ic)"/>
+  <text x="200" y="140" font-size="24" font-weight="700" fill="white" text-anchor="middle" font-family="Arial">$</text>
+  
+  </g>
+</svg>

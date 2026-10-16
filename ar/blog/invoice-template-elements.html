@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <script>/*theme-init*/(function(){try{var t=localStorage.getItem('theme')||((window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light');if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عناصر نموذج الفاتورة الأساسية | QueckBiz</title>
+  <meta name="description" content="العناصر الأساسية التي يحتاجها أي نموذج فاتورة، من الترويسة إلى شروط الدفع مع أمثلة عملية ونصائح وأخطاء شائعة.">
+  <link rel="canonical" href="https://queckbiz.com/ar/blog/invoice-template-elements">
+  <link rel="alternate" hreflang="en" href="https://queckbiz.com/blog/invoice-template-elements">
+  <link rel="alternate" hreflang="ar" href="https://queckbiz.com/ar/blog/invoice-template-elements">
+  <link rel="alternate" hreflang="fr" href="https://queckbiz.com/fr/blog/invoice-template-elements">
+  <link rel="alternate" hreflang="x-default" href="https://queckbiz.com/blog/invoice-template-elements">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://queckbiz.com/ar/blog/invoice-template-elements">
+  <meta property="og:title" content="عناصر نموذج الفاتورة الأساسية | QueckBiz">
+  <meta property="og:description" content="العناصر الأساسية التي يحتاجها أي نموذج فاتورة، من الترويسة إلى شروط الدفع مع أمثلة عملية ونصائح وأخطاء شائعة.">
+  <meta property="og:image" content="https://queckbiz.com/og-image.png">
+  <meta property="og:site_name" content="QueckBiz">
+  <style>
+    :root{--bg:#f8fafc;--surface:#fff;--text:#0f172a;--text2:#475569;--primary:#2563eb;--primary2:#1d4ed8;--border:#e2e8f0;--shadow:0 1px 3px rgba(0,0,0,0.1);--radius:10px;--radius-lg:14px;      --footer-bg:#f1f5f9;--footer-border:#e2e8f0;--footer-text:#475569;--footer-heading:#0f172a;--footer-muted:#64748b;
+    }
+    [data-theme="dark"]{--bg:#0f172a;--surface:#1e293b;--text:#f1f5f9;--text2:#94a3b8;--primary:#3b82f6;--primary2:#60a5fa;--border:#334155;--shadow:0 1px 3px rgba(0,0,0,0.3);      --footer-bg:#0f172a;--footer-border:#1e293b;--footer-text:#94a3b8;--footer-heading:#f1f5f9;--footer-muted:#64748b;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:background .2s,color .2s}
+    header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+    .h-inner{max-width:1100px;margin:0 auto;padding:.75rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .logo{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.25rem;color:var(--primary);text-decoration:none}
+    .logo svg{width:28px;height:28px}
+    .h-actions{display:flex;align-items:center;gap:.5rem}
+    .back-btn{display:flex;align-items:center;gap:.4rem;padding:.4rem .8rem;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text2);text-decoration:none;font-size:.875rem}
+    .back-btn:hover{border-color:var(--primary);color:var(--primary)}
+    main{max-width:800px;margin:0 auto;padding:2rem 1rem}
+    .article-header{padding:2rem 0;border-bottom:1px solid var(--border);margin-bottom:2rem}
+    .article-header .category{display:inline-block;background:linear-gradient(135deg,var(--primary),#7c3aed);color:#fff;padding:.25rem .75rem;border-radius:9999px;font-size:.75rem;font-weight:600;margin-bottom:1rem}
+    .article-header h1{font-size:2rem;font-weight:800;line-height:1.2;margin-bottom:1rem}
+    .article-header .meta{display:flex;align-items:center;gap:1rem;color:var(--text2);font-size:.875rem}
+    .article-content{font-size:1.125rem;line-height:1.8}
+    .article-content h2{font-size:1.5rem;font-weight:700;margin-top:2.5rem;margin-bottom:1rem;color:var(--text)}
+    .article-content h3{font-size:1.25rem;font-weight:600;margin-top:2rem;margin-bottom:.75rem;color:var(--text2)}
+    .article-content p{margin-bottom:1.5rem}
+    .article-content ul,.article-content ol{margin-left:2rem;margin-bottom:1.5rem}
+    .article-content li{margin-bottom:.5rem}
+    .article-content strong{color:var(--text)}
+    .article-content a{color:var(--primary);text-decoration:none}
+    .article-content a:hover{text-decoration:underline}
+    .tip-box{background:linear-gradient(135deg,#dbeafe,#ede9fe);border-left:4px solid var(--primary);padding:1.5rem;border-radius:var(--radius);margin:2rem 0}
+    .tip-box h4{font-size:1rem;font-weight:700;margin-bottom:.5rem;color:var(--primary)}
+    .cta-box{background:var(--surface);border:2px solid var(--primary);border-radius:var(--radius-lg);padding:2rem;text-align:center;margin:3rem 0}
+    .cta-box h3{font-size:1.25rem;font-weight:700;margin-bottom:1rem}
+    .cta-box p{color:var(--text2);margin-bottom:1.5rem}
+    .article-content a.cta-btn,.article-content a.cta-btn:hover{color:#fff;text-decoration:none}
+    .cta-btn{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--primary),#7c3aed);color:#fff;padding:.875rem 2rem;border-radius:var(--radius);font-weight:600;text-decoration:none;transition:transform .2s}
+    .cta-btn:hover{transform:translateY(-2px)}
+    .site-footer{background:var(--footer-bg);color:var(--footer-text);border-top:1px solid var(--footer-border);margin-top:3rem}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:3rem 1.5rem;display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:start}
+    .footer-brand{max-width:280px}
+    .footer-logo{display:flex;align-items:center;gap:.75rem;font-weight:800;font-size:1.25rem;color:var(--footer-heading);text-decoration:none;margin-bottom:1rem}
+    .footer-logo svg{width:32px;height:32px}
+    .footer-tagline{font-size:.875rem;line-height:1.6;color:var(--footer-muted)}
+    .footer-links{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+    .footer-col h4{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--footer-heading);margin-bottom:1rem}
+    .footer-col ul{list-style:none}
+    .footer-col li{margin-bottom:.75rem}
+    .footer-col a{color:var(--footer-text);text-decoration:none;font-size:.875rem;transition:color .2s}
+    .footer-col a:hover{color:#3b82f6}
+    .footer-bottom{border-top:1px solid var(--footer-border);text-align:center;padding:1.5rem;font-size:.875rem;color:var(--footer-muted)}
+    @media(max-width:768px){.footer-inner{grid-template-columns:1fr;gap:2rem}.footer-links{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.footer-links{grid-template-columns:1fr}}
+  .theme-toggle{display:inline-flex;align-items:center;justify-content:center;padding:.4rem;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text2);cursor:pointer;line-height:0}.theme-toggle svg{width:18px;height:18px}</style>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9121502081229374" crossorigin="anonymous"></script>
+  <style>
+    .ad-placeholder { width:100%; max-width:100%; overflow:hidden; text-align:center; background:transparent; }
+    .ad-top { margin: 0.75rem 0 1.25rem; }
+    .ad-bottom { margin: 1.25rem 0 0.75rem; }
+  </style>
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "عناصر نموذج الفاتورة الأساسية ولماذا هي موجودة",
+ "description": "العناصر الأساسية التي يحتاجها أي نموذج فاتورة، من الترويسة إلى شروط الدفع.",
+ "inLanguage": "ar",
+ "author": {
+  "@type": "Organization",
+  "name": "QueckBiz"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "QueckBiz",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://queckbiz.com/favicon-512.png"
+  }
+ },
+ "datePublished": "2026-07-24",
+ "dateModified": "2026-10-09",
+ "mainEntityOfPage": "https://queckbiz.com/ar/blog/invoice-template-elements"
+}
+</script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What are the mandatory elements of an invoice?","acceptedAnswer":{"@type":"Answer","text":"Mandatory invoice elements vary by jurisdiction but generally include: your business name and address, the client's name and address, a unique invoice number, the invoice date, a description of goods or services provided, quantities and unit prices, subtotal, applicable taxes with the rate specified, the grand total due, and payment terms including the due date."}},
+      {"@type":"Question","name":"Should I use a logo on my invoice?","acceptedAnswer":{"@type":"Answer","text":"Yes, including your business logo significantly increases the professional appearance of your invoice and reinforces your brand. Clients who receive branded invoices tend to perceive the business as more established and professional, which can positively influence how quickly they prioritize payment. Even a simple text-based logo or wordmark is better than no branding at all."}},
+      {"@type":"Question","name":"How many line items should an invoice have?","acceptedAnswer":{"@type":"Answer","text":"An invoice can have as many line items as needed to accurately describe what you are billing for. Avoid combining multiple services into a single vague line item — breaking work into specific components demonstrates transparency and makes it easier for the client's accounts payable team to approve and process payment. Each line item should be self-explanatory without requiring the client to ask for clarification."}}
+    ]
+  }
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GT-55X3TZ2M');</script>
+  <!-- End Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BS0FSQVQ9V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BS0FSQVQ9V');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/design.css?v=1">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-55X3TZ2M"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="h-inner">
+      <a href="/ar/" class="logo">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="20" fill="#2563eb"/><text x="50" y="68" font-size="55" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">Q</text></svg>
+        QueckBiz
+      </a>
+      <div class="h-actions">
+        <details class="lang-select-wrap"><summary class="lang-switch" title="Choose language">AR</summary><div class="lang-menu"><a href="/ar/blog/invoice-template-elements" class="active">العربية</a><a href="/fr/blog/invoice-template-elements">Français</a><a href="/blog/invoice-template-elements">English</a></div></details>
+        <button id="themeToggle" class="theme-toggle" aria-label="تبديل المظهر" title="تبديل المظهر">
+          <svg id="moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg id="sun" style="display:none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </button>
+        <a href="/ar/blog/" class="back-btn">← المدونة</a>
+        <a href="/ar/" class="back-btn">الرئيسية</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="ad-placeholder ad-top">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9121502081229374" data-ad-slot="6802457913" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    <article>
+      <div class="article-header">
+        <span class="category">الفوترة</span>
+        <h1>عناصر نموذج الفاتورة الأساسية ولماذا هي موجودة</h1>
+        <div class="meta"><span>فريق QueckBiz</span><span>·</span><span>24 يوليو 2026</span><span>·</span><span>6 دقائق قراءة</span></div>
+      </div>
+      <img src="/blog-images/invoice-template-elements.svg" alt="عناصر نموذج الفاتورة الأساسية" width="1200" height="630" loading="lazy" style="width:100%;height:auto;border-radius:14px;margin:0 0 1.5rem;display:block" />
+      <div class="article-content">
+        <p>افتح أي قالب فاتورة احترافي وستجد نفس الخانات تقريبا. هذا ليس صدفة — كل عنصر موجود لسبب محاسبي أو قانوني أو عملي محدد. فهم "لماذا" وراء كل خانة يجعلك تملأها بشكل صحيح وتعرف ما يمكن حذفه وما لا يجوز. في هذا المقال نشرّح قالب الفاتورة عنصرا عنصرا.</p>
+
+        <h2>منطقة الرأس: الهوية</h2>
+        <ul>
+          <li><strong>كلمة "فاتورة":</strong> التصنيف القانوني للوثيقة. بدونها قد تُعامل كعرض سعر أو كشف — بما يترتب على ذلك ضريبيا.</li>
+          <li><strong>الشعار واسم النشاط:</strong> هويتك البصرية. الفاتورة وثيقة تسويقية صامتة أيضا — شكلها المتقن يرسخ صورتك.</li>
+          <li><strong>بيانات الاتصال والرقم الضريبي:</strong> عنوانك وبريدك وهاتفك، والرقم الضريبي (ICE بالمغرب، TRN بالإمارات، الرقم الضريبي بالسعودية) إن كنت مسجلا — إلزامي في الفواتير الخاضعة للضريبة.</li>
+        </ul>
+
+        <h2>منطقة المراجع: التتبع</h2>
+        <ul>
+          <li><strong>رقم الفاتورة:</strong> فريد وتسلسلي (INV-001، INV-002...). هو مفتاح المطابقة في محاسبتك ومحاسبة العميل، والقفزات أو التكرارات فيه تثير أسئلة في أي مراجعة.</li>
+          <li><strong>تاريخ الإصدار:</strong> يحدد الفترة المحاسبية والضريبية التي تنتمي إليها الفاتورة.</li>
+          <li><strong>تاريخ الاستحقاق:</strong> أهم سطر لتحصيلك — التاريخ الصريح ("30 يوليو 2026") أقوى من الصيغة النسبية وحدها.</li>
+          <li><strong>مرجع العميل عند وجوده:</strong> رقم أمر الشراء أو رقم العقد — الشركات الكبيرة قد ترفض معالجة فاتورة بدون رقم أمر الشراء الخاص بها.</li>
+        </ul>
+
+        <h2>منطقة الأطراف: من ولمن</h2>
+        <p><strong>"من" (بياناتك)</strong> و<strong>"إلى" (بيانات العميل)</strong>. وجّه الفاتورة للكيان القانوني الصحيح: إن كان عميلك شركة، فاسم الشركة وعنوانها المسجل — لا اسم الموظف الذي تراسله. الفاتورة الموجهة لغير مالك الالتزام تفقد قوتها عند النزاع.</p>
+
+        <h2>منطقة البنود: التفصيل</h2>
+        <p>جدول من أربعة أعمدة: <strong>الوصف، الكمية، سعر الوحدة، المجموع</strong>. القاعدة: وصف محدد يقطع الجدال ("تصميم 5 منشورات سوشيال ميديا بمقاس 1080×1080" لا "أعمال تصميم"). البند الغامض هو الباب الذي يدخل منه كل نقاش لاحق حول ما تم تسليمه.</p>
+
+        <h2>منطقة المجاميع: الحساب</h2>
+        <p>بترتيب ثابت: <strong>المجموع الفرعي</strong> ← <strong>الخصم</strong> إن وُجد (سطر مستقل ليرى العميل قيمته) ← <strong>الضريبة</strong> بنسبتها ومبلغها ← <strong>الإجمالي النهائي</strong> بخط بارز. إظهار الضريبة كسطر مستقل إلزامي في الفواتير الضريبية، وهو ما يمكّن العميل الخاضع للضريبة من خصمها.</p>
+
+        <h2>منطقة الذيل: الشروط</h2>
+        <ul>
+          <li><strong>شروط الدفع:</strong> الأجل وطريقة الدفع وتفاصيل الحساب البنكي.</li>
+          <li><strong>غرامة التأخير</strong> إن كنت تطبقها.</li>
+          <li><strong>ملاحظات:</strong> رسالة شكر، سياسة الإرجاع، أو أي شرط خاص بالصفقة.</li>
+        </ul>
+
+<div class="tip-box">
+<strong>اختبار الاكتمال:</strong> اقرأ فاتورتك بعين شخص لا يعرف شيئا عن الصفقة. هل يستطيع أن يعرف: من أصدرها؟ لمن؟ مقابل ماذا بالضبط؟ كم المبلغ؟ ومتى وكيف يُدفع؟ إن أجابت الفاتورة عن الأسئلة الخمسة فهي كاملة.</p>
+</div>
+
+        
+        <!-- data-qb-enh -->
+        <h2>كيف تصمم نموذجك الخاص؟</h2>
+        <p>بعد معرفة المناطق الست، اجعل نموذجك بسيطا ومتسقا. بعض الإرشادات التصميمية التي تفرق بين فاتورة تُقرأ وأخرى تُهمل:</p>
+        <ul>
+        <li><strong>اجعل الإجمالي أبرز رقم في الصفحة:</strong> بخط أكبر أو بلون مميز في الأسفل الأيمن (أو الأيسر في العربية).</li>
+        <li><strong>اختر خطا مقروءا</strong> بحجم لا يقل عن 10–11 نقطة، وتجنب الخطوط الزخرفية للبنود.</li>
+        <li><strong>اترك مساحة بيضاء:</strong> الازدحام يوحي بالفوضى ويزيد الأخطاء.</li>
+        <li><strong>استخدم لونين على الأكثر:</strong> لون العلامة ولون محايد للنص.</li>
+        <li><strong>اضبط اتجاه الكتابة:</strong> للفواتير العربية اجعل الاتجاه من اليمين إلى اليسار، وللثنائية اللغة افصل بوضوح بين اللغتين.</li>
+        </ul>
+        
+        <h2>أمثلة على الصياغة الجيدة لكل منطقة</h2>
+        <ul>
+        <li><strong>الرأس:</strong> اسم النشاط، رقم السجل أو الرقم الضريبي، العنوان، وسيلة التواصل.</li>
+        <li><strong>المراجع:</strong> "فاتورة رقم INV-2026-014 — تاريخ الإصدار: 5 أكتوبر 2026 — الاستحقاق: 4 نوفمبر 2026".</li>
+        <li><strong>البنود:</strong> بدل "خدمات تصميم" اكتب "تصميم شعار وهوية بصرية (3 مقترحات، جولتا تعديل)".</li>
+        <li><strong>المجاميع:</strong> مجموع فرعي، خصم (إن وجد)، ضريبة بنسبتها، إجمالي مستحق.</li>
+        <li><strong>الذيل:</strong> "الدفع خلال 30 يوما. التحويل على IBAN ... مع ذكر رقم الفاتورة. غرامة تأخير 1.5% شهريا."</li>
+        </ul>
+        
+        <div class="tip-box">
+        <strong>نصيحة:</strong> أضف في الذيل عبارة شكر قصيرة وسطر تواصل للاستفسارات. التفصيل الإنساني الصغير يحسن سرعة الدفع أكثر مما تتوقع.
+        </div>
+        
+        <h2>اختلافات حسب القطاع</h2>
+        <ul>
+        <li><strong>الخدمات:</strong> أبرز الساعات أو المراحل وسعر الساعة أو سعر المرحلة.</li>
+        <li><strong>التجارة:</strong> أضف رمز المنتج (SKU) والكمية وسعر الوحدة وتكاليف الشحن.</li>
+        <li><strong>الاشتراكات الشهرية:</strong> اذكر الفترة المغطاة بوضوح ("من 1 إلى 31 أكتوبر").</li>
+        <li><strong>التجارة الدولية:</strong> أضف العملة وشروط التسليم وبيانات الجمارك، وقد تحتاج <a href="/ar/blog/proforma-invoice-guide">فاتورة أولية</a> قبل الشحن.</li>
+        </ul>
+        
+        <h2>أخطاء النموذج الشائعة</h2>
+        <ul>
+        <li>إغفال تاريخ الاستحقاق أو إخفاؤه في سطر صغير.</li>
+        <li>عدم وضع رقم تسلسلي، أو تكرار أرقام بين فاتورتين.</li>
+        <li>خلط الضريبة بالسعر دون إيضاح هل السعر شامل الضريبة أم لا (انظر <a href="/ar/blog/understanding-sales-tax">فهم ضريبة القيمة المضافة</a>).</li>
+        <li>غياب بيانات الدفع، فيضطر العميل إلى سؤالك.</li>
+        <li>تعديل فاتورة صدرت بدل إصدار <a href="/ar/blog/credit-note-explained">إشعار دائن</a>.</li>
+        </ul>
+        
+        <h2>خطوات تالية</h2>
+        <p>تعلّم كيف تنشئ الفاتورة كاملة في <a href="/ar/blog/how-to-create-professional-invoice">كيف تنشئ فاتورة احترافية</a>، واختر الأجل المناسب بقراءة <a href="/ar/blog/payment-terms-net-30-explained">شروط الدفع وNet 30</a>. وإن أردت نموذجا جاهزا بكل هذه العناصر فاستخدم <a href="/ar/invoice">منشئ الفواتير المجاني</a> الذي يرتب لك المناطق الست تلقائيا.</p>
+
+        <!-- data-qb-enh2 -->
+        <h2>اختبار سريع لفاتورتك في 30 ثانية</h2>
+        <p>أعطِ فاتورتك لشخص لا يعرف مشروعك واطلب منه الإجابة عن هذه الأسئلة دون سؤالك:</p>
+        <ul>
+        <li>من الذي أصدر الفاتورة؟</li>
+        <li>من الذي يجب أن يدفع؟</li>
+        <li>كم المبلغ المطلوب بالضبط؟</li>
+        <li>لقاء ماذا؟</li>
+        <li>حتى متى؟</li>
+        <li>وكيف يدفع؟</li>
+        </ul>
+        <p>إن تعثر في أي سؤال فإن في فاتورتك منطقة تحتاج وضوحا. هذا الاختبار البسيط يكشف أخطاء التصميم أكثر مما يكشفها أي دليل.</p>
+        <h2>عناصر اختيارية ترفع الاحترافية</h2>
+        <ul>
+        <li><strong>رقم أمر الشراء أو العقد:</strong> يسرّع اعتماد الدفع لدى الشركات.</li>
+        <li><strong>ملاحظات الشكر أو الشروط الخاصة:</strong> تعطي انطباعا إنسانيا.</li>
+        <li><strong>رمز استجابة سريعة (QR) لبيانات الدفع:</strong> يختصر على العميل نسخ الأرقام.</li>
+        <li><strong>رابط لصفحة الدفع الإلكتروني</strong> إن توفر.</li>
+        <li><strong>فاصل للدفعات السابقة والمتبقي:</strong> مفيد في الفواتير المرحلية.</li>
+        <li><strong>شعار وألوان علامتك:</strong> تعزز التذكر وتجعل الفاتورة تمثلك.</li>
+        </ul>
+        <h3>إمكانية الوصول والقراءة</h3>
+        <p>تأكد أن التباين بين النص والخلفية كاف، وأن الفاتورة تُقرأ بوضوح عند طباعتها بالأبيض والأسود، وأن حجم الملف صغير (أقل من 1 ميغابايت) كي يصل بالبريد دون مشاكل. وأخيرا افتح ملف PDF على هاتفك قبل الإرسال: كثيرا ما يقرأ العملاء فواتيرك من الجوال.</p>
+        <h2>أسئلة شائعة</h2>
+        <h3>What are the mandatory elements of an invoice?</h3>
+        <p>Mandatory invoice elements vary by jurisdiction but generally include: your business name and address, the client&#x27;s name and address, a unique invoice number, the invoice date, a description of goods or services provided, quantities and unit prices, subtotal, applicable taxes with the rate specified, the grand total due, and payment terms including the due date.</p>
+        <h3>Should I use a logo on my invoice?</h3>
+        <p>Yes, including your business logo significantly increases the professional appearance of your invoice and reinforces your brand. Clients who receive branded invoices tend to perceive the business as more established and professional, which can positively influence how quickly they prioritize payment. Even a simple text-based logo or wordmark is better than no branding at all.</p>
+        <h3>How many line items should an invoice have?</h3>
+        <p>An invoice can have as many line items as needed to accurately describe what you are billing for. Avoid combining multiple services into a single vague line item — breaking work into specific components demonstrates transparency and makes it easier for the client&#x27;s accounts payable team to approve and process payment. Each line item should be self-explanatory without requiring the client to ask for clarification.</p>
+
+        <h2>اقرأ أيضا</h2>
+        <ul><li><a href="/ar/blog/how-to-create-professional-invoice">كيف تنشئ فاتورة احترافية</a></li><li><a href="/ar/blog/payment-terms-net-30-explained">شروط الدفع في الفواتير: معنى Net 30 وكيف تختار الأجل المناسب لنشاطك</a></li><li><a href="/ar/blog/invoice-vs-bill-vs-statement">الفاتورة وكشف الحساب والمطالبة: ثلاث وثائق يخلط بينها الجميع</a></li></ul>
+
+        <div class="cta-box">
+          <h3>قالب جاهز بكل هذه العناصر</h3>
+          <p>منشئ فواتير QueckBiz يرتب كل العناصر أعلاه تلقائيا — املأ الخانات وحمّل PDF.</p>
+          <a href="/ar/invoice" class="cta-btn">جرّب منشئ الفواتير ←</a>
+        </div>
+      </div>
+    </article>
+    <div class="ad-placeholder ad-bottom">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9121502081229374" data-ad-slot="6802457913" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/ar/" class="footer-logo">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="20" fill="#3b82f6"/><text x="50" y="68" font-size="55" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">Q</text></svg>
+          <span>QueckBiz</span>
+        </a>
+        <p class="footer-tagline">أدوات مجانية عبر الإنترنت لإنشاء الفواتير والإيصالات وعروض الأسعار والمزيد.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>الأدوات</h4>
+          <ul>
+            <li><a href="/ar/invoice">الفاتورة</a></li>
+            <li><a href="/ar/receipt">الإيصال</a></li>
+            <li><a href="/ar/estimate">عرض السعر</a></li>
+            <li><a href="/ar/proforma">الفاتورة الأولية</a></li>
+            <li><a href="/ar/creditnote">الإشعار الدائن</a></li>
+            <li><a href="/ar/purchaseorder">أمر الشراء</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>الشركة</h4>
+          <ul>
+            <li><a href="/ar/about">من نحن</a></li>
+            <li><a href="/ar/contact">اتصل بنا</a></li>
+            <li><a href="/ar/blog/">المدونة</a></li>
+            <li><a href="/ar/privacy">الخصوصية</a></li>
+            <li><a href="/ar/terms">الشروط</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>قانوني</h4>
+          <ul>
+            <li><a href="/ar/cookies">ملفات تعريف الارتباط</a></li>
+            <li><a href="/ar/adsettings">إعدادات الإعلانات</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 QueckBiz. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+  <!-- Cookie Consent + Consent Mode v2 -->
+  <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:1000;font-size:.875rem;box-shadow:0 -4px 6px rgba(0,0,0,0.1);">
+    <p style="margin:0;flex:1;min-width:200px;">نستخدم ملفات تعريف الارتباط وGoogle AdSense لتحسين تجربتك ودعم أدواتنا المجانية. <a href="/ar/cookies" style="color:#60a5fa;text-decoration:underline;">اعرف المزيد</a></p>
+    <div style="display:flex;gap:.75rem;flex-shrink:0;">
+      <button onclick="declineCookies()" style="padding:.5rem 1rem;border-radius:8px;border:1px solid #475569;background:transparent;color:#94a3b8;cursor:pointer;font-size:.875rem;">رفض</button>
+      <button onclick="acceptCookies()" style="padding:.5rem 1.25rem;border-radius:8px;border:none;background:#2563eb;color:#fff;cursor:pointer;font-size:.875rem;font-weight:600;">موافقة</button>
+    </div>
+  </div>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied',
+      analytics_storage:'denied',
+      ad_user_data:'denied',
+      ad_personalization:'denied',
+      wait_for_update:500
+    });
+    function acceptCookies(){
+      document.getElementById('cookieBanner').style.display='none';
+      localStorage.setItem('cookiesAccepted','true');
+      gtag('consent','update',{
+        ad_storage:'granted',
+        analytics_storage:'granted',
+        ad_user_data:'granted',
+        ad_personalization:'granted'
+      });
+    }
+    function declineCookies(){
+      document.getElementById('cookieBanner').style.display='none';
+      localStorage.setItem('cookiesAccepted','false');
+    }
+    (function(){
+      var v=localStorage.getItem('cookiesAccepted');
+      if(v!==null){
+        document.getElementById('cookieBanner').style.display='none';
+        if(v==='true'){
+          gtag('consent','update',{
+            ad_storage:'granted',analytics_storage:'granted',
+            ad_user_data:'granted',ad_personalization:'granted'
+          });
+        }
+      }
+    })();
+  </script>
+  <script>/*theme-toggle*/(function(){var b=document.getElementById('themeToggle');if(!b)return;var moon=document.getElementById('moon'),sun=document.getElementById('sun');function sync(){var d=document.documentElement.getAttribute('data-theme')==='dark';if(moon)moon.style.display=d?'none':'block';if(sun)sun.style.display=d?'block':'none';}sync();b.addEventListener('click',function(){var d=document.documentElement.getAttribute('data-theme')==='dark';if(d){document.documentElement.removeAttribute('data-theme');localStorage.setItem('theme','light');}else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme','dark');}sync();});})();</script>
+</body>
+</html>
