@@ -203,3 +203,7 @@ html[dir="rtl"] .lang-select {
   .btn:hover, .tool-card:hover, .tool-grid a:hover { transform: none; }
 }
 ::selection { background: color-mix(in srgb, var(--primary) 22%, transparent); }
+
+/* related links + author box readability */
+.qb-related a{color:#2563eb}
+[data-theme="dark"] .qb-related a{color:#60a5fa}
