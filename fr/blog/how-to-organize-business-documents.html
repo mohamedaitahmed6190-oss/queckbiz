@@ -73,7 +73,11 @@
     .footer-bottom{border-top:1px solid var(--footer-border);text-align:center;padding:1.5rem;font-size:.875rem;color:var(--footer-muted)}
     @media(max-width:768px){.footer-inner{grid-template-columns:1fr;gap:2rem}.footer-links{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:480px){.footer-links{grid-template-columns:1fr}}
-  .theme-toggle{display:inline-flex;align-items:center;justify-content:center;padding:.4rem;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text2);cursor:pointer;line-height:0}.theme-toggle svg{width:18px;height:18px}</style>
+  .theme-toggle{display:inline-flex;align-items:center;justify-content:center;padding:.4rem;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text2);cursor:pointer;line-height:0}.theme-toggle svg{width:18px;height:18px}
+    /* Hide empty/unfilled ad slots so no blank space shows */
+    .ad-placeholder:has(ins.adsbygoogle[data-ad-status="unfilled"]),ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!important}
+    .ad-placeholder{min-height:0}
+  </style>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9121502081229374" crossorigin="anonymous"></script>
   <style>

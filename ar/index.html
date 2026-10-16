@@ -508,6 +508,10 @@
     .ad-top { margin: 0.75rem 0 1.25rem; }
     .ad-bottom { margin: 1.25rem 0 0.75rem; }
 
+  
+    /* Hide empty/unfilled ad slots so no blank space shows */
+    .ad-placeholder:has(ins.adsbygoogle[data-ad-status="unfilled"]),ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!important}
+    .ad-placeholder{min-height:0}
   </style>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
