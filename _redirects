@@ -1,0 +1,144 @@
+# ===== Language index pages (.html -> clean folder root) =====
+/index.html / 301
+/blog/index.html /blog/ 301
+/fr/index.html /fr/ 301
+/fr/blog/index.html /fr/blog/ 301
+/ar/index.html /ar/ 301
+/ar/blog/index.html /ar/blog/ 301
+
+# ===== Blog listing pages (pretty URLs) =====
+/blog/ /blog/index.html 200
+/blog /blog/index.html 301
+/ar/blog/ /ar/blog/index.html 200
+/ar/blog /ar/blog/index.html 301
+/fr/blog/ /fr/blog/index.html 200
+/fr/blog /fr/blog/index.html 301
+
+# ===== Root pages (EN): .html -> clean URL =====
+/about.html /about 301
+/adsettings.html /adsettings 301
+/contact.html /contact 301
+/cookies.html /cookies 301
+/creditnote.html /creditnote 301
+/estimate.html /estimate 301
+/invoice.html /invoice 301
+/privacy.html /privacy 301
+/proforma.html /proforma 301
+/purchaseorder.html /purchaseorder 301
+/receipt.html /receipt 301
+/terms.html /terms 301
+
+# ===== Root blog posts (EN): .html -> clean URL =====
+/blog/business-registration-guide.html /blog/business-registration-guide 301
+/blog/cash-flow-management-tips.html /blog/cash-flow-management-tips 301
+/blog/client-contract-essentials.html /blog/client-contract-essentials 301
+/blog/credit-note-explained.html /blog/credit-note-explained 301
+/blog/digital-tools-small-business.html /blog/digital-tools-small-business 301
+/blog/estimate-vs-quote-vs-proposal.html /blog/estimate-vs-quote-vs-proposal 301
+/blog/freelancer-tax-guide.html /blog/freelancer-tax-guide 301
+/blog/freelancer-vs-employee-taxes.html /blog/freelancer-vs-employee-taxes 301
+/blog/how-to-create-professional-invoice.html /blog/how-to-create-professional-invoice 301
+/blog/how-to-organize-business-documents.html /blog/how-to-organize-business-documents 301
+/blog/how-to-price-freelance-services.html /blog/how-to-price-freelance-services 301
+/blog/how-to-send-payment-reminders.html /blog/how-to-send-payment-reminders 301
+/blog/how-to-start-freelancing.html /blog/how-to-start-freelancing 301
+/blog/how-to-track-expenses.html /blog/how-to-track-expenses 301
+/blog/how-to-write-receipt.html /blog/how-to-write-receipt 301
+/blog/invoice-template-elements.html /blog/invoice-template-elements 301
+/blog/invoice-vs-bill-vs-statement.html /blog/invoice-vs-bill-vs-statement 301
+/blog/late-payment-fees-guide.html /blog/late-payment-fees-guide 301
+/blog/payment-terms-net-30-explained.html /blog/payment-terms-net-30-explained 301
+/blog/proforma-invoice-guide.html /blog/proforma-invoice-guide 301
+/blog/purchase-order-guide.html /blog/purchase-order-guide 301
+/blog/receipt-vs-invoice-difference.html /blog/receipt-vs-invoice-difference 301
+/blog/retainer-agreements-explained.html /blog/retainer-agreements-explained 301
+/blog/small-business-bookkeeping-basics.html /blog/small-business-bookkeeping-basics 301
+/blog/understanding-sales-tax.html /blog/understanding-sales-tax 301
+/blog/why-business-needs-website.html /blog/why-business-needs-website 301
+
+# ===== French pages: .html -> clean URL =====
+/fr/about.html /fr/about 301
+/fr/adsettings.html /fr/adsettings 301
+/fr/contact.html /fr/contact 301
+/fr/cookies.html /fr/cookies 301
+/fr/creditnote.html /fr/creditnote 301
+/fr/estimate.html /fr/estimate 301
+/fr/invoice.html /fr/invoice 301
+/fr/privacy.html /fr/privacy 301
+/fr/proforma.html /fr/proforma 301
+/fr/purchaseorder.html /fr/purchaseorder 301
+/fr/receipt.html /fr/receipt 301
+/fr/terms.html /fr/terms 301
+
+# ===== French blog posts: .html -> clean URL =====
+/fr/blog/business-registration-guide.html /fr/blog/business-registration-guide 301
+/fr/blog/cash-flow-management-tips.html /fr/blog/cash-flow-management-tips 301
+/fr/blog/client-contract-essentials.html /fr/blog/client-contract-essentials 301
+/fr/blog/credit-note-explained.html /fr/blog/credit-note-explained 301
+/fr/blog/digital-tools-small-business.html /fr/blog/digital-tools-small-business 301
+/fr/blog/estimate-vs-quote-vs-proposal.html /fr/blog/estimate-vs-quote-vs-proposal 301
+/fr/blog/freelancer-tax-guide.html /fr/blog/freelancer-tax-guide 301
+/fr/blog/freelancer-vs-employee-taxes.html /fr/blog/freelancer-vs-employee-taxes 301
+/fr/blog/how-to-create-professional-invoice.html /fr/blog/how-to-create-professional-invoice 301
+/fr/blog/how-to-organize-business-documents.html /fr/blog/how-to-organize-business-documents 301
+/fr/blog/how-to-price-freelance-services.html /fr/blog/how-to-price-freelance-services 301
+/fr/blog/how-to-send-payment-reminders.html /fr/blog/how-to-send-payment-reminders 301
+/fr/blog/how-to-start-freelancing.html /fr/blog/how-to-start-freelancing 301
+/fr/blog/how-to-track-expenses.html /fr/blog/how-to-track-expenses 301
+/fr/blog/how-to-write-receipt.html /fr/blog/how-to-write-receipt 301
+/fr/blog/invoice-template-elements.html /fr/blog/invoice-template-elements 301
+/fr/blog/invoice-vs-bill-vs-statement.html /fr/blog/invoice-vs-bill-vs-statement 301
+/fr/blog/late-payment-fees-guide.html /fr/blog/late-payment-fees-guide 301
+/fr/blog/payment-terms-net-30-explained.html /fr/blog/payment-terms-net-30-explained 301
+/fr/blog/proforma-invoice-guide.html /fr/blog/proforma-invoice-guide 301
+/fr/blog/purchase-order-guide.html /fr/blog/purchase-order-guide 301
+/fr/blog/receipt-vs-invoice-difference.html /fr/blog/receipt-vs-invoice-difference 301
+/fr/blog/retainer-agreements-explained.html /fr/blog/retainer-agreements-explained 301
+/fr/blog/small-business-bookkeeping-basics.html /fr/blog/small-business-bookkeeping-basics 301
+/fr/blog/understanding-sales-tax.html /fr/blog/understanding-sales-tax 301
+/fr/blog/why-business-needs-website.html /fr/blog/why-business-needs-website 301
+
+# ===== Arabic pages: .html -> clean URL =====
+/ar/about.html /ar/about 301
+/ar/adsettings.html /ar/adsettings 301
+/ar/contact.html /ar/contact 301
+/ar/cookies.html /ar/cookies 301
+/ar/creditnote.html /ar/creditnote 301
+/ar/estimate.html /ar/estimate 301
+/ar/invoice.html /ar/invoice 301
+/ar/privacy.html /ar/privacy 301
+/ar/proforma.html /ar/proforma 301
+/ar/purchaseorder.html /ar/purchaseorder 301
+/ar/receipt.html /ar/receipt 301
+/ar/terms.html /ar/terms 301
+
+# ===== Arabic blog posts: .html -> clean URL =====
+/ar/blog/business-registration-guide.html /ar/blog/business-registration-guide 301
+/ar/blog/cash-flow-management-tips.html /ar/blog/cash-flow-management-tips 301
+/ar/blog/client-contract-essentials.html /ar/blog/client-contract-essentials 301
+/ar/blog/credit-note-explained.html /ar/blog/credit-note-explained 301
+/ar/blog/digital-tools-small-business.html /ar/blog/digital-tools-small-business 301
+/ar/blog/estimate-vs-quote-vs-proposal.html /ar/blog/estimate-vs-quote-vs-proposal 301
+/ar/blog/freelancer-tax-guide.html /ar/blog/freelancer-tax-guide 301
+/ar/blog/freelancer-vs-employee-taxes.html /ar/blog/freelancer-vs-employee-taxes 301
+/ar/blog/how-to-create-professional-invoice.html /ar/blog/how-to-create-professional-invoice 301
+/ar/blog/how-to-organize-business-documents.html /ar/blog/how-to-organize-business-documents 301
+/ar/blog/how-to-price-freelance-services.html /ar/blog/how-to-price-freelance-services 301
+/ar/blog/how-to-send-payment-reminders.html /ar/blog/how-to-send-payment-reminders 301
+/ar/blog/how-to-start-freelancing.html /ar/blog/how-to-start-freelancing 301
+/ar/blog/how-to-track-expenses.html /ar/blog/how-to-track-expenses 301
+/ar/blog/how-to-write-receipt.html /ar/blog/how-to-write-receipt 301
+/ar/blog/invoice-template-elements.html /ar/blog/invoice-template-elements 301
+/ar/blog/invoice-vs-bill-vs-statement.html /ar/blog/invoice-vs-bill-vs-statement 301
+/ar/blog/late-payment-fees-guide.html /ar/blog/late-payment-fees-guide 301
+/ar/blog/payment-terms-net-30-explained.html /ar/blog/payment-terms-net-30-explained 301
+/ar/blog/proforma-invoice-guide.html /ar/blog/proforma-invoice-guide 301
+/ar/blog/purchase-order-guide.html /ar/blog/purchase-order-guide 301
+/ar/blog/receipt-vs-invoice-difference.html /ar/blog/receipt-vs-invoice-difference 301
+/ar/blog/retainer-agreements-explained.html /ar/blog/retainer-agreements-explained 301
+/ar/blog/small-business-bookkeeping-basics.html /ar/blog/small-business-bookkeeping-basics 301
+/ar/blog/understanding-sales-tax.html /ar/blog/understanding-sales-tax 301
+/ar/blog/why-business-needs-website.html /ar/blog/why-business-needs-website 301
+
+# ===== www -> apex (non-www canonical) =====
+https://www.queckbiz.com/* https://queckbiz.com/:splat 301!

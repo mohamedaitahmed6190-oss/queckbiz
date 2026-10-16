@@ -1,0 +1,35 @@
+User-agent: *
+Allow: /
+Allow: /ads.txt
+Sitemap: https://queckbiz.com/sitemap.xml
+
+# Allow search engines and AI assistants to index
+User-agent: Googlebot
+Allow: /
+Allow: /ads.txt
+
+User-agent: Googlebot-ads
+Allow: /
+Allow: /ads.txt
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Block spam bots only
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /

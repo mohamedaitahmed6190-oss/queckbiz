@@ -1,0 +1,5 @@
+# Ads.txt - Authorized Digital Sellers for QueckBiz
+# Place your ad network sellers below if you display ads on this site.
+# Example format: domain.com, publisherID, DIRECT/RESELLER, certificationID
+
+google.com, pub-9121502081229374, DIRECT, f08c47fec0942fa0

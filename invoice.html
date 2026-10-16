@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Invoice Generator — Create Professional Invoices Free | QueckBiz</title>
+  <meta name="description" content="Generate professional invoices instantly. Add your logo, items, taxes & discounts. Download as PDF or print. 100% free, no signup, privacy-first.">
+  <link rel="canonical" href="https://queckbiz.com/invoice">
+  <link rel="alternate" hreflang="en" href="https://queckbiz.com/invoice">
+  <link rel="alternate" hreflang="ar" href="https://queckbiz.com/ar/invoice">
+  <link rel="alternate" hreflang="fr" href="https://queckbiz.com/fr/invoice">
+  <link rel="alternate" hreflang="x-default" href="https://queckbiz.com/invoice">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://queckbiz.com/invoice">
+  <meta property="og:title" content="Invoice Generator — Create Professional Invoices Free | QueckBiz">
+  <meta property="og:description" content="Generate professional invoices instantly. Add your logo, items, taxes & discounts. Download as PDF or print. 100% free, no signup, privacy-first.">
+  <meta property="og:image" content="https://queckbiz.com/og-image.png">
+  <meta property="og:site_name" content="QueckBiz">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BS0FSQVQ9V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BS0FSQVQ9V');
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this invoice generator really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. There is no signup, no watermark, and no limit on how many invoices you can create."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data saved anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The invoice is generated locally in your browser and is not sent to or stored on any server."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add my logo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can upload a logo and it will appear on the generated invoice and the downloaded PDF."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What format can I download the invoice in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can download it as a PDF or print it directly from your browser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between an invoice and a receipt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An invoice requests payment for goods or services before or after delivery, while a receipt confirms that payment has already been received."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What payment terms should I put on an invoice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common terms are “Due on receipt” or “Net 30” (payment within 30 days). Stating clear terms sets expectations and helps reduce late payments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should I number my invoices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use a simple sequential system such as INV-001, INV-002, or include the date. Consistent, unique numbers make invoices easy to track and reconcile at tax time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I charge a late fee if a client pays late?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — as long as you stated the late-fee policy on the invoice or in your agreement beforehand. A small percentage per month is common."
+      }
+    }
+  ]
+}
+  </script>
+  <style>
+    :root{--bg:#f8fafc;--surface:#fff;--text:#0f172a;--text2:#475569;--primary:#2563eb;--primary2:#1d4ed8;--border:#e2e8f0;--shadow:0 1px 3px rgba(0,0,0,0.1);--radius:10px;--radius-lg:14px;      --footer-bg:#f1f5f9;--footer-border:#e2e8f0;--footer-text:#475569;--footer-heading:#0f172a;--footer-muted:#64748b;
+    }
+    [data-theme="dark"]{--bg:#0f172a;--surface:#1e293b;--text:#f1f5f9;--text2:#94a3b8;--primary:#3b82f6;--primary2:#60a5fa;--border:#334155;--shadow:0 1px 3px rgba(0,0,0,0.3);      --footer-bg:#0f172a;--footer-border:#1e293b;--footer-text:#94a3b8;--footer-heading:#f1f5f9;--footer-muted:#64748b;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{will-change:background,color;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;transition:background .2s,color .2s}
+    header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+    .h-inner{max-width:1100px;margin:0 auto;padding:.75rem 1rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem}.h-nav{justify-self:center;display:flex;align-items:center}.h-nav a{color:var(--text2);text-decoration:none;font-weight:600;font-size:.9rem;white-space:nowrap}.h-nav a:hover{color:var(--primary)}
+    .logo{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.25rem;color:var(--primary);text-decoration:none}
+    .logo svg{width:28px;height:28px}
+    .h-actions{display:flex;align-items:center;gap:.5rem;justify-self:end}
+    .theme-btn{width:36px;height:36px;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center}
+    .theme-btn:hover{background:var(--border)}
+    .back-btn{display:flex;align-items:center;gap:.4rem;padding:.4rem .8rem;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text2);text-decoration:none;font-size:.875rem}
+    .back-btn:hover{border-color:var(--primary);color:var(--primary)}
+    main{max-width:1100px;margin:0 auto;padding:1.5rem 1rem}
+    h1{font-size:1.5rem;font-weight:700;margin-bottom:1.5rem}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:1rem;box-shadow:var(--shadow)}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    @media(max-width:640px){.grid-2{grid-template-columns:1fr}}
+    label{display:block;font-size:.875rem;font-weight:600;color:var(--text2);margin-bottom:.25rem}
+    input,textarea,select{width:100%;padding:.6rem .75rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);color:var(--text);font-size:.9375rem;transition:border-color .2s}
+    input:focus,textarea:focus,select:focus{outline:none;border-color:var(--primary)}
+    textarea{resize:vertical;min-height:60px}
+    .row{display:flex;gap:.5rem;align-items:flex-end;margin-bottom:.75rem}
+    .row input{flex:1}
+    .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.6rem 1.2rem;border-radius:var(--radius);border:none;background:var(--primary);color:#fff;font-weight:600;cursor:pointer;transition:background .2s;font-size:.875rem}
+    .btn:hover{background:var(--primary2)}
+    .btn-secondary{background:var(--surface);color:var(--text);border:1px solid var(--border)}
+    .btn-secondary:hover{background:var(--border)}
+    .btn-danger{background:#dc2626}
+    .btn-danger:hover{background:#b91c1c}
+    .actions{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
+    .preview-area{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;margin-top:1.5rem;min-height:400px}
+    .doc-preview{background:#fff;color:#000;padding:2rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);max-width:800px;margin:0 auto}
+    .hidden{display:none}
+    .site-footer{content-visibility:auto;contain-intrinsic-size:0 500px;background:var(--footer-bg);color:var(--footer-text);border-top:1px solid var(--footer-border);margin-top:3rem}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:3rem 1.5rem;display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:start}
+    .footer-brand{max-width:280px}
+    .footer-logo{display:flex;align-items:center;gap:.75rem;font-weight:800;font-size:1.25rem;color:var(--footer-heading);text-decoration:none;margin-bottom:1rem}
+    .footer-logo svg{width:32px;height:32px}
+    .footer-tagline{font-size:.875rem;line-height:1.6;color:var(--footer-muted)}
+    .footer-links{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+    .footer-col h4{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--footer-heading);margin-bottom:1rem}
+    .footer-col ul{list-style:none}
+    .footer-col li{margin-bottom:.75rem}
+    .footer-col a{color:var(--footer-text);text-decoration:none;font-size:.875rem;transition:color .2s}
+    .footer-col a:hover{color:#3b82f6}
+    .footer-bottom{border-top:1px solid var(--footer-border);text-align:center;padding:1.5rem;font-size:.875rem;color:var(--footer-muted)}
+    @media(max-width:768px){.footer-inner{grid-template-columns:1fr;gap:2rem}.footer-links{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.footer-links{grid-template-columns:1fr}}
+  </style>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9121502081229374" crossorigin="anonymous"></script>
+  <style>
+    .ad-placeholder { width:100%; max-width:100%; overflow:hidden; text-align:center; background:transparent; }
+    .ad-top { margin: 0.75rem 0 1.25rem; }
+    .ad-bottom { margin: 1.25rem 0 0.75rem; }
+  </style>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GT-55X3TZ2M');</script>
+  <!-- End Google Tag Manager -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/design.css?v=1">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-55X3TZ2M"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="h-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fetchpriority="high"><rect width="100" height="100" rx="20" fill="#2563eb"/><text x="50" y="68" font-size="55" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">Q</text></svg>
+        QueckBiz
+      </a>
+      <nav class="h-nav"><a href="/blog/">Blog</a></nav>
+      <div class="h-actions">
+        <details class="lang-select-wrap"><summary class="lang-switch" title="Choose language">EN</summary><div class="lang-menu"><a href="/invoice" class="active">English</a><a href="/ar/invoice">العربية</a><a href="/fr/invoice">Français</a></div></details>
+        <a href="/" class="back-btn"><span>← Home</span></a><button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+          <svg id="moon" width="18" height="18" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg id="sun" width="18" height="18" style="display:none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+  <!-- Ad Placeholder Top -->
+  <div class="ad-placeholder ad-top">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9121502081229374"
+         data-ad-slot="2222333344"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+<h1>Invoice Generator</h1>
+    <div class="card">
+      <div class="grid-2">
+        <div><label>Your Business Name</label><input type="text" id="bizName" placeholder="Acme Corp"></div><div style="grid-column:1/-1"><label>Business Logo (optional)</label><div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap"><input type="file" id="logoInput" accept="image/png,image/jpeg,image/webp,image/svg+xml" style="display:none" onchange="handleLogoUpload(event)"><button type="button" class="btn btn-secondary" onclick="document.getElementById('logoInput').click()"><span>📁 Upload Logo</span></button><img id="logoPreviewImg" alt="Logo" style="display:none;max-height:56px;max-width:160px;border-radius:6px;border:1px solid var(--border);object-fit:contain;background:#fff;padding:2px"><button type="button" class="btn btn-danger" id="logoRemoveBtn" style="display:none" onclick="removeLogo()">✕</button></div><small style="color:var(--text2);font-size:.75rem;display:block;margin-top:.35rem">PNG, JPG, SVG or WebP, max 1MB. Saved only in your browser and reused automatically across all QueckBiz tools.</small></div>
+        <div><label>Your Email / Phone</label><input type="text" id="bizContact" placeholder="contact@acme.com"></div>
+        <div><label>Your Address</label><textarea id="bizAddress" placeholder="123 Main St, City, Country"></textarea></div>
+        <div><label>Client Name</label><input type="text" id="clientName" placeholder="John Doe"></div>
+        <div><label>Client Address</label><textarea id="clientAddress" placeholder="Client address..."></textarea></div>
+        <div><label>Invoice #</label><input type="text" id="invNumber" placeholder="INV-001"></div>
+        <div><label>Invoice Date</label><input type="date" id="invDate"></div>
+        <div><label>Due Date</label><input type="date" id="dueDate"></div>
+        <div><label>Currency</label>
+          <select id="currency">
+          </select>
+        </div>
+        <div><label>Tax Rate (%)</label><input type="number" id="taxRate" value="0" min="0" max="100" step="0.01"></div>
+        <div><label>Discount (%)</label><input type="number" id="discountRate" value="0" min="0" max="100" step="0.01"></div>
+        <div><label>Notes / Terms</label><textarea id="notes" placeholder="Payment terms, bank details, thank you message..."></textarea></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:1rem;font-size:1.1rem"><span>Line Items</span></h3>
+      <div id="itemsContainer">
+        <div class="row">
+          <input type="text" placeholder="Description" class="item-desc" style="flex:2">
+          <input type="number" placeholder="Qty" class="item-qty" value="1" min="0" style="width:80px">
+          <input type="number" placeholder="Price" class="item-price" value="0" min="0" step="0.01" style="width:100px">
+          <button class="btn btn-danger" onclick="removeRow(this)">×</button>
+        </div>
+      </div>
+      <button class="btn btn-secondary" onclick="addRow()"><span>+ Add Item</span></button>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="generatePreview()"><span>👁 Preview Invoice</span></button>
+      <button class="btn" onclick="printInvoice()"><span>🖨 Print / PDF</span></button>
+      <button class="btn btn-secondary" onclick="resetForm()"><span>↺ Reset</span></button>
+    </div>
+    <div class="preview-area" id="previewArea">
+      <div style="text-align:center;color:var(--text2);padding:3rem" id="previewPlaceholder">Click "Preview Invoice" to see your invoice</div>
+      <div id="invoicePreview" style="display:none">
+        <div class="doc-preview" id="invoiceContent"></div>
+      </div>
+    </div>
+
+  <script>
+    // Theme
+    const themeToggle = document.getElementById('themeToggle');
+    const moon = document.getElementById('moon');
+    const sun = document.getElementById('sun');
+    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (savedTheme === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); moon.style.display='none'; sun.style.display='block'; }
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (isDark) { document.documentElement.removeAttribute('data-theme'); moon.style.display='block'; sun.style.display='none'; localStorage.setItem('theme','light'); }
+      else { document.documentElement.setAttribute('data-theme','dark'); moon.style.display='none'; sun.style.display='block'; localStorage.setItem('theme','dark'); }
+    });
+
+    function addRow() {
+      const c = document.getElementById('itemsContainer');
+      const row = document.createElement('div');
+      row.className = 'row';
+      row.innerHTML = '<input type="text" placeholder="Description" class="item-desc" style="flex:2"><input type="number" placeholder="Qty" class="item-qty" value="1" min="0" style="width:80px"><input type="number" placeholder="Price" class="item-price" value="0" min="0" step="0.01" style="width:100px"><button class="btn btn-danger" onclick="removeRow(this)">×</button>';
+      c.appendChild(row);
+    }
+    function removeRow(btn) { btn.parentElement.remove(); }
+    function formatMoney(amount, currency) {
+      if (['€','£','¥'].includes(currency)) return currency + amount.toFixed(2);
+      return currency + amount.toFixed(2);
+    }
+  </script>
+
+  <script>
+    document.getElementById('invDate').valueAsDate = new Date();
+    var d = new Date(); d.setDate(d.getDate()+14);
+    document.getElementById('dueDate').valueAsDate = d;
+
+    var LOGO_KEY = 'qb_logo_data';
+    var currentLogo = localStorage.getItem(LOGO_KEY) || '';
+    function refreshLogoUI() {
+      var img = document.getElementById('logoPreviewImg');
+      var rm = document.getElementById('logoRemoveBtn');
+      if (!img) return;
+      if (currentLogo) { img.src = currentLogo; img.style.display = 'inline-block'; rm.style.display = 'inline-flex'; }
+      else { img.style.display = 'none'; rm.style.display = 'none'; }
+    }
+    function handleLogoUpload(e) {
+      var file = e.target.files[0];
+      if (!file) return;
+      if (file.size > 1024*1024) { alert('Logo must be smaller than 1MB.'); e.target.value=''; return; }
+      var reader = new FileReader();
+      reader.onload = function(ev) { currentLogo = ev.target.result; localStorage.setItem(LOGO_KEY, currentLogo); refreshLogoUI(); };
+      reader.readAsDataURL(file);
+    }
+    function removeLogo() { currentLogo=''; localStorage.removeItem(LOGO_KEY); document.getElementById('logoInput').value=''; refreshLogoUI(); }
+    refreshLogoUI();
+
+    function generatePreview() {
+      var bizName = document.getElementById('bizName').value || 'Your Business';
+      var bizContact = document.getElementById('bizContact').value || '';
+      var bizAddress = document.getElementById('bizAddress').value.replace(/\n/g,'<br>') || '';
+      var clientName = document.getElementById('clientName').value || 'Client Name';
+      var clientAddress = document.getElementById('clientAddress').value.replace(/\n/g,'<br>') || '';
+      var invNumber = document.getElementById('invNumber').value || 'INV-001';
+      var invDate = document.getElementById('invDate').value || new Date().toISOString().split('T')[0];
+      var dueDate = document.getElementById('dueDate').value || '';
+      var currency = document.getElementById('currency').value;
+      var taxRate = parseFloat(document.getElementById('taxRate').value) || 0;
+      var discountRate = parseFloat(document.getElementById('discountRate').value) || 0;
+      var notes = document.getElementById('notes').value.replace(/\n/g,'<br>') || '';
+
+      var itemsHtml = '';
+      var subtotal = 0;
+      var rows = document.querySelectorAll('#itemsContainer .row');
+      for (var i = 0; i < rows.length; i++) {
+        var row = rows[i];
+        var desc = row.querySelector('.item-desc').value || 'Item';
+        var qty = parseFloat(row.querySelector('.item-qty').value) || 0;
+        var price = parseFloat(row.querySelector('.item-price').value) || 0;
+        var total = qty * price;
+        subtotal += total;
+        itemsHtml += '<tr><td>' + desc + '</td><td>' + qty + '</td><td>' + formatMoney(price,currency) + '</td><td>' + formatMoney(total,currency) + '</td></tr>';
+      }
+
+      var discountAmt = subtotal * (discountRate/100);
+      var afterDiscount = subtotal - discountAmt;
+      var taxAmt = afterDiscount * (taxRate/100);
+      var grandTotal = afterDiscount + taxAmt;
+
+      var html = '<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:2rem">' +
+        '<div style="font-size:2rem;font-weight:700;color:#2563eb">INVOICE</div>' + (currentLogo ? '<div style="flex:1;display:flex;justify-content:center"><img src="' + currentLogo + '" alt="Logo" style="max-height:70px;max-width:180px;object-fit:contain"></div>' : '') + '' +
+        '<div style="text-align:right;font-size:.875rem;color:#475569">' +
+        '<div><strong>Invoice #:</strong> ' + invNumber + '</div>' +
+        '<div><strong>Date:</strong> ' + invDate + '</div>' +
+        (dueDate ? '<div><strong>Due Date:</strong> ' + dueDate + '</div>' : '') +
+        '</div></div>' +
+        '<div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:2rem">' +
+        '<div><h4 style="font-size:.75rem;text-transform:uppercase;letter-spacing:1px;color:#94a3b8;margin-bottom:.5rem">From</h4><div style="font-size:.875rem;line-height:1.6"><strong>' + bizName + '</strong><br>' + bizContact + '<br>' + bizAddress + '</div></div>' +
+        '<div><h4 style="font-size:.75rem;text-transform:uppercase;letter-spacing:1px;color:#94a3b8;margin-bottom:.5rem">Bill To</h4><div style="font-size:.875rem;line-height:1.6"><strong>' + clientName + '</strong><br>' + clientAddress + '</div></div>' +
+        '</div>' +
+        '<table style="width:100%;border-collapse:collapse;margin-bottom:2rem"><thead><tr><th style="background:#f1f5f9;padding:.75rem;text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.5px;color:#64748b;border-bottom:2px solid #e2e8f0">Description</th><th style="background:#f1f5f9;padding:.75rem;text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.5px;color:#64748b;border-bottom:2px solid #e2e8f0">Qty</th><th style="background:#f1f5f9;padding:.75rem;text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.5px;color:#64748b;border-bottom:2px solid #e2e8f0">Price</th><th style="background:#f1f5f9;padding:.75rem;text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.5px;color:#64748b;border-bottom:2px solid #e2e8f0">Total</th></tr></thead><tbody>' + itemsHtml + '</tbody></table>' +
+        '<div style="text-align:right"><div style="margin-bottom:.25rem;font-size:.875rem;color:#475569">Subtotal: ' + formatMoney(subtotal,currency) + '</div>' +
+        (discountRate > 0 ? '<div style="margin-bottom:.25rem;font-size:.875rem;color:#475569">Discount (' + discountRate + '%): -' + formatMoney(discountAmt,currency) + '</div>' : '') +
+        (taxRate > 0 ? '<div style="margin-bottom:.25rem;font-size:.875rem;color:#475569">Tax (' + taxRate + '%): +' + formatMoney(taxAmt,currency) + '</div>' : '') +
+        '<div style="font-size:1.25rem;font-weight:700;color:#0f172a">Total: ' + formatMoney(grandTotal,currency) + '</div></div>' +
+        (notes ? '<div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid #e2e8f0;font-size:.875rem;color:#475569"><strong>Notes:</strong><br>' + notes + '</div>' : '');
+
+      document.getElementById('invoiceContent').innerHTML = html;
+      document.getElementById('previewPlaceholder').style.display = 'none';
+      document.getElementById('invoicePreview').style.display = 'block';
+    }
+
+    function printInvoice() {
+      if (document.getElementById('invoicePreview').style.display === 'none') generatePreview();
+      setTimeout(function() {
+        var printContent = document.getElementById('invoiceContent').innerHTML;
+        var printWindow = window.open('', '_blank');
+        printWindow.document.write('<html><head><title>Invoice</title><style>body{will-change:background,color;font-family:Arial,sans-serif;padding:2rem}table{width:100%;border-collapse:collapse}th,td{padding:.75rem;border-bottom:1px solid #e2e8f0;text-align:left}th{background:#f1f5f9;font-size:.75rem;text-transform:uppercase;color:#64748b}</style></head><body>' + printContent + '');
+        printWindow.document.close();
+        printWindow.focus();
+        setTimeout(function() { printWindow.print(); }, 250);
+      }, 300);
+    }
+
+    function resetForm() {
+      document.querySelectorAll('input, textarea').forEach(function(el) {
+        if (el.type === 'number') el.value = (el.id === 'taxRate' || el.id === 'discountRate') ? '0' : (el.classList.contains('item-qty') ? '1' : '0');
+        else if (el.type === 'date') { if (el.id === 'invDate') el.valueAsDate = new Date(); else if (el.id === 'dueDate') { var d2 = new Date(); d2.setDate(d2.getDate()+14); el.valueAsDate = d2; } else el.value = ''; }
+        else el.value = '';
+      });
+      document.getElementById('itemsContainer').innerHTML = '<div class="row"><input type="text" placeholder="Description" class="item-desc" style="flex:2"><input type="number" placeholder="Qty" class="item-qty" value="1" min="0" style="width:80px"><input type="number" placeholder="Price" class="item-price" value="0" min="0" step="0.01" style="width:100px"><button class="btn btn-danger" onclick="removeRow(this)">×</button></div>';
+      document.getElementById('previewPlaceholder').style.display = 'block';
+      document.getElementById('invoicePreview').style.display = 'none';
+    }
+  </script>
+
+    <section class="card" style="margin-top:1.5rem">
+      <h2 style="font-size:1.3rem;margin-bottom:.75rem">Free Online Invoice Generator</h2>
+      <p style="color:var(--text2);margin-bottom:1rem;line-height:1.7">This invoice generator lets freelancers, contractors, and small business owners create a professional, itemized invoice in the browser without signing up or installing anything. Enter your business details, add line items, apply tax and discounts, then download the result as a PDF or print it directly. Nothing you type is uploaded or stored — the invoice is built entirely on your device, so client names, prices, and contact details never leave your browser.</p>
+
+      <h3 style="font-size:1.05rem;margin-bottom:.5rem">How to create an invoice</h3>
+      <ol style="color:var(--text2);line-height:1.8;margin:0 0 1rem 1.25rem;padding:0">
+        <li>Fill in your business name, contact info, and address in the "Your Business" fields.</li>
+        <li>Add your client's name and details so the invoice is addressed correctly.</li>
+        <li>List each product or service as a line item with quantity and price — the subtotal updates automatically.</li>
+        <li>Add a tax rate or discount if they apply to this invoice.</li>
+        <li>Review the live preview, then click Download PDF or Print.</li>
+      </ol>
+
+      <h3 style="font-size:1.05rem;margin-bottom:.5rem">What should a professional invoice include?</h3>
+      <p style="color:var(--text2);margin-bottom:1rem;line-height:1.7">A complete invoice should have a unique invoice number, the issue date and payment due date, your business and client contact details, a clear breakdown of items or services with quantities and prices, the subtotal, any tax or discount applied, and the final total due. Including your preferred payment method and terms (for example, "Net 30") helps clients pay on time and avoids back-and-forth emails.</p>
+
+      <h3 style="font-size:1.05rem;margin-bottom:.5rem">How to get your invoices paid faster</h3>
+      <p style="color:var(--text2);margin-bottom:1rem;line-height:1.7">Sending a clear invoice is only half the job — getting paid on time depends on a few small habits. Set expectations up front with explicit payment terms, make the total and due date impossible to miss, and follow up politely the moment a payment is late. The tips below help freelancers and small businesses shorten the gap between sending an invoice and seeing the money land.</p>
+      <ul style="color:var(--text2);line-height:1.8;margin:0 0 1rem 1.25rem;padding:0">
+        <li>State your payment terms clearly (for example, “Net 30” or “Due on receipt”) so the client knows exactly when payment is expected.</li>
+        <li>Put the due date and total near the top, where they are the first things the client sees.</li>
+        <li>Give every invoice a unique, sequential number so you can track what is paid and what is still outstanding.</li>
+        <li>Offer more than one payment method — the easier it is to pay, the faster you get paid.</li>
+        <li>Send a friendly reminder the day a payment becomes overdue; a short nudge resolves most late payments.</li>
+      </ul>
+
+      <h3 style="font-size:1.05rem;margin-bottom:.5rem">Frequently asked questions</h3>
+      <div style="color:var(--text2);line-height:1.7">
+        <p style="margin-bottom:.75rem"><strong style="color:var(--text)">Is this invoice generator really free?</strong><br>Yes. There is no signup, no watermark, and no limit on how many invoices you can create.</p>
+        <p style="margin-bottom:.75rem"><strong style="color:var(--text)">Is my data saved anywhere?</strong><br>No. The invoice is generated locally in your browser and is not sent to or stored on any server.</p>
+        <p style="margin-bottom:.75rem"><strong style="color:var(--text)">Can I add my logo?</strong><br>Yes, you can upload a logo and it will appear on the generated invoice and the downloaded PDF.</p>
+        <p style="margin-bottom:.75rem"><strong style="color:var(--text)">What format can I download the invoice in?</strong><br>You can download it as a PDF or print it directly from your browser.</p>
+        <p style="margin-bottom:.75rem"><strong style="color:var(--text)">What's the difference between an invoice and a receipt?</strong><br>An invoice requests payment for goods or services before or after delivery, while a receipt confirms that payment has already been received. Read our <a href="/blog/receipt-vs-invoice-difference" style="color:var(--primary)">the difference explained</a>.</p>
+        <p style="margin-bottom:.75rem"><strong style="color:var(--text)">What payment terms should I put on an invoice?</strong><br>Common terms are “Due on receipt” or “Net 30” (payment within 30 days). Stating clear terms sets expectations and helps reduce late payments. Read our <a href="/blog/payment-terms-net-30-explained" style="color:var(--primary)">payment terms explained</a>.</p>
+        <p style="margin-bottom:.75rem"><strong style="color:var(--text)">How should I number my invoices?</strong><br>Use a simple sequential system such as INV-001, INV-002, or include the date. Consistent, unique numbers make invoices easy to track and reconcile at tax time. Read our <a href="/blog/invoice-template-elements" style="color:var(--primary)">invoice elements guide</a>.</p>
+        <p style="margin-bottom:0"><strong style="color:var(--text)">Can I charge a late fee if a client pays late?</strong><br>Yes — as long as you stated the late-fee policy on the invoice or in your agreement beforehand. A small percentage per month is common. Read our <a href="/blog/late-payment-fees-guide" style="color:var(--primary)">late payment fees</a>.</p>
+      </div>
+    </section>
+
+    <!-- Ad Placeholder Bottom -->
+  <div class="ad-placeholder ad-bottom">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9121502081229374"
+         data-ad-slot="2222333344"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="20" fill="#3b82f6"/><text x="50" y="68" font-size="55" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">Q</text></svg>
+          <span>QueckBiz</span>
+        </a>
+        <p class="footer-tagline">Free online tools for invoices, receipts, estimates, and more.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>TOOLS</h4>
+          <ul>
+            <li><a href="/invoice">Invoice</a></li>
+            <li><a href="/receipt">Receipt</a></li>
+            <li><a href="/estimate">Estimate</a></li>
+            <li><a href="/proforma">Proforma</a></li>
+            <li><a href="/creditnote">Credit Note</a></li>
+            <li><a href="/purchaseorder">Purchase Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>COMPANY</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>LEGAL</h4>
+          <ul>
+            <li><a href="/cookies">Cookies</a></li>
+            <li><a href="/adsettings">Ad Settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 QueckBiz. All rights reserved.</p>
+    </div>
+  </footer>
+<script>
+// Auto-sanitize all text inputs on this page before generate/print
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('input[type="text"], textarea').forEach(function(el) {
+    el.addEventListener('blur', function() {
+      this.value = sanitizeInput(this.value);
+    });
+  });
+});
+</script>
+  <!-- Cookie Consent + Consent Mode v2 -->
+  <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:1000;font-size:.875rem;box-shadow:0 -4px 6px rgba(0,0,0,0.1);">
+    <p style="margin:0;flex:1;min-width:200px;">We use cookies and Google AdSense to improve your experience and support our free tools. <a href="/cookies" style="color:#60a5fa;text-decoration:underline;">Learn more</a></p>
+    <div style="display:flex;gap:.75rem;flex-shrink:0;">
+      <button onclick="declineCookies()" style="padding:.5rem 1rem;border-radius:8px;border:1px solid #475569;background:transparent;color:#94a3b8;cursor:pointer;font-size:.875rem;">Decline</button>
+      <button onclick="acceptCookies()" style="padding:.5rem 1.25rem;border-radius:8px;border:none;background:#2563eb;color:#fff;cursor:pointer;font-size:.875rem;font-weight:600;">Accept</button>
+    </div>
+  </div>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied',
+      analytics_storage:'denied',
+      ad_user_data:'denied',
+      ad_personalization:'denied',
+      wait_for_update:500
+    });
+    function acceptCookies(){
+      document.getElementById('cookieBanner').style.display='none';
+      localStorage.setItem('cookiesAccepted','true');
+      gtag('consent','update',{
+        ad_storage:'granted',
+        analytics_storage:'granted',
+        ad_user_data:'granted',
+        ad_personalization:'granted'
+      });
+    }
+    function declineCookies(){
+      document.getElementById('cookieBanner').style.display='none';
+      localStorage.setItem('cookiesAccepted','false');
+    }
+    (function(){
+      var v=localStorage.getItem('cookiesAccepted');
+      if(v!==null){
+        document.getElementById('cookieBanner').style.display='none';
+        if(v==='true'){
+          gtag('consent','update',{
+            ad_storage:'granted',analytics_storage:'granted',
+            ad_user_data:'granted',ad_personalization:'granted'
+          });
+        }
+      }
+    })();
+  </script>
+<script src="/currencies.js?v=1"></script>
+</body>
+</html>

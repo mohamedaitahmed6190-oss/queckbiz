@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Receipt Maker — Generate Printable Receipts Free | QueckBiz</title>
+  <meta name="description" content="Create clean, printable receipts instantly. Add business details, items, payment method & totals. Download as PDF. 100% free, no signup.">
+  <link rel="canonical" href="https://queckbiz.com/receipt">
+  <link rel="alternate" hreflang="en" href="https://queckbiz.com/receipt">
+  <link rel="alternate" hreflang="ar" href="https://queckbiz.com/ar/receipt">
+  <link rel="alternate" hreflang="fr" href="https://queckbiz.com/fr/receipt">
+  <link rel="alternate" hreflang="x-default" href="https://queckbiz.com/receipt">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://queckbiz.com/receipt">
+  <meta property="og:title" content="Receipt Maker — Generate Printable Receipts Free | QueckBiz">
+  <meta property="og:description" content="Create clean, printable receipts instantly. Add business details, items, payment method & totals. Download as PDF. 100% free, no signup.">
+  <meta property="og:image" content="https://queckbiz.com/og-image.png">
+  <meta property="og:site_name" content="QueckBiz">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BS0FSQVQ9V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BS0FSQVQ9V');
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between a receipt and an invoice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An invoice requests payment before or after delivery, while a receipt confirms that payment has already been received. A receipt closes the transaction; an invoice creates the payment obligation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this receipt maker free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it's completely free with no signup, and everything is generated locally in your browser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to give a receipt for every sale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Requirements vary by country and business type, but it's good practice to provide a receipt for any payment so both sides have a record for bookkeeping and tax purposes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this for a cash payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Simply select the payment method as cash when filling in the receipt details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should a receipt include tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the sale is taxable, show the tax amount separately so the customer has a clear record and your own bookkeeping stays accurate at filing time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I issue a receipt for a deposit or partial payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Note the amount received and the balance still due, so both sides have a clear record of what remains to be paid."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should I keep copies of receipts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most tax authorities recommend keeping business records for several years — commonly three to seven, depending on your country. Saving a PDF of each receipt makes this effortless."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a sales receipt different from a regular receipt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are essentially the same document — a sales receipt simply emphasises that it records a completed sale. Both confirm payment was received and itemise what it covered."
+      }
+    }
+  ]
+}
+  </script>
+  <style>
+    :root{--bg:#f8fafc;--surface:#fff;--text:#0f172a;--text2:#475569;--primary:#2563eb;--primary2:#1d4ed8;--border:#e2e8f0;--shadow:0 1px 3px rgba(0,0,0,0.1);--radius:10px;--radius-lg:14px;      --footer-bg:#f1f5f9;--footer-border:#e2e8f0;--footer-text:#475569;--footer-heading:#0f172a;--footer-muted:#64748b;
+    }
+    [data-theme="dark"]{--bg:#0f172a;--surface:#1e293b;--text:#f1f5f9;--text2:#94a3b8;--primary:#3b82f6;--primary2:#60a5fa;--border:#334155;--shadow:0 1px 3px rgba(0,0,0,0.3);      --footer-bg:#0f172a;--footer-border:#1e293b;--footer-text:#94a3b8;--footer-heading:#f1f5f9;--footer-muted:#64748b;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{will-change:background,color;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;transition:background .2s,color .2s}
+    header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+    .h-inner{max-width:1100px;margin:0 auto;padding:.75rem 1rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem}.h-nav{justify-self:center;display:flex;align-items:center}.h-nav a{color:var(--text2);text-decoration:none;font-weight:600;font-size:.9rem;white-space:nowrap}.h-nav a:hover{color:var(--primary)}
+    .logo{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.25rem;color:var(--primary);text-decoration:none}
+    .logo svg{width:28px;height:28px}
+    .h-actions{display:flex;align-items:center;gap:.5rem;justify-self:end}
+    .theme-btn{width:36px;height:36px;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center}
+    .theme-btn:hover{background:var(--border)}
+    .back-btn{display:flex;align-items:center;gap:.4rem;padding:.4rem .8rem;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text2);text-decoration:none;font-size:.875rem}
+    .back-btn:hover{border-color:var(--primary);color:var(--primary)}
+    main{max-width:1100px;margin:0 auto;padding:1.5rem 1rem}
+    h1{font-size:1.5rem;font-weight:700;margin-bottom:1.5rem}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:1rem;box-shadow:var(--shadow)}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    @media(max-width:640px){.grid-2{grid-template-columns:1fr}}
+    label{display:block;font-size:.875rem;font-weight:600;color:var(--text2);margin-bottom:.25rem}
+    input,textarea,select{width:100%;padding:.6rem .75rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);color:var(--text);font-size:.9375rem;transition:border-color .2s}
+    input:focus,textarea:focus,select:focus{outline:none;border-color:var(--primary)}
+    textarea{resize:vertical;min-height:60px}
+    .row{display:flex;gap:.5rem;align-items:flex-end;margin-bottom:.75rem}
+    .row input{flex:1}
+    .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.6rem 1.2rem;border-radius:var(--radius);border:none;background:var(--primary);color:#fff;font-weight:600;cursor:pointer;transition:background .2s;font-size:.875rem}
+    .btn:hover{background:var(--primary2)}
+    .btn-secondary{background:var(--surface);color:var(--text);border:1px solid var(--border)}
+    .btn-secondary:hover{background:var(--border)}
+    .btn-danger{background:#dc2626}
+    .btn-danger:hover{background:#b91c1c}
+    .actions{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
+    .preview-area{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;margin-top:1.5rem;min-height:400px}
+    .doc-preview{background:#fff;color:#000;padding:2rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);max-width:800px;margin:0 auto}
+    .hidden{display:none}
+    .site-footer{content-visibility:auto;contain-intrinsic-size:0 500px;background:var(--footer-bg);color:var(--footer-text);border-top:1px solid var(--footer-border);margin-top:3rem}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:3rem 1.5rem;display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:start}
+    .footer-brand{max-width:280px}
+    .footer-logo{display:flex;align-items:center;gap:.75rem;font-weight:800;font-size:1.25rem;color:var(--footer-heading);text-decoration:none;margin-bottom:1rem}
+    .footer-logo svg{width:32px;height:32px}
+    .footer-tagline{font-size:.875rem;line-height:1.6;color:var(--footer-muted)}
+    .footer-links{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+    .footer-col h4{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--footer-heading);margin-bottom:1rem}
+    .footer-col ul{list-style:none}
+    .footer-col li{margin-bottom:.75rem}
+    .footer-col a{color:var(--footer-text);text-decoration:none;font-size:.875rem;transition:color .2s}
+    .footer-col a:hover{color:#3b82f6}
+    .footer-bottom{border-top:1px solid var(--footer-border);text-align:center;padding:1.5rem;font-size:.875rem;color:var(--footer-muted)}
+    @media(max-width:768px){.footer-inner{grid-template-columns:1fr;gap:2rem}.footer-links{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.footer-links{grid-template-columns:1fr}}
+  </style>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9121502081229374" crossorigin="anonymous"></script>
+  <style>
+    .ad-placeholder { width:100%; max-width:100%; overflow:hidden; text-align:center; background:transparent; }
+    .ad-top { margin: 0.75rem 0 1.25rem; }
+    .ad-bottom { margin: 1.25rem 0 0.75rem; }
+  </style>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GT-55X3TZ2M');</script>
+  <!-- End Google Tag Manager -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/design.css?v=1">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-55X3TZ2M"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="h-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fetchpriority="high"><rect width="100" height="100" rx="20" fill="#2563eb"/><text x="50" y="68" font-size="55" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">Q</text></svg>
+        QueckBiz
+      </a>
+      <nav class="h-nav"><a href="/blog/">Blog</a></nav>
+      <div class="h-actions">
+        <details class="lang-select-wrap"><summary class="lang-switch" title="Choose language">EN</summary><div class="lang-menu"><a href="/receipt" class="active">English</a><a href="/ar/receipt">العربية</a><a href="/fr/receipt">Français</a></div></details>
+        <a href="/" class="back-btn"><span>← Home</span></a><button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+          <svg id="moon" width="18" height="18" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg id="sun" width="18" height="18" style="display:none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+  <!-- Ad Placeholder Top -->
+  <div class="ad-placeholder ad-top">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9121502081229374"
+         data-ad-slot="3333444455"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+<h1>Receipt Maker</h1>
+    <div class="card">
+      <div class="grid-2">
+        <div><label>Business Name</label><input type="text" id="bizName" placeholder="Your Store"></div><div style="grid-column:1/-1"><label>Business Logo (optional)</label><div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap"><input type="file" id="logoInput" accept="image/png,image/jpeg,image/webp,image/svg+xml" style="display:none" onchange="handleLogoUpload(event)"><button type="button" class="btn btn-secondary" onclick="document.getElementById('logoInput').click()"><span>📁 Upload Logo</span></button><img id="logoPreviewImg" alt="Logo" style="display:none;max-height:56px;max-width:160px;border-radius:6px;border:1px solid var(--border);object-fit:contain;background:#fff;padding:2px"><button type="button" class="btn btn-danger" id="logoRemoveBtn" style="display:none" onclick="removeLogo()">✕</button></div><small style="color:var(--text2);font-size:.75rem;display:block;margin-top:.35rem">PNG, JPG, SVG or WebP, max 1MB. Saved only in your browser and reused automatically across all QueckBiz tools.</small></div>
+        <div><label>Business Address</label><textarea id="bizAddress" placeholder="Store address..."></textarea></div>
+        <div><label>Receipt #</label><input type="text" id="recNumber" placeholder="R-001"></div>
+        <div><label>Date & Time</label><input type="datetime-local" id="recDate"></div>
+        <div><label>Customer Name</label><input type="text" id="customer" placeholder="Customer name"></div>
+        <div><label>Payment Method</label>
+          <select id="payment">
+            <option>Cash</option><option>Credit Card</option><option>Debit Card</option><option>Bank Transfer</option><option>Check</option><option>Mobile Payment</option><option>Other</option>
+          </select>
+        </div>
+        <div><label>Currency</label>
+          <select id="currency">
+          </select>
+        </div>
+        <div><label>Tax Rate (%)</label><input type="number" id="taxRate" value="0" min="0" max="100" step="0.01"></div>
+        <div><label>Thank You Message</label><input type="text" id="thanks" value="Thank you for your purchase!"></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:1rem;font-size:1.1rem">Items</h3>
+      <div id="itemsContainer">
+        <div class="row">
+          <input type="text" placeholder="Item name" class="item-desc" style="flex:2">
+          <input type="number" placeholder="Qty" class="item-qty" value="1" min="1" style="width:70px">
+          <input type="number" placeholder="Price" class="item-price" value="0" min="0" step="0.01" style="width:90px">
+          <button class="btn btn-danger" onclick="removeRow(this)">×</button>
+        </div>
+      </div>
+      <button class="btn btn-secondary" onclick="addRow()"><span>+ Add Item</span></button>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="generatePreview()"><span>👁 Preview Receipt</span></button>
+      <button class="btn" onclick="printReceipt()"><span>🖨 Print / PDF</span></button>
+      <button class="btn btn-secondary" onclick="resetForm()"><span>↺ Reset</span></button>
+    </div>
+    <div class="preview-area" id="previewArea">
+      <div style="text-align:center;color:var(--text2);padding:3rem" id="previewPlaceholder">Click "Preview Receipt" to see your receipt</div>
+      <div id="receiptPreview" style="display:none">
+        <div class="doc-preview" id="receiptContent"></div>
+      </div>
+    </div>
+
+  <script>
+    // Theme
+    const themeToggle = document.getElementById('themeToggle');
+    const moon = document.getElementById('moon');
+    const sun = document.getElementById('sun');
+    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (savedTheme === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); moon.style.display='none'; sun.style.display='block'; }
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (isDark) { document.documentElement.removeAttribute('data-theme'); moon.style.display='block'; sun.style.display='none'; localStorage.setItem('theme','light'); }
+      else { document.documentElement.setAttribute('data-theme','dark'); moon.style.display='none'; sun.style.display='block'; localStorage.setItem('theme','dark'); }
+    });
+
+    function addRow() {
+      const c = document.getElementById('itemsContainer');
+      const row = document.createElement('div');
+      row.className = 'row';
+      row.innerHTML = '<input type="text" placeholder="Description" class="item-desc" style="flex:2"><input type="number" placeholder="Qty" class="item-qty" value="1" min="0" style="width:80px"><input type="number" placeholder="Price" class="item-price" value="0" min="0" step="0.01" style="width:100px"><button class="btn btn-danger" onclick="removeRow(this)">×</button>';
+      c.appendChild(row);
+    }
+    function removeRow(btn) { btn.parentElement.remove(); }
+    function formatMoney(amount, currency) {
+      if (['€','£','¥'].includes(currency)) return currency + amount.toFixed(2);
+      return currency + amount.toFixed(2);
+    }
+  </script>
+
+  <script>
+    document.getElementById('recDate').value = new Date().toISOString().slice(0,16);
+
+    var LOGO_KEY = 'qb_logo_data';
+    var currentLogo = localStorage.getItem(LOGO_KEY) || '';
+    function refreshLogoUI() {
+      var img = document.getElementById('logoPreviewImg');
+      var rm = document.getElementById('logoRemoveBtn');
+      if (!img) return;
+      if (currentLogo) { img.src = currentLogo; img.style.display = 'inline-block'; rm.style.display = 'inline-flex'; }
+      else { img.style.display = 'none'; rm.style.display = 'none'; }
+    }
+    function handleLogoUpload(e) {
+      var file = e.target.files[0];
+      if (!file) return;
+      if (file.size > 1024*1024) { alert('Logo must be smaller than 1MB.'); e.target.value=''; return; }
+      var reader = new FileReader();
+      reader.onload = function(ev) { currentLogo = ev.target.result; localStorage.setItem(LOGO_KEY, currentLogo); refreshLogoUI(); };
+      reader.readAsDataURL(file);
+    }
+    function removeLogo() { currentLogo=''; localStorage.removeItem(LOGO_KEY); document.getElementById('logoInput').value=''; refreshLogoUI(); }
+    refreshLogoUI();
+
+    function generatePreview() {
+      var bizName = document.getElementById('bizName').value || 'Your Store';
+      var bizAddress = document.getElementById('bizAddress').value.replace(/\n/g,'<br>') || '';
+      var recNumber = document.getElementById('recNumber').value || 'R-001';
+      var recDate = document.getElementById('recDate').value ? new Date(document.getElementById('recDate').value).toLocaleString() : new Date().toLocaleString();
+      var customer = document.getElementById('customer').value || 'Guest';
+      var payment = document.getElementById('payment').value;
+      var currency = document.getElementById('currency').value;
+      var taxRate = parseFloat(document.getElementById('taxRate').value) || 0;
+      var thanks = document.getElementById('thanks').value || 'Thank you for your purchase!';
+
+      var itemsHtml = '';
+      var subtotal = 0;
+      var rows = document.querySelectorAll('#itemsContainer .row');
+      for (var i = 0; i < rows.length; i++) {
+        var row = rows[i];
+        var desc = row.querySelector('.item-desc').value || 'Item';
+        var qty = parseFloat(row.querySelector('.item-qty').value) || 0;
+        var price = parseFloat(row.querySelector('.item-price').value) || 0;
+        var total = qty * price;
+        subtotal += total;
+        itemsHtml += '<tr><td>' + desc + '</td><td>' + qty + '</td><td>' + formatMoney(price,currency) + '</td><td>' + formatMoney(total,currency) + '</td></tr>';
+      }
+
+      var taxAmt = subtotal * (taxRate/100);
+      var grandTotal = subtotal + taxAmt;
+
+      var html = (currentLogo ? '<div style="text-align:center;margin-bottom:.5rem"><img src="' + currentLogo + '" alt="Logo" style="max-height:60px;max-width:160px;object-fit:contain"></div>' : '') + '<div style="text-align:center;border-bottom:2px dashed #ccc;padding-bottom:1rem;margin-bottom:1rem"><div style="font-size:1.5rem;font-weight:700;color:#2563eb;margin-bottom:.5rem">RECEIPT</div><div style="font-size:.875rem;color:#475569">' + bizName + '</div><div style="font-size:.75rem;color:#94a3b8">' + bizAddress + '</div></div>' +
+        '<div style="text-align:left;font-size:.875rem;margin-bottom:1rem"><div><strong>Receipt #:</strong> ' + recNumber + '</div><div><strong>Date:</strong> ' + recDate + '</div><div><strong>Customer:</strong> ' + customer + '</div><div><strong>Payment:</strong> ' + payment + '</div></div>' +
+        '<table style="width:100%;border-collapse:collapse;margin:1rem 0;text-align:left"><thead><tr><th style="padding:.5rem;border-bottom:1px solid #eee;font-size:.75rem;text-transform:uppercase;color:#64748b">Item</th><th style="padding:.5rem;border-bottom:1px solid #eee;font-size:.75rem;text-transform:uppercase;color:#64748b">Qty</th><th style="padding:.5rem;border-bottom:1px solid #eee;font-size:.75rem;text-transform:uppercase;color:#64748b">Price</th><th style="padding:.5rem;border-bottom:1px solid #eee;font-size:.75rem;text-transform:uppercase;color:#64748b">Total</th></tr></thead><tbody>' + itemsHtml + '</tbody></table>' +
+        '<div style="text-align:right;font-size:.875rem;margin-top:.5rem"><div>Subtotal: ' + formatMoney(subtotal,currency) + '</div>' + (taxRate > 0 ? '<div>Tax (' + taxRate + '%): ' + formatMoney(taxAmt,currency) + '</div>' : '') + '</div>' +
+        '<div style="font-size:1.25rem;font-weight:700;margin-top:1rem;padding-top:1rem;border-top:2px dashed #ccc">TOTAL: ' + formatMoney(grandTotal,currency) + '</div>' +
+        '<div style="margin-top:1.5rem;font-size:.75rem;color:#94a3b8">' + thanks + '<br>Powered by QueckBiz</div>';
+
+      document.getElementById('receiptContent').innerHTML = html;
+      document.getElementById('previewPlaceholder').style.display = 'none';
+      document.getElementById('receiptPreview').style.display = 'block';
+    }
+
+    function printReceipt() {
+      if (document.getElementById('receiptPreview').style.display === 'none') generatePreview();
+      setTimeout(function() {
+        var printContent = document.getElementById('receiptContent').innerHTML;
+        var printWindow = window.open('', '_blank');
+        printWindow.document.write('<html><head><title>Receipt</title><style>body{will-change:background,color;font-family:Arial,sans-serif;padding:2rem;text-align:center}table{width:100%;border-collapse:collapse;margin:1rem 0;text-align:left}th,td{padding:.5rem;border-bottom:1px solid #eee}</style></head><body>' + printContent + '');
+        printWindow.document.close();
+        printWindow.focus();
+        setTimeout(function() { printWindow.print(); }, 250);
+      }, 300);
+    }
+
+    function resetForm() {
+      document.querySelectorAll('input, textarea').forEach(function(el) {
+        if (el.type === 'number') el.value = el.id === 'taxRate' ? '0' : (el.classList.contains('item-qty') ? '1' : '0');
+        else if (el.type === 'datetime-local') el.value = new Date().toISOString().slice(0,16);
+        else if (el.id === 'thanks') el.value = 'Thank you for your purchase!';
+        else el.value = '';
+      });
+      document.getElementById('itemsContainer').innerHTML = '<div class="row"><input type="text" placeholder="Item name" class="item-desc" style="flex:2"><input type="number" placeholder="Qty" class="item-qty" value="1" min="1" style="width:70px"><input type="number" placeholder="Price" class="item-price" value="0" min="0" step="0.01" style="width:90px"><button class="btn btn-danger" onclick="removeRow(this)">×</button></div>';
+      document.getElementById('previewPlaceholder').style.display = 'block';
+      document.getElementById('receiptPreview').style.display = 'none';
+    }
+  </script>
+
+    <section class="card" style="margin-top:1.5rem">
+      <h2 style="font-size:1.3rem;margin-bottom:.75rem">Free Online Receipt Maker</h2>
+      <p style="color:var(--text2);margin-bottom:1rem;line-height:1.7">A receipt confirms that a payment has been received and gives your customer proof of the transaction. This receipt maker builds a clean, professional receipt in seconds — add the amount paid, payment method, and items covered, then download it as a PDF or print it on the spot. Everything runs in your browser, so no customer or payment data is ever uploaded or stored.</p>
+
+      <h3 style="font-size:1.05rem;margin-bottom:.5rem">How to create a receipt</h3>
+      <ol style="color:var(--text2);line-height:1.8;margin:0 0 1rem 1.25rem;padding:0">
+        <li>Enter your business name and contact details.</li>
+        <li>Add the customer's name if needed.</li>
+        <li>List the items or services paid for, with quantity and price.</li>
+        <li>Select the payment method (cash, card, transfer, etc.).</li>
+        <li>Download as PDF or print immediately for your customer.</li>
+      </ol>
+
+      <h3 style="font-size:1.05rem;margin-bottom:.5rem">When should you issue a receipt?</h3>
+      <p style="color:var(--text2);margin-bottom:1rem;line-height:1.7">Issue a receipt any time money changes hands — whether the payment is cash, card, or bank transfer. Receipts matter most for cash sales, where no bank record exists to prove the transaction, and for deposits or partial payments, where the customer needs written proof of what they have already paid and how much is still owed.</p>
+      <ul style="color:var(--text2);line-height:1.8;margin:0 0 1rem 1.25rem;padding:0">
+        <li>Give the receipt immediately at the point of payment, while the customer is still with you.</li>
+        <li>Keep a copy for your own records — receipts are the backbone of accurate bookkeeping and tax filing.</li>
+        <li>Number your receipts sequentially so they are easy to reconcile at year-end.</li>
+        <li>Always note the payment method (cash, card, transfer) in case a charge is later disputed.</li>
+        <li>For a deposit or partial payment, state the amount paid and the remaining balance clearly.</li>
+      </ul>
+
+      <h3 style="font-size:1.05rem;margin-bottom:.5rem">Frequently asked questions</h3>
+      <div style="color:var(--text2);line-height:1.7">
+        <p style="margin-bottom:.75rem"><strong style="color:var(--text)">What is the difference between a receipt and an invoice?</strong><br>An invoice requests payment before or after delivery, while a receipt confirms that payment has already been received. A receipt closes the transaction; an invoice creates the payment obligation. Read our <a href="/blog/receipt-vs-invoice-difference" style="color:var(--primary)">detailed comparison</a>.</p>
+        <p style="margin-bottom:.75rem"><strong style="color:var(--text)">Is this receipt maker free?</strong><br>Yes, it's completely free with no signup, and everything is generated locally in your browser.</p>
+        <p style="margin-bottom:.75rem"><strong style="color:var(--text)">Do I need to give a receipt for every sale?</strong><br>Requirements vary by country and business type, but it's good practice to provide a receipt for any payment so both sides have a record for bookkeeping and tax purposes.</p>
+        <p style="margin-bottom:.75rem"><strong style="color:var(--text)">Can I use this for a cash payment?</strong><br>Yes. Simply select the payment method as cash when filling in the receipt details.</p>
+        <p style="margin-bottom:.75rem"><strong style="color:var(--text)">Should a receipt include tax?</strong><br>If the sale is taxable, show the tax amount separately so the customer has a clear record and your own bookkeeping stays accurate at filing time.</p>
+        <p style="margin-bottom:.75rem"><strong style="color:var(--text)">Can I issue a receipt for a deposit or partial payment?</strong><br>Yes. Note the amount received and the balance still due, so both sides have a clear record of what remains to be paid.</p>
+        <p style="margin-bottom:.75rem"><strong style="color:var(--text)">How long should I keep copies of receipts?</strong><br>Most tax authorities recommend keeping business records for several years — commonly three to seven, depending on your country. Saving a PDF of each receipt makes this effortless.</p>
+        <p style="margin-bottom:0"><strong style="color:var(--text)">Is a sales receipt different from a regular receipt?</strong><br>They are essentially the same document — a sales receipt simply emphasises that it records a completed sale. Both confirm payment was received and itemise what it covered.</p>
+      </div>
+    </section>
+
+    <!-- Ad Placeholder Bottom -->
+  <div class="ad-placeholder ad-bottom">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9121502081229374"
+         data-ad-slot="3333444455"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="20" fill="#3b82f6"/><text x="50" y="68" font-size="55" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">Q</text></svg>
+          <span>QueckBiz</span>
+        </a>
+        <p class="footer-tagline">Free online tools for invoices, receipts, estimates, and more.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>TOOLS</h4>
+          <ul>
+            <li><a href="/invoice">Invoice</a></li>
+            <li><a href="/receipt">Receipt</a></li>
+            <li><a href="/estimate">Estimate</a></li>
+            <li><a href="/proforma">Proforma</a></li>
+            <li><a href="/creditnote">Credit Note</a></li>
+            <li><a href="/purchaseorder">Purchase Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>COMPANY</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>LEGAL</h4>
+          <ul>
+            <li><a href="/cookies">Cookies</a></li>
+            <li><a href="/adsettings">Ad Settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 QueckBiz. All rights reserved.</p>
+    </div>
+  </footer>
+<script>
+// Auto-sanitize all text inputs on this page before generate/print
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('input[type="text"], textarea').forEach(function(el) {
+    el.addEventListener('blur', function() {
+      this.value = sanitizeInput(this.value);
+    });
+  });
+});
+</script>
+  <!-- Cookie Consent + Consent Mode v2 -->
+  <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:1000;font-size:.875rem;box-shadow:0 -4px 6px rgba(0,0,0,0.1);">
+    <p style="margin:0;flex:1;min-width:200px;">We use cookies and Google AdSense to improve your experience and support our free tools. <a href="/cookies" style="color:#60a5fa;text-decoration:underline;">Learn more</a></p>
+    <div style="display:flex;gap:.75rem;flex-shrink:0;">
+      <button onclick="declineCookies()" style="padding:.5rem 1rem;border-radius:8px;border:1px solid #475569;background:transparent;color:#94a3b8;cursor:pointer;font-size:.875rem;">Decline</button>
+      <button onclick="acceptCookies()" style="padding:.5rem 1.25rem;border-radius:8px;border:none;background:#2563eb;color:#fff;cursor:pointer;font-size:.875rem;font-weight:600;">Accept</button>
+    </div>
+  </div>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied',
+      analytics_storage:'denied',
+      ad_user_data:'denied',
+      ad_personalization:'denied',
+      wait_for_update:500
+    });
+    function acceptCookies(){
+      document.getElementById('cookieBanner').style.display='none';
+      localStorage.setItem('cookiesAccepted','true');
+      gtag('consent','update',{
+        ad_storage:'granted',
+        analytics_storage:'granted',
+        ad_user_data:'granted',
+        ad_personalization:'granted'
+      });
+    }
+    function declineCookies(){
+      document.getElementById('cookieBanner').style.display='none';
+      localStorage.setItem('cookiesAccepted','false');
+    }
+    (function(){
+      var v=localStorage.getItem('cookiesAccepted');
+      if(v!==null){
+        document.getElementById('cookieBanner').style.display='none';
+        if(v==='true'){
+          gtag('consent','update',{
+            ad_storage:'granted',analytics_storage:'granted',
+            ad_user_data:'granted',ad_personalization:'granted'
+          });
+        }
+      }
+    })();
+  </script>
+<script src="/currencies.js?v=1"></script>
+</body>
+</html>

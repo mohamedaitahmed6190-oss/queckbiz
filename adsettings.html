@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <title>Ad Settings & Preferences — QueckBiz</title>
+  <link rel="canonical" href="https://queckbiz.com/adsettings">
+  <link rel="alternate" hreflang="en" href="https://queckbiz.com/adsettings">
+  <link rel="alternate" hreflang="ar" href="https://queckbiz.com/ar/adsettings">
+  <link rel="alternate" hreflang="fr" href="https://queckbiz.com/fr/adsettings">
+  <link rel="alternate" hreflang="x-default" href="https://queckbiz.com/adsettings">
+  <meta name="description" content="Manage your ad preferences on QueckBiz. We use Google AdSense to display non-personalized ads. Learn how to control your ad experience.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://queckbiz.com/adsettings">
+  <meta property="og:title" content="Ad Settings & Preferences — QueckBiz">
+  <meta property="og:description" content="Manage your ad preferences on QueckBiz. We use Google AdSense to display non-personalized ads. Learn how to control your ad experience.">
+  <meta property="og:image" content="https://queckbiz.com/og-image.png">
+  <meta property="og:site_name" content="QueckBiz">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BS0FSQVQ9V"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BS0FSQVQ9V');</script>
+  <style>
+    :root{--bg:#f8fafc;--surface:#fff;--text:#0f172a;--text2:#475569;--primary:#2563eb;--primary2:#1d4ed8;--border:#e2e8f0;--shadow:0 1px 3px rgba(0,0,0,0.1);--radius:10px;--radius-lg:14px;      --footer-bg:#f1f5f9;--footer-border:#e2e8f0;--footer-text:#475569;--footer-heading:#0f172a;--footer-muted:#64748b;
+    }
+    [data-theme="dark"]{--bg:#0f172a;--surface:#1e293b;--text:#f1f5f9;--text2:#94a3b8;--primary:#3b82f6;--primary2:#60a5fa;--border:#334155;--shadow:0 1px 3px rgba(0,0,0,0.3);      --footer-bg:#0f172a;--footer-border:#1e293b;--footer-text:#94a3b8;--footer-heading:#f1f5f9;--footer-muted:#64748b;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{will-change:background,color;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:background .2s,color .2s}
+    header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+    .h-inner{max-width:1100px;margin:0 auto;padding:.75rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .logo{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.25rem;color:var(--primary);text-decoration:none}
+    .logo svg{width:28px;height:28px}
+    .h-actions{display:flex;align-items:center;gap:.5rem}
+    .theme-btn{width:36px;height:36px;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center}
+    .theme-btn:hover{background:var(--border)}
+    .back-btn{display:flex;align-items:center;gap:.4rem;padding:.4rem .8rem;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text2);text-decoration:none;font-size:.875rem}
+    .back-btn:hover{border-color:var(--primary);color:var(--primary)}
+    main{max-width:800px;margin:0 auto;padding:2rem 1rem}
+    h1{font-size:1.75rem;font-weight:700;margin-bottom:1rem}
+    h2{font-size:1.25rem;font-weight:700;margin-top:2rem;margin-bottom:.75rem;color:var(--primary)}
+    h3{font-size:1rem;font-weight:700;margin-top:1.5rem;margin-bottom:.5rem}
+    p{margin-bottom:1rem;font-size:1rem;color:var(--text2)}
+    ul,ol{margin-left:1.5rem;margin-bottom:1rem;color:var(--text2)}
+    li{margin-bottom:.5rem}
+    a{color:var(--primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;margin-bottom:1rem;box-shadow:var(--shadow)}
+    .email-box{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;text-align:center;margin:1.5rem 0}
+    .email-box a{font-size:1.125rem;font-weight:600}
+    .site-footer{content-visibility:auto;contain-intrinsic-size:0 500px;background:var(--footer-bg);color:var(--footer-text);border-top:1px solid var(--footer-border);margin-top:3rem}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:3rem 1.5rem;display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:start}
+    .footer-brand{max-width:280px}
+    .footer-logo{display:flex;align-items:center;gap:.75rem;font-weight:800;font-size:1.25rem;color:var(--footer-heading);text-decoration:none;margin-bottom:1rem}
+    .footer-logo svg{width:32px;height:32px}
+    .footer-tagline{font-size:.875rem;line-height:1.6;color:var(--footer-muted)}
+    .footer-links{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+    .footer-col h4{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--footer-heading);margin-bottom:1rem}
+    .footer-col ul{list-style:none}
+    .footer-col li{margin-bottom:.75rem}
+    .footer-col a{color:var(--footer-text);text-decoration:none;font-size:.875rem;transition:color .2s}
+    .footer-col a:hover{color:#3b82f6}
+    .footer-bottom{border-top:1px solid var(--footer-border);text-align:center;padding:1.5rem;font-size:.875rem;color:var(--footer-muted)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}
+    .contact-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;text-align:center}
+    .contact-card svg{width:32px;height:32px;color:var(--primary);margin-bottom:.75rem}
+    .contact-card h3{font-size:1rem;margin-top:0}
+    .contact-card p{font-size:.875rem;margin-bottom:0}
+    @media(max-width:768px){.footer-inner{grid-template-columns:1fr;gap:2rem}.footer-links{grid-template-columns:repeat(2,1fr)}.contact-grid{grid-template-columns:1fr}}
+    @media(max-width:480px){.footer-links{grid-template-columns:1fr}}
+  </style>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9121502081229374" crossorigin="anonymous"></script>
+  <style>
+    .ad-placeholder { width:100%; max-width:100%; overflow:hidden; text-align:center; background:transparent; }
+    .ad-top { margin: 0.75rem 0 1.25rem; }
+    .ad-bottom { margin: 1.25rem 0 0.75rem; }
+  </style>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GT-55X3TZ2M');</script>
+  <!-- End Google Tag Manager -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/design.css?v=1">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-55X3TZ2M"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="h-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fetchpriority="high"><rect width="100" height="100" rx="20" fill="#2563eb"/><text x="50" y="68" font-size="55" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">Q</text></svg>
+        QueckBiz
+      </a>
+      <div class="h-actions">
+        <details class="lang-select-wrap"><summary class="lang-switch" title="Choose language">EN</summary><div class="lang-menu"><a href="/adsettings" class="active">English</a><a href="/ar/adsettings">العربية</a><a href="/fr/adsettings">Français</a></div></details>
+        <a href="/" class="back-btn">← Home</a>
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+          <svg id="moon" width="18" height="18" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg id="sun" width="18" height="18" style="display:none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+  <!-- Ad Placeholder Top -->
+  <div class="ad-placeholder ad-top">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9121502081229374"
+         data-ad-slot="2020202020"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+<div class="card">
+      <h1>Ad Settings &amp; Preferences</h1>
+      <p><em>Last updated: May 20, 2026</em></p>
+      <p>QueckBiz displays advertisements to fund the free operation of our platform. This page explains how advertising works on QueckBiz, what types of ads are displayed, how you can manage your ad preferences, and what options you have to opt out of personalized advertising.</p>
+
+      <h2>1. Why We Show Ads</h2>
+      <p>QueckBiz is completely free to use. Every tool — invoice generator, receipt maker, estimate builder, and more — is available to all users without any subscription, account, or payment. To sustain this, we display non-intrusive advertisements through Google AdSense. Advertising revenue covers hosting costs, development time, and ongoing maintenance of the platform.</p>
+      <p>We have designed our ad integration to be as unobtrusive as possible. Ads appear in clearly designated areas above and below the main content and do not interfere with the document creation experience. We do not show pop-up ads, interstitials, or auto-playing video ads.</p>
+
+      <h2>2. Our Advertising Partner: Google AdSense</h2>
+      <p>All advertisements on QueckBiz are served through Google AdSense, operated by Google LLC. Google AdSense is one of the most widely used and trusted digital advertising platforms in the world. It is subject to Google's advertising policies, which prohibit deceptive ads, malware, and inappropriate content.</p>
+      <p>When you visit QueckBiz, Google's systems may use information about your browsing history, interests, and demographics (if you are signed into a Google account or have previously accepted personalization) to select relevant ads to display. This is called interest-based or personalized advertising.</p>
+
+      <h2>3. Personalized vs. Non-Personalized Ads</h2>
+      <p>There are two types of ads you may see on QueckBiz:</p>
+      <ul>
+        <li><strong>Personalized ads</strong> — Based on your browsing history, interests, and behavior across websites. These ads are served when you have accepted cookies on QueckBiz and have not opted out of personalization through Google's ad settings.</li>
+        <li><strong>Non-personalized ads</strong> — Based on the content of the current page you are viewing, not your personal history. These are shown when you decline cookies on QueckBiz, or when you have opted out of ad personalization in your Google account settings.</li>
+      </ul>
+      <p>Both types of ads look identical on the page. The difference is in how they are selected — personalized ads are chosen based on your interests, while non-personalized ads are chosen based on the page topic.</p>
+
+      <h2>4. Managing Your Ad Preferences</h2>
+      <p>You have several options for managing how ads are targeted to you on QueckBiz and across the web:</p>
+
+      <h3>4.1 On QueckBiz</h3>
+      <p>When you first visit QueckBiz, a consent banner gives you the option to accept or decline cookies. If you decline, only non-personalized ads will be displayed. If you have already made a choice and wish to change it, clear your browser's local storage for queckbiz.com and the consent banner will appear again on your next visit.</p>
+
+      <h3>4.2 Through Google's Ad Settings</h3>
+      <p>You can manage your Google advertising preferences across all websites — not just QueckBiz — at <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>. If you are signed into a Google account, you can:</p>
+      <ul>
+        <li>Turn off personalized ads entirely</li>
+        <li>See and manage the interests Google has associated with your account</li>
+        <li>Remove specific interest categories you do not want used for ad targeting</li>
+        <li>Opt out of ads based on your activity on Google services</li>
+      </ul>
+
+      <h3>4.3 Through Your Browser Settings</h3>
+      <p>Most browsers allow you to block or manage cookies on a site-by-site or global basis. You can find cookie management options in your browser's privacy or security settings. Blocking all cookies will prevent personalized advertising but may also affect the functionality of many other websites you use.</p>
+
+      <h3>4.4 Industry Opt-Out Tools</h3>
+      <p>You can also use industry-wide opt-out tools to opt out of interest-based advertising from multiple companies simultaneously:</p>
+      <ul>
+        <li><a href="https://www.youronlinechoices.com" target="_blank" rel="noopener">Your Online Choices</a> (EU)</li>
+        <li><a href="https://optout.networkadvertising.org" target="_blank" rel="noopener">Network Advertising Initiative Opt-Out</a> (US)</li>
+        <li><a href="https://optout.aboutads.info" target="_blank" rel="noopener">Digital Advertising Alliance Opt-Out</a> (US)</li>
+      </ul>
+
+      <h2>5. Ad Content Standards</h2>
+      <p>Google AdSense enforces strict content policies on the types of ads that can appear on our site. Prohibited ad categories include ads for illegal products, deceptive financial schemes, counterfeit goods, gambling (without appropriate licensing), adult content, and harmful software. While we do not have direct control over which specific ads appear, we rely on Google's enforcement of these policies to maintain advertising quality standards.</p>
+      <p>If you see an ad on QueckBiz that you believe violates Google's advertising policies or that you find inappropriate, you can report it by clicking the AdChoices icon (a small triangle) on the ad itself, or by contacting us at <a href="mailto:support@queckbiz.com">support@queckbiz.com</a> with a description of the ad.</p>
+
+      <h2>6. Our Publisher ID</h2>
+      <p>QueckBiz's Google AdSense publisher ID is <strong>ca-pub-9121502081229374</strong>. This ID is publicly declared in our <a href="/ads.txt">ads.txt file</a>, which authorizes Google to sell advertising on our behalf and helps prevent ad fraud.</p>
+
+      <h2>7. Contact</h2>
+      <p>If you have questions or concerns about advertising on QueckBiz, please contact us at <a href="mailto:support@queckbiz.com">support@queckbiz.com</a>. We will respond within 48 hours on business days.</p>
+    
+      <h2>8. How Ad Revenue Supports QueckBiz</h2>
+      <p>Every QueckBiz tool — the invoice generator, receipt maker, estimate builder, proforma invoice creator, credit note tool, and purchase order generator — is completely free to use, with no subscription, no premium tier, and no per-document charge. Sustaining this requires revenue, and advertising is how we generate it.</p>
+      <p>When you visit QueckBiz and view an ad, a small amount of revenue is generated — typically a fraction of a cent per ad impression for non-personalized ads, and slightly more for personalized ads that match your interests. These small amounts accumulate across all our visitors and fund the hosting, development, maintenance, and ongoing improvement of the platform. Without advertising revenue, QueckBiz would need to introduce paid plans, limit usage, or shut down entirely.</p>
+      <p>We are mindful of the balance between generating the revenue we need and maintaining an ad experience that does not interfere with your ability to use our tools. We have deliberately limited ads to clearly marked areas above and below the main content. We do not show interstitial ads between steps, pop-up ads that block content, auto-playing audio or video ads, or ads that disguise themselves as content. If our ad implementation ever crosses a line for you, we want to know — please email <a href="mailto:support@queckbiz.com">support@queckbiz.com</a>.</p>
+
+      <h2>9. Understanding the AdChoices Icon</h2>
+      <p>You may notice a small triangle or "i" icon on some ads displayed on QueckBiz. This is the AdChoices icon, an industry-standard symbol used by the Digital Advertising Alliance and similar organizations. Clicking the AdChoices icon opens a panel where you can learn more about why a particular ad was shown to you and manage your advertising preferences directly within the ad itself.</p>
+      <p>The AdChoices system gives you granular control over interest-based advertising from participating advertisers. It is separate from the Google Ad Settings tool, though both can be used to manage your advertising experience. We encourage users who want fine-grained control over their ad experience to explore both options.</p>
+
+      <h2>10. Ad Blocking</h2>
+      <p>We understand that some users prefer to use ad-blocking browser extensions. While we respect your right to control your browsing experience, we want to be transparent: ad revenue is how QueckBiz remains free for everyone. If you use an ad blocker on QueckBiz, we lose the revenue that would otherwise support the platform's operation.</p>
+      <p>We do not use anti-ad-blocking scripts, we do not block access to our tools for users with ad blockers, and we do not display messages demanding you disable your ad blocker. If you find our ad implementation reasonable and our tools genuinely useful, we simply ask that you consider allowing ads on QueckBiz while blocking them on sites where you find the ad experience more intrusive. The choice is entirely yours.</p>
+
+      <h2>11. Transparency and Ad Quality Commitment</h2>
+      <p>We are committed to maintaining a high-quality advertising environment on QueckBiz. This means:</p>
+      <ul>
+        <li>We only use Google AdSense, a reputable and policy-governed advertising platform, not lower-quality ad networks known for intrusive or misleading ads.</li>
+        <li>We do not accept direct advertising deals that would require us to promote specific products or services in our content without clear disclosure.</li>
+        <li>We do not allow sponsored content, native advertising, or paid editorial placements. All content on QueckBiz is created independently of advertising relationships.</li>
+        <li>We report any ads that we observe violating Google's policies and take action to prevent their recurrence.</li>
+        <li>We are transparent about our publisher ID (ca-pub-9121502081229374) and maintain an up-to-date ads.txt file that prevents unauthorized parties from selling advertising on our behalf.</li>
+      </ul>
+      <p>If you ever see an ad on QueckBiz that strikes you as inappropriate, misleading, or in violation of advertising standards, please report it to us at <a href="mailto:support@queckbiz.com">support@queckbiz.com</a> with as much detail as possible, including a screenshot if you can capture one. We take these reports seriously and will escalate them to Google AdSense when warranted. Maintaining a trustworthy advertising environment is in the interest of our users, our platform, and the long-term sustainability of QueckBiz as a free service. We appreciate your help in keeping advertising on QueckBiz to a high standard.</p>
+
+    </div>
+    
+    <!-- Ad Placeholder Bottom -->
+  <div class="ad-placeholder ad-bottom">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9121502081229374"
+         data-ad-slot="2020202020"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="20" fill="#3b82f6"/><text x="50" y="68" font-size="55" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">Q</text></svg>
+          <span>QueckBiz</span>
+        </a>
+        <p class="footer-tagline">Free online tools for invoices, receipts, estimates, and more.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>TOOLS</h4>
+          <ul>
+            <li><a href="/invoice">Invoice</a></li>
+            <li><a href="/receipt">Receipt</a></li>
+            <li><a href="/estimate">Estimate</a></li>
+            <li><a href="/proforma">Proforma</a></li>
+            <li><a href="/creditnote">Credit Note</a></li>
+            <li><a href="/purchaseorder">Purchase Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>COMPANY</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>LEGAL</h4>
+          <ul>
+            <li><a href="/cookies">Cookies</a></li>
+            <li><a href="/adsettings">Ad Settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 QueckBiz. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const moon = document.getElementById('moon');
+    const sun = document.getElementById('sun');
+    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (savedTheme === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); moon.style.display='none'; sun.style.display='block'; }
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (isDark) { document.documentElement.removeAttribute('data-theme'); moon.style.display='block'; sun.style.display='none'; localStorage.setItem('theme','light'); }
+      else { document.documentElement.setAttribute('data-theme','dark'); moon.style.display='none'; sun.style.display='block'; localStorage.setItem('theme','dark'); }
+    });
+  </script>
+
+  <!-- Cookie Consent + Consent Mode v2 -->
+  <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:1000;font-size:.875rem;box-shadow:0 -4px 6px rgba(0,0,0,0.1);">
+    <p style="margin:0;flex:1;min-width:200px;">We use cookies and Google AdSense to improve your experience and support our free tools. <a href="/cookies" style="color:#60a5fa;text-decoration:underline;">Learn more</a></p>
+    <div style="display:flex;gap:.75rem;flex-shrink:0;">
+      <button onclick="declineCookies()" style="padding:.5rem 1rem;border-radius:8px;border:1px solid #475569;background:transparent;color:#94a3b8;cursor:pointer;font-size:.875rem;">Decline</button>
+      <button onclick="acceptCookies()" style="padding:.5rem 1.25rem;border-radius:8px;border:none;background:#2563eb;color:#fff;cursor:pointer;font-size:.875rem;font-weight:600;">Accept</button>
+    </div>
+  </div>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied',
+      analytics_storage:'denied',
+      ad_user_data:'denied',
+      ad_personalization:'denied',
+      wait_for_update:500
+    });
+    function acceptCookies(){
+      document.getElementById('cookieBanner').style.display='none';
+      localStorage.setItem('cookiesAccepted','true');
+      gtag('consent','update',{
+        ad_storage:'granted',
+        analytics_storage:'granted',
+        ad_user_data:'granted',
+        ad_personalization:'granted'
+      });
+    }
+    function declineCookies(){
+      document.getElementById('cookieBanner').style.display='none';
+      localStorage.setItem('cookiesAccepted','false');
+    }
+    (function(){
+      var v=localStorage.getItem('cookiesAccepted');
+      if(v!==null){
+        document.getElementById('cookieBanner').style.display='none';
+        if(v==='true'){
+          gtag('consent','update',{
+            ad_storage:'granted',analytics_storage:'granted',
+            ad_user_data:'granted',ad_personalization:'granted'
+          });
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
