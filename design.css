@@ -218,3 +218,10 @@ html[dir="rtl"] .lang-select {
 @media (max-width:900px){.hero-split .hero-links{justify-content:center}}
 .hero-links a{color:#dbe4ff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:.35rem .8rem;border-radius:999px;font-size:.85rem;text-decoration:none}
 .hero-links a:hover{background:rgba(255,255,255,.2)}
+/* hero: light in day mode, dark only in night mode */
+:root:not([data-theme="dark"]) .hero-split{background:linear-gradient(160deg,#eef2ff 0%,#f5f7ff 55%,#ffffff 100%)!important;border-bottom:1px solid #e2e8f0}
+:root:not([data-theme="dark"]) .hero-split h1{color:#0f172a!important}
+:root:not([data-theme="dark"]) .hero-split p{color:#475569!important}
+:root:not([data-theme="dark"]) .hero-links a{color:#334155;background:#fff;border-color:#cbd5e1}
+:root:not([data-theme="dark"]) .hero-links a:hover{background:#eef2ff}
+:root:not([data-theme="dark"]) .hero-split .invoice-card{box-shadow:0 18px 40px rgba(15,23,42,.14);border:1px solid #e2e8f0}
