@@ -157,7 +157,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/design.css?v=2">
+  <link rel="stylesheet" href="/design.css?v=3">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -196,7 +196,7 @@
     <p style="color:var(--text2);line-height:1.7;margin:-.5rem 0 1.25rem">Design work is billed by deliverable and by revision, so the invoice has to record what was agreed. This template lists each asset, the revision rounds and the license, which protects both sides.</p>
     <div class="card">
       <div class="grid-2">
-        <div><label>Your Business Name</label><input type="text" id="bizName" placeholder="Acme Corp"></div><div style="grid-column:1/-1"><label>Business Logo (optional)</label><div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap"><input type="file" id="logoInput" accept="image/png,image/jpeg,image/webp,image/svg+xml" style="display:none" onchange="handleLogoUpload(event)"><button type="button" class="btn btn-secondary" onclick="document.getElementById('logoInput').click()"><span>📁 Upload Logo</span></button><img id="logoPreviewImg" alt="Logo" style="display:none;max-height:56px;max-width:160px;border-radius:6px;border:1px solid var(--border);object-fit:contain;background:#fff;padding:2px"><button type="button" class="btn btn-danger" id="logoRemoveBtn" style="display:none" onclick="removeLogo()">✕</button></div><small style="color:var(--text2);font-size:.75rem;display:block;margin-top:.35rem">PNG, JPG, SVG or WebP, max 1MB. Saved only in your browser and reused automatically across all QueckBiz tools.</small></div>
+        <div><label>Your Business Name</label><input type="text" id="bizName" placeholder="Acme Corp"></div><div><label>Business Logo (optional)</label><div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap"><input type="file" id="logoInput" accept="image/png,image/jpeg,image/webp,image/svg+xml" style="display:none" onchange="handleLogoUpload(event)"><button type="button" class="btn btn-secondary" onclick="document.getElementById('logoInput').click()"><span>📁 Upload Logo</span></button><img id="logoPreviewImg" alt="Logo" style="display:none;max-height:56px;max-width:160px;border-radius:6px;border:1px solid var(--border);object-fit:contain;background:#fff;padding:2px"><button type="button" class="btn btn-danger" id="logoRemoveBtn" style="display:none" onclick="removeLogo()">✕</button></div><small style="color:var(--text2);font-size:.75rem;display:block;margin-top:.35rem">PNG, JPG, SVG or WebP, max 1MB. Saved only in your browser and reused automatically across all QueckBiz tools.</small></div>
         <div><label>Your Email / Phone</label><input type="text" id="bizContact" placeholder="contact@acme.com"></div>
         <div><label>Your Address</label><textarea id="bizAddress" placeholder="123 Main St, City, Country"></textarea></div>
         <div><label>Client Name</label><input type="text" id="clientName" placeholder="John Doe"></div>

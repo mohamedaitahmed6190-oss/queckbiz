@@ -160,7 +160,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/design.css?v=2">
+  <link rel="stylesheet" href="/design.css?v=3">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -198,7 +198,7 @@
 <h1>مولّد سند التسليم</h1>
     <div class="card">
       <div class="grid-2">
-        <div><label>المرسل (شركتك)</label><input type="text" id="bizName"></div><div style="grid-column:1/-1"><label>شعار النشاط التجاري (اختياري)</label><div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap"><input type="file" id="logoInput" accept="image/png,image/jpeg,image/webp,image/svg+xml" style="display:none" onchange="handleLogoUpload(event)"><button type="button" class="btn btn-secondary" onclick="document.getElementById('logoInput').click()"><span>📁 رفع الشعار</span></button><img id="logoPreviewImg" alt="Logo" style="display:none;max-height:56px;max-width:160px;border-radius:6px;border:1px solid var(--border);object-fit:contain;background:#fff;padding:2px"><button type="button" class="btn btn-danger" id="logoRemoveBtn" style="display:none" onclick="removeLogo()">✕</button></div><small style="color:var(--text2);font-size:.75rem;display:block;margin-top:.35rem">PNG أو JPG أو SVG أو WebP، بحد أقصى 1 ميجابايت. يُحفظ في متصفحك فقط ويُستخدم تلقائيًا في جميع أدوات QueckBiz.</small></div>
+        <div><label>المرسل (شركتك)</label><input type="text" id="bizName"></div><div><label>شعار النشاط التجاري (اختياري)</label><div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap"><input type="file" id="logoInput" accept="image/png,image/jpeg,image/webp,image/svg+xml" style="display:none" onchange="handleLogoUpload(event)"><button type="button" class="btn btn-secondary" onclick="document.getElementById('logoInput').click()"><span>📁 رفع الشعار</span></button><img id="logoPreviewImg" alt="Logo" style="display:none;max-height:56px;max-width:160px;border-radius:6px;border:1px solid var(--border);object-fit:contain;background:#fff;padding:2px"><button type="button" class="btn btn-danger" id="logoRemoveBtn" style="display:none" onclick="removeLogo()">✕</button></div><small style="color:var(--text2);font-size:.75rem;display:block;margin-top:.35rem">PNG أو JPG أو SVG أو WebP، بحد أقصى 1 ميجابايت. يُحفظ في متصفحك فقط ويُستخدم تلقائيًا في جميع أدوات QueckBiz.</small></div>
         <div><label>البريد الإلكتروني / الهاتف</label><input type="text" id="bizContact" placeholder="contact@example.ma"></div>
         <div><label>العنوان</label><textarea id="bizAddress"></textarea></div>
         <div><label>ICE</label><input type="text" id="bizIce" inputmode="numeric" placeholder="001234567000089"></div>
