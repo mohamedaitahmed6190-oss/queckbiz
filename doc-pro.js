@@ -16,19 +16,23 @@
     proforma:      { no: 'profNumber', date: 'profDate', extra: [['expiryDate', 'expiry']], content: 'profContent', preview: 'profPreview', print: 'printProforma', prefix: 'PRO-001', last: 'qb_last_pro', from: 'from', to: 'billTo', notes: 'notes', notesLbl: 'notes', biz: { name: 'bizName', contact: 'bizContact', addr: 'bizAddress' }, party: { name: 'clientName', addr: 'clientAddress' }, ship: 1, pay: 1, clients: 'clients' },
     creditnote:    { no: 'cnNumber', date: 'cnDate', extra: [['origInv', 'origInv']], content: 'cnContent', preview: 'cnPreview', print: 'printCN', prefix: 'CN-001', last: 'qb_last_cn', from: 'from', to: 'creditTo', notes: 'notes', notesLbl: 'notes', blocks: [['reason', 'reason']], totalKey: 'creditTotal', color: '#dc2626', biz: { name: 'bizName', contact: 'bizContact', addr: 'bizAddress' }, party: { name: 'clientName', addr: 'clientAddress' }, clients: 'clients' },
     purchaseorder: { no: 'poNumber', date: 'poDate', extra: [['deliveryDate', 'delivery']], content: 'poContent', preview: 'poPreview', print: 'printPO', prefix: 'PO-001', last: 'qb_last_po', from: 'buyer', to: 'vendor', notes: 'terms', notesLbl: 'terms', sku: 1, ship: 1, shipExists: 1, biz: { name: 'buyerName', contact: 'buyerContact', addr: 'buyerAddress' }, party: { name: 'vendorName', addr: 'vendorAddress' }, clients: 'suppliers' },
+    moroccan:      { no: 'invNumber', date: 'invDate', extra: [['dueDate', 'due']], content: 'invoiceContent', preview: 'invoicePreview', print: 'printInvoice', prefix: 'FAC-001', last: 'qb_last_ma', from: 'from', to: 'billTo', notes: 'notes', notesLbl: 'payTerms', biz: { name: 'bizName', contact: 'bizContact', addr: 'bizAddress' }, party: { name: 'clientName', addr: 'clientAddress' }, ship: 1, paid: 1, pay: 1, clients: 'clients', ht: 1, words: 1, legal: 1 },
+    deliverynote:  { no: 'dnNumber', date: 'dnDate', extra: [['orderRef', 'orderRef'], ['transport', 'transport']], content: 'dnContent', preview: 'dnPreview', print: 'printDN', prefix: 'BL-001', last: 'qb_last_dn', from: 'seller', to: 'deliverTo', notes: 'notes', notesLbl: 'notes', biz: { name: 'bizName', contact: 'bizContact', addr: 'bizAddress' }, party: { name: 'clientName', addr: 'clientAddress' }, clients: 'clients', noPrice: 1, sku: 1, legal: 1 },
     receipt:       { no: 'recNumber', date: 'recDate', extra: [['payment', 'paymentMethod']], content: 'receiptContent', preview: 'receiptPreview', print: 'printReceipt', prefix: 'R-001', last: 'qb_last_rec', from: 'from', to: 'customer', notes: 'thanks', notesLbl: 'thanks', receipt: 1, biz: { name: 'bizName', addr: 'bizAddress' }, party: { name: 'customer' } }
   };
   var C = DOCS[TYPE] || DOCS.invoice;
 
   var T = {
     en: {
-      title: { invoice: 'INVOICE', estimate: 'ESTIMATE', proforma: 'PROFORMA INVOICE', creditnote: 'CREDIT NOTE', purchaseorder: 'PURCHASE ORDER', receipt: 'RECEIPT' },
-      noLbl: { invoice: 'Invoice #', estimate: 'Estimate #', proforma: 'Proforma #', creditnote: 'Credit note #', purchaseorder: 'PO #', receipt: 'Receipt #' },
+      title: { moroccan: 'INVOICE', deliverynote: 'DELIVERY NOTE', invoice: 'INVOICE', estimate: 'ESTIMATE', proforma: 'PROFORMA INVOICE', creditnote: 'CREDIT NOTE', purchaseorder: 'PURCHASE ORDER', receipt: 'RECEIPT' },
+      noLbl: { moroccan: 'Invoice #', deliverynote: 'Delivery note #', invoice: 'Invoice #', estimate: 'Estimate #', proforma: 'Proforma #', creditnote: 'Credit note #', purchaseorder: 'PO #', receipt: 'Receipt #' },
       date: 'Date', due: 'Due', valid: 'Valid until', expiry: 'Expires', delivery: 'Delivery', origInv: 'Original invoice', paymentMethod: 'Payment', reason: 'Reason',
       from: 'From', billTo: 'Bill To', preparedFor: 'Prepared for', creditTo: 'Credit to', buyer: 'Buyer', vendor: 'Vendor', customer: 'Customer',
       desc: 'Description', item: 'Item', sku: 'SKU', qty: 'Qty', price: 'Price', amount: 'Amount',
       subtotal: 'Subtotal', discount: 'Discount', tax: 'Tax', shipping: 'Shipping / fees', total: 'Total', creditTotal: 'Credit total', paid: 'Paid', balance: 'Balance due',
       payDetails: 'Payment details', notes: 'Notes', terms: 'Terms & conditions', thanks: '', signature: 'Authorized signature',
+      ice: 'ICE', ifNo: 'Tax ID (IF)', rc: 'Trade register (RC)', tp: 'Business tax (Patente)', clientIce: 'Client ICE', subtotalHT: 'Total excl. VAT', taxMA: 'VAT', totalTTC: 'Total incl. VAT', payTerms: 'Payment terms', words: 'This invoice is closed at the amount of:',
+      seller: 'Sender', deliverTo: 'Deliver to', orderRef: 'Order ref.', transport: 'Carrier / vehicle', totalQty: 'Total quantity', deliveredBy: 'Delivered by (stamp & signature)', receivedBy: 'Received by (name, date, stamp & signature)', goodCond: 'Goods received in good condition',
       bizDef: 'Your Business', partyDef: 'Client Name', guest: 'Guest', itemDef: 'Item', powered: 'Powered by QueckBiz',
       cardTitle: 'Style, payment & saved details', template: 'Template', tplClassic: 'Classic', tplModern: 'Modern (colour header)', tplMinimal: 'Minimal (black & white)', accent: 'Accent colour',
       shipUi: 'Shipping / extra fees (not taxed)', paidUi: 'Amount already paid (deposit)', payUi: 'Payment details (bank, IBAN/RIB, PayPal…)', payPh: 'Bank: ...\nIBAN / RIB: ...\nPayPal: ...',
@@ -38,13 +42,15 @@
       popup: 'Allow pop-ups to print or save as PDF.', storeFail: 'Could not save on this device (storage is blocked or full).'
     },
     fr: {
-      title: { invoice: 'FACTURE', estimate: 'DEVIS', proforma: 'FACTURE PROFORMA', creditnote: 'NOTE DE CRÉDIT', purchaseorder: 'BON DE COMMANDE', receipt: 'REÇU' },
-      noLbl: { invoice: 'N° de facture', estimate: 'N° de devis', proforma: 'N° de proforma', creditnote: 'N° de note de crédit', purchaseorder: 'N° de commande', receipt: 'N° de reçu' },
+      title: { moroccan: 'FACTURE', deliverynote: 'BON DE LIVRAISON', invoice: 'FACTURE', estimate: 'DEVIS', proforma: 'FACTURE PROFORMA', creditnote: 'NOTE DE CRÉDIT', purchaseorder: 'BON DE COMMANDE', receipt: 'REÇU' },
+      noLbl: { moroccan: 'N° de facture', deliverynote: 'N° de bon de livraison', invoice: 'N° de facture', estimate: 'N° de devis', proforma: 'N° de proforma', creditnote: 'N° de note de crédit', purchaseorder: 'N° de commande', receipt: 'N° de reçu' },
       date: 'Date', due: 'Échéance', valid: 'Valable jusqu\'au', expiry: 'Expire le', delivery: 'Livraison', origInv: 'Facture d\'origine', paymentMethod: 'Paiement', reason: 'Motif',
       from: 'De', billTo: 'Facturer à', preparedFor: 'Destinataire', creditTo: 'Crédité à', buyer: 'Acheteur', vendor: 'Fournisseur', customer: 'Client',
       desc: 'Description', item: 'Article', sku: 'Réf.', qty: 'Qté', price: 'Prix', amount: 'Montant',
       subtotal: 'Sous-total', discount: 'Remise', tax: 'Taxe', shipping: 'Livraison / frais', total: 'Total', creditTotal: 'Total de l\'avoir', paid: 'Payé', balance: 'Reste à payer',
       payDetails: 'Coordonnées de paiement', notes: 'Notes', terms: 'Conditions générales', thanks: '', signature: 'Signature autorisée',
+      ice: 'ICE', ifNo: 'IF', rc: 'RC', tp: 'Patente', clientIce: 'ICE du client', subtotalHT: 'Total HT', taxMA: 'TVA', totalTTC: 'Total TTC', payTerms: 'Conditions de règlement', words: 'Arrêtée la présente facture à la somme de :',
+      seller: 'Expéditeur', deliverTo: 'Livré à', orderRef: 'Réf. commande', transport: 'Transporteur / véhicule', totalQty: 'Quantité totale', deliveredBy: 'Livré par (cachet et signature)', receivedBy: 'Reçu par (nom, date, cachet et signature)', goodCond: 'Marchandise reçue en bon état',
       bizDef: 'Votre entreprise', partyDef: 'Nom du client', guest: 'Client', itemDef: 'Article', powered: 'Propulsé par QueckBiz',
       cardTitle: 'Style, paiement et données enregistrées', template: 'Modèle', tplClassic: 'Classique', tplModern: 'Moderne (en-tête coloré)', tplMinimal: 'Minimal (noir et blanc)', accent: 'Couleur d\'accent',
       shipUi: 'Livraison / frais supplémentaires (hors taxe)', paidUi: 'Montant déjà payé (acompte)', payUi: 'Coordonnées de paiement (banque, IBAN/RIB, PayPal…)', payPh: 'Banque : ...\nIBAN / RIB : ...\nPayPal : ...',
@@ -54,13 +60,15 @@
       popup: 'Autorisez les pop-ups pour imprimer ou enregistrer en PDF.', storeFail: 'Enregistrement impossible sur cet appareil (stockage bloqué ou plein).'
     },
     ar: {
-      title: { invoice: 'فاتورة', estimate: 'عرض سعر', proforma: 'فاتورة أولية', creditnote: 'إشعار دائن', purchaseorder: 'أمر شراء', receipt: 'إيصال' },
-      noLbl: { invoice: 'رقم الفاتورة', estimate: 'رقم العرض', proforma: 'رقم الفاتورة الأولية', creditnote: 'رقم الإشعار', purchaseorder: 'رقم الأمر', receipt: 'رقم الإيصال' },
+      title: { moroccan: 'فاتورة', deliverynote: 'سند التسليم', invoice: 'فاتورة', estimate: 'عرض سعر', proforma: 'فاتورة أولية', creditnote: 'إشعار دائن', purchaseorder: 'أمر شراء', receipt: 'إيصال' },
+      noLbl: { moroccan: 'رقم الفاتورة', deliverynote: 'رقم سند التسليم', invoice: 'رقم الفاتورة', estimate: 'رقم العرض', proforma: 'رقم الفاتورة الأولية', creditnote: 'رقم الإشعار', purchaseorder: 'رقم الأمر', receipt: 'رقم الإيصال' },
       date: 'التاريخ', due: 'الاستحقاق', valid: 'صالح حتى', expiry: 'ينتهي في', delivery: 'التسليم', origInv: 'الفاتورة الأصلية', paymentMethod: 'طريقة الدفع', reason: 'السبب',
       from: 'من', billTo: 'إلى', preparedFor: 'إلى', creditTo: 'إلى', buyer: 'المشتري', vendor: 'المورد', customer: 'العميل',
       desc: 'الوصف', item: 'الصنف', sku: 'الرمز', qty: 'الكمية', price: 'السعر', amount: 'المبلغ',
       subtotal: 'المجموع الفرعي', discount: 'خصم', tax: 'ضريبة', shipping: 'الشحن / رسوم', total: 'الإجمالي', creditTotal: 'إجمالي الإشعار', paid: 'المدفوع', balance: 'المتبقي',
       payDetails: 'تفاصيل الدفع', notes: 'ملاحظات', terms: 'الشروط والأحكام', thanks: '', signature: 'التوقيع المعتمد',
+      ice: 'ICE', ifNo: 'التعريف الجبائي', rc: 'السجل التجاري', tp: 'الضريبة المهنية', clientIce: 'ICE العميل', subtotalHT: 'المجموع دون احتساب الضريبة', taxMA: 'الضريبة على القيمة المضافة', totalTTC: 'المجموع مع احتساب الضريبة', payTerms: 'شروط الأداء', words: '',
+      seller: 'المرسل', deliverTo: 'يُسلَّم إلى', orderRef: 'مرجع الطلب', transport: 'الناقل / المركبة', totalQty: 'مجموع الكميات', deliveredBy: 'المسلِّم (الختم والتوقيع)', receivedBy: 'المستلِم (الاسم، التاريخ، الختم والتوقيع)', goodCond: 'تم استلام البضاعة في حالة جيدة',
       bizDef: 'شركتك', partyDef: 'اسم العميل', guest: 'زبون', itemDef: 'صنف', powered: 'بواسطة QueckBiz',
       cardTitle: 'الأسلوب والدفع والبيانات المحفوظة', template: 'القالب', tplClassic: 'كلاسيكي', tplModern: 'عصري (ترويسة ملونة)', tplMinimal: 'بسيط (أبيض وأسود)', accent: 'اللون الرئيسي',
       shipUi: 'الشحن / رسوم إضافية (بدون ضريبة)', paidUi: 'المبلغ المدفوع مسبقاً (عربون)', payUi: 'تفاصيل الدفع (البنك، IBAN/RIB، PayPal…)', payPh: 'البنك: ...\nIBAN / RIB: ...\nPayPal: ...',
@@ -142,6 +150,7 @@
   function fieldMap() {
     var m = { bizName: C.biz.name, bizAddress: C.biz.addr, currency: 'currency', taxRate: 'taxRate', tplSelect: 'tplSelect', accentColor: 'accentColor', payDetails: 'payDetails' };
     if (C.biz.contact) m.bizContact = C.biz.contact;
+    ['bizIce', 'bizIf', 'bizRc', 'bizTp'].forEach(function (id) { if ($(id)) m[id] = id; });
     m['n_' + TYPE] = C.notes;
     return m;
   }
@@ -190,25 +199,58 @@
   function saveClient() {
     var name = val(C.party.name).trim(); if (!name) { alert(T.needName); return; }
     var list = jget(K.clients, []).filter(function (c) { return c.name.toLowerCase() !== name.toLowerCase(); });
-    list.unshift({ name: name, address: val(C.party.addr) });
+    list.unshift({ name: name, address: val(C.party.addr), ice: val('clientIce') });
     if (!lsSet(K.clients, JSON.stringify(list.slice(0, 50)))) alert(T.storeFail);
     renderClients();
   }
   function pickClient() {
     var i = $('savedClients').value; if (i === '') return;
     var c = jget(K.clients, [])[parseInt(i, 10)]; if (!c) return;
-    $(C.party.name).value = c.name; if ($(C.party.addr)) $(C.party.addr).value = c.address || '';
+    $(C.party.name).value = c.name; if ($(C.party.addr)) $(C.party.addr).value = c.address || ''; if ($('clientIce')) $('clientIce').value = c.ice || '';
   }
   function deleteClient() {
     var i = $('savedClients').value; if (i === '') return;
     var list = jget(K.clients, []); list.splice(parseInt(i, 10), 1); lsSet(K.clients, JSON.stringify(list)); renderClients();
   }
 
+  /* ---------- amount in words (French) ---------- */
+  var U = ['zéro', 'un', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix', 'onze', 'douze', 'treize', 'quatorze', 'quinze', 'seize'];
+  var TENS = ['', '', 'vingt', 'trente', 'quarante', 'cinquante', 'soixante'];
+  function b100(n, term) {
+    if (n < 17) return U[n];
+    if (n < 20) return 'dix-' + U[n - 10];
+    if (n < 70) { var t = Math.floor(n / 10), u = n % 10; return TENS[t] + (u === 1 ? ' et un' : u ? '-' + U[u] : ''); }
+    if (n < 80) { var v = n - 60; return 'soixante' + (v === 11 ? ' et onze' : '-' + b100(v)); }
+    var w = n - 80; return w === 0 ? 'quatre-vingt' + (term ? 's' : '') : 'quatre-vingt-' + b100(w);
+  }
+  function w3(n, term) {
+    var h = Math.floor(n / 100), r = n % 100, out = [];
+    if (h) out.push(h === 1 ? 'cent' : U[h] + ' cent' + (r === 0 && term ? 's' : ''));
+    if (r) out.push(b100(r, term));
+    return out.join(' ');
+  }
+  function frWords(n) {
+    if (n === 0) return 'zéro';
+    var b = Math.floor(n / 1e9), m = Math.floor(n % 1e9 / 1e6), k = Math.floor(n % 1e6 / 1e3), r = n % 1e3, o = [];
+    if (b) o.push(w3(b, false) + ' milliard' + (b > 1 ? 's' : ''));
+    if (m) o.push(w3(m, false) + ' million' + (m > 1 ? 's' : ''));
+    if (k) o.push(k === 1 ? 'mille' : w3(k, false) + ' mille');
+    if (r) o.push(w3(r, true));
+    return o.join(' ');
+  }
+  function amountWords(total, cur) {
+    var t = Math.round(total * 100) / 100, i = Math.floor(t), c = Math.round((t - i) * 100);
+    var names = { MAD: ['dirham', 'dirhams', 'centime', 'centimes'], EUR: ['euro', 'euros', 'centime', 'centimes'], USD: ['dollar', 'dollars', 'cent', 'cents'] }[cur] || [cur, cur, '', ''];
+    var s = frWords(i) + (i >= 1e6 && i % 1e6 === 0 ? ' de ' : ' ') + (i > 1 ? names[1] : names[0]);
+    if (c > 0 && names[2]) s += ' et ' + frWords(c) + ' ' + (c > 1 ? names[3] : names[2]);
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+
   /* ---------- document HTML ---------- */
   function collect() {
     var items = [], sub = 0;
     document.querySelectorAll('#itemsContainer .row').forEach(function (row) {
-      var q = parseFloat(row.querySelector('.item-qty').value) || 0, p = parseFloat(row.querySelector('.item-price').value) || 0, sk = row.querySelector('.item-sku');
+      var pe = row.querySelector('.item-price'), q = parseFloat(row.querySelector('.item-qty').value) || 0, p = pe ? (parseFloat(pe.value) || 0) : 0, sk = row.querySelector('.item-sku');
       items.push({ d: row.querySelector('.item-desc').value || T.itemDef, sku: sk ? (sk.value || '-') : '', q: q, p: p, t: q * p }); sub += q * p;
     });
     var disc = num('discountRate'), tax = num('taxRate'), ship = C.ship ? num('shipping') : 0, paid = C.paid ? num('paidAmt') : 0;
@@ -221,16 +263,18 @@
       blocks: (C.blocks || []).map(function (x) { return [T[x[1]], val(x[0])]; }).filter(function (x) { return x[1]; }),
       cur: val('currency'), items: items, sub: sub, disc: disc, discAmt: discAmt, tax: tax, taxAmt: taxAmt, ship: ship, total: total, paid: paid, balance: total - paid,
       notes: val(C.notes), pay: C.pay ? val('payDetails') : '', tpl: val('tplSelect') || 'classic', color: safeColor(val('accentColor') || '#2563eb'),
+      legal: C.legal ? [[T.ice, val('bizIce')], [T.ifNo, val('bizIf')], [T.rc, val('bizRc')], [T.tp, val('bizTp')]].filter(function (x) { return x[1].trim(); }) : [], pIce: val('clientIce'),
+      qtySum: items.reduce(function (a, i) { return a + i.q; }, 0),
       logo: safeImg(window.currentLogo), sig: safeImg(sigData)
     };
   }
   function build(d) {
     var a = d.color, tpl = d.tpl, cur = d.cur, ink = tpl === 'minimal' ? '#111' : a;
-    var H = tpl === 'modern' ? 'background:' + a + ';color:#fff;padding:.65rem .75rem;text-align:'
-          : tpl === 'minimal' ? 'color:#111;padding:.65rem .75rem;border-bottom:2px solid #111;text-align:'
-          : 'background:#f1f5f9;color:#64748b;padding:.65rem .75rem;border-bottom:2px solid #e2e8f0;text-align:';
+    var H = tpl === 'modern' ? 'background:' + a + ';color:#fff;padding:.6rem .5rem;text-align:'
+          : tpl === 'minimal' ? 'color:#111;padding:.6rem .5rem;border-bottom:2px solid #111;text-align:'
+          : 'background:#f1f5f9;color:#64748b;padding:.6rem .5rem;border-bottom:2px solid #e2e8f0;text-align:';
     var th = function (t, al) { return '<th style="' + H + al + ';font-size:.72rem;text-transform:uppercase;letter-spacing:' + (RTL ? '0' : '.5px') + '">' + esc(t) + '</th>'; };
-    var td = 'padding:.65rem .75rem;border-bottom:1px solid #e2e8f0;font-size:.9rem;';
+    var td = 'padding:.6rem .5rem;border-bottom:1px solid #e2e8f0;font-size:.9rem;';
     var ttl = T.title[TYPE];
     var title = tpl === 'minimal' ? '<div style="font-size:1.1rem;font-weight:600;letter-spacing:' + (RTL ? '0' : '.35em') + ';color:#111">' + esc(ttl) + '</div>'
       : '<div style="font-size:' + (C.receipt ? '1.5rem' : '2rem') + ';font-weight:700;color:' + (tpl === 'modern' ? '#fff' : a) + '">' + esc(ttl) + '</div>';
@@ -240,28 +284,29 @@
     var logo = d.logo ? '<div style="flex:1;display:flex;justify-content:center"><img src="' + d.logo + '" alt="Logo" style="max-height:70px;max-width:180px;object-fit:contain"></div>' : '';
     var head = '<div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1.75rem;' + (tpl === 'modern' ? 'background:' + a + ';padding:1.1rem 1.25rem;border-radius:8px;' : tpl === 'minimal' ? 'padding-bottom:1rem;border-bottom:1px solid #111;' : '') + '">' + title + logo + meta + '</div>';
     var lab = 'font-size:.72rem;text-transform:uppercase;letter-spacing:' + (RTL ? '0' : '1px') + ';color:#94a3b8;margin-bottom:.4rem';
-    var left = '<div><h4 style="' + lab + '">' + esc(T[C.from]) + '</h4><div style="font-size:.875rem;line-height:1.6"><strong>' + esc(d.biz) + '</strong>' + (d.contact ? '<br>' + esc(d.contact) : '') + (d.addr ? '<br>' + nl2br(d.addr) : '') + '</div></div>';
-    var right = '<div><h4 style="' + lab + '">' + esc(T[C.to]) + '</h4><div style="font-size:.875rem;line-height:1.6"><strong>' + esc(d.party) + '</strong>' + (d.pAddr ? '<br>' + nl2br(d.pAddr) : '') + '</div></div>';
+    var left = '<div><h4 style="' + lab + '">' + esc(T[C.from]) + '</h4><div style="font-size:.875rem;line-height:1.6"><strong>' + esc(d.biz) + '</strong>' + (d.contact ? '<br>' + esc(d.contact) : '') + (d.addr ? '<br>' + nl2br(d.addr) : '') + (d.legal.length ? '<br><span style="font-size:.78rem;color:#64748b">' + d.legal.map(function (x) { return esc(x[0]) + ': ' + esc(x[1]); }).join(' · ') + '</span>' : '') + '</div></div>';
+    var right = '<div><h4 style="' + lab + '">' + esc(T[C.to]) + '</h4><div style="font-size:.875rem;line-height:1.6"><strong>' + esc(d.party) + '</strong>' + (d.pAddr ? '<br>' + nl2br(d.pAddr) : '') + (d.pIce.trim() ? '<br><span style="font-size:.78rem;color:#64748b">' + esc(T.clientIce) + ': ' + esc(d.pIce) + '</span>' : '') + '</div></div>';
     var parties = '<div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:1.75rem">' + left + right + '</div>';
     var rows = d.items.map(function (it) {
-      return '<tr><td style="' + td + '">' + esc(it.d) + '</td>' + (C.sku ? '<td style="' + td + '">' + esc(it.sku) + '</td>' : '') + '<td style="' + td + 'text-align:' + END + '">' + it.q + '</td><td style="' + td + 'text-align:' + END + '">' + money(it.p, cur) + '</td><td style="' + td + 'text-align:' + END + '">' + money(it.t, cur) + '</td></tr>';
+      return '<tr><td style="' + td + '">' + esc(it.d) + '</td>' + (C.sku ? '<td style="' + td + '">' + esc(it.sku) + '</td>' : '') + '<td style="' + td + 'text-align:' + END + '">' + it.q + '</td>' + (C.noPrice ? '' : '<td style="' + td + 'text-align:' + END + '">' + money(it.p, cur) + '</td><td style="' + td + 'text-align:' + END + '">' + money(it.t, cur) + '</td>') + '</tr>';
     }).join('');
-    var table = '<table style="width:100%;border-collapse:collapse;margin-bottom:1.25rem"><thead><tr>' + th(C.receipt ? T.item : T.desc, START) + (C.sku ? th(T.sku, START) : '') + th(T.qty, END) + th(T.price, END) + th(T.amount, END) + '</tr></thead><tbody>' + rows + '</tbody></table>';
+    var table = '<div style="overflow-x:auto;margin-bottom:1.25rem"><table style="width:100%;min-width:' + (C.noPrice ? '0' : '340px') + ';border-collapse:collapse"><thead><tr>' + th(C.receipt ? T.item : T.desc, START) + (C.sku ? th(T.sku, START) : '') + th(T.qty, END) + (C.noPrice ? '' : th(T.price, END) + th(T.amount, END)) + '</tr></thead><tbody>' + rows + '</tbody></table></div>';
     var line = function (l, v) { return '<div style="display:flex;justify-content:space-between;gap:2rem;font-size:.875rem;color:#475569;margin-bottom:.25rem"><span>' + esc(l) + '</span><span>' + v + '</span></div>'; };
-    var totals = '<div style="margin-' + START + ':auto;max-width:300px">' + line(T.subtotal, money(d.sub, cur)) +
+    var totals = C.noPrice ? '<div style="margin-' + START + ':auto;max-width:300px;font-weight:700;font-size:1rem;border-top:2px solid ' + ink + ';padding-top:.5rem;display:flex;justify-content:space-between;gap:2rem"><span>' + esc(T.totalQty) + '</span><span>' + d.qtySum + '</span></div>' : '<div style="margin-' + START + ':auto;max-width:300px">' + line(C.ht ? T.subtotalHT : T.subtotal, money(d.sub, cur)) +
       (d.disc > 0 ? line(T.discount + ' (' + d.disc + '%)', '-' + money(d.discAmt, cur)) : '') +
-      (d.tax > 0 ? line(T.tax + ' (' + d.tax + '%)', money(d.taxAmt, cur)) : '') +
+      (d.tax > 0 || C.ht ? line((C.ht ? T.taxMA : T.tax) + ' (' + d.tax + '%)', money(d.taxAmt, cur)) : '') +
       (d.ship > 0 ? line(T.shipping, money(d.ship, cur)) : '') +
-      '<div style="display:flex;justify-content:space-between;gap:2rem;font-size:1.2rem;font-weight:700;margin-top:.4rem;padding-top:.5rem;border-top:2px solid ' + ink + ';color:#0f172a"><span>' + esc(T[C.totalKey || 'total']) + '</span><span>' + money(d.total, cur) + '</span></div>' +
+      '<div style="display:flex;justify-content:space-between;gap:2rem;font-size:1.2rem;font-weight:700;margin-top:.4rem;padding-top:.5rem;border-top:2px solid ' + ink + ';color:#0f172a"><span>' + esc(C.ht ? T.totalTTC : T[C.totalKey || 'total']) + '</span><span>' + money(d.total, cur) + '</span></div>' +
       (d.paid > 0 ? line(T.paid, '-' + money(d.paid, cur)) + '<div style="display:flex;justify-content:space-between;gap:2rem;font-size:1.05rem;font-weight:700;color:' + ink + '"><span>' + esc(T.balance) + '</span><span>' + money(d.balance, cur) + '</span></div>' : '') + '</div>';
+    var words = (C.words && LANG === 'fr') ? '<div style="margin-top:1.25rem;font-size:.85rem;color:#0f172a;line-height:1.6"><em>' + esc(T.words) + '</em> <strong>' + esc(amountWords(d.total, cur)) + '</strong></div>' : '';
     var box = 'margin-top:1.5rem;padding:.9rem 1rem;border:1px solid #e2e8f0;border-radius:8px;font-size:.85rem;color:#475569;line-height:1.6;';
     var blocks = d.blocks.map(function (b) { return '<div style="' + box + '"><strong style="color:#0f172a">' + esc(b[0]) + ':</strong> ' + esc(b[1]) + '</div>'; }).join('');
     var pay = d.pay.trim() ? '<div style="' + box + '"><strong style="color:#0f172a">' + esc(T.payDetails) + '</strong><br>' + nl2br(d.pay) + '</div>' : '';
     var notes = '';
     if (d.notes.trim()) notes = C.receipt ? '<div style="margin-top:1.5rem;text-align:center;font-size:.8rem;color:#94a3b8">' + nl2br(d.notes) + '<br>' + esc(T.powered) + '</div>'
       : '<div style="margin-top:1.25rem;font-size:.85rem;color:#475569;line-height:1.6"><strong>' + esc(T[C.notesLbl]) + '</strong><br>' + nl2br(d.notes) + '</div>';
-    var sig = d.sig ? '<div style="margin-top:2rem;display:flex;justify-content:flex-' + 'end"><div style="text-align:center;width:220px"><img src="' + d.sig + '" alt="" style="max-height:70px;max-width:100%"><div style="border-top:1px solid #94a3b8;margin-top:.25rem;padding-top:.25rem;font-size:.75rem;color:#64748b">' + esc(T.signature) + '</div></div></div>' : '';
-    return '<div dir="' + (RTL ? 'rtl' : 'ltr') + '"' + (C.receipt ? ' style="max-width:460px;margin:0 auto"' : '') + '>' + head + parties + table + totals + blocks + pay + notes + sig + '</div>';
+    var sig = C.noPrice ? '<div style="margin-top:2rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;font-size:.8rem;color:#64748b"><div style="min-height:90px;border-top:1px solid #94a3b8;padding-top:.3rem">' + esc(T.deliveredBy) + (d.sig ? '<br><img src="' + d.sig + '" alt="" style="max-height:60px;max-width:100%">' : '') + '</div><div style="min-height:90px;border-top:1px solid #94a3b8;padding-top:.3rem">' + esc(T.receivedBy) + '<br><span style="font-size:.72rem">' + esc(T.goodCond) + ' ☐</span></div></div>' : d.sig ? '<div style="margin-top:2rem;display:flex;justify-content:flex-' + 'end"><div style="text-align:center;width:220px"><img src="' + d.sig + '" alt="" style="max-height:70px;max-width:100%"><div style="border-top:1px solid #94a3b8;margin-top:.25rem;padding-top:.25rem;font-size:.75rem;color:#64748b">' + esc(T.signature) + '</div></div></div>' : '';
+    return '<div dir="' + (RTL ? 'rtl' : 'ltr') + '"' + (C.receipt ? ' style="max-width:460px;margin:0 auto"' : '') + '>' + head + parties + table + totals + words + blocks + pay + notes + sig + '</div>';
   }
 
   function preview() {
@@ -279,7 +324,7 @@
   }
   var origReset = window.resetForm;
   function resetAll() {
-    var keep = {}, ids = ['tplSelect', 'accentColor', 'payDetails', 'currency'].concat(Object.keys(C.biz).map(function (k) { return C.biz[k]; }));
+    var keep = {}, ids = ['tplSelect', 'accentColor', 'payDetails', 'currency', 'bizIce', 'bizIf', 'bizRc', 'bizTp'].concat(Object.keys(C.biz).map(function (k) { return C.biz[k]; }));
     ids.forEach(function (id) { if ($(id)) keep[id] = $(id).value; });
     if (typeof origReset === 'function') origReset();
     Object.keys(keep).forEach(function (id) { $(id).value = keep[id]; });
@@ -291,7 +336,7 @@
 
   /* ---------- wire up ---------- */
   window.generatePreview = preview; window[C.print] = printIt; window.resetForm = resetAll;
-  window.qbPro = { persist: persist };
+  window.qbPro = { persist: persist, amountWords: amountWords };
 
   function start() {
     buildCard(); sigInit(); renderClients(); loadPrefs();
