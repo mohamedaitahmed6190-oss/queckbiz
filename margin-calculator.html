@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Margin &amp; Selling Price Calculator — Margin vs Markup | QueckBiz</title>
+  <meta name="description" content="Calculate your selling price, profit margin and markup from your cost. Margin vs markup explained. Free, no sign-up.">
+  <link rel="canonical" href="https://queckbiz.com/margin-calculator">
+  <link rel="alternate" hreflang="en" href="https://queckbiz.com/margin-calculator">
+  <link rel="alternate" hreflang="ar" href="https://queckbiz.com/ar/margin-calculator">
+  <link rel="alternate" hreflang="fr" href="https://queckbiz.com/fr/margin-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://queckbiz.com/margin-calculator">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://queckbiz.com/margin-calculator">
+  <meta property="og:title" content="Margin &amp; Selling Price Calculator — Margin vs Markup | QueckBiz">
+  <meta property="og:description" content="Calculate your selling price, profit margin and markup from your cost. Margin vs markup explained. Free, no sign-up.">
+  <meta property="og:image" content="https://queckbiz.com/og-image.png">
+  <meta property="og:site_name" content="QueckBiz">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BS0FSQVQ9V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BS0FSQVQ9V');
+  </script>
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is the difference between margin and markup?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Margin is calculated on the selling price; markup on the cost. For the same profit, markup is always higher than margin."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I price for a 30% margin?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Divide the cost by (1 − 0.30), i.e. by 0.70. For a cost of 70, the price is 100."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the price multiplier?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It is the selling price divided by the cost. A multiplier of 1.5 means you sell at 1.5 times your cost."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does the calculated price include VAT?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No, it is excluding VAT. Add VAT afterwards with the VAT calculator."
+   }
+  }
+ ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Margin & Selling Price Calculator",
+ "url": "https://queckbiz.com/margin-calculator",
+ "applicationCategory": "BusinessApplication",
+ "operatingSystem": "Any",
+ "inLanguage": "en",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "MAD"
+ }
+}
+  </script>
+  <style>
+    :root{--bg:#f8fafc;--surface:#fff;--text:#0f172a;--text2:#475569;--primary:#2563eb;--primary2:#1d4ed8;--border:#e2e8f0;--shadow:0 1px 3px rgba(0,0,0,0.1);--radius:10px;--radius-lg:14px;      --footer-bg:#f1f5f9;--footer-border:#e2e8f0;--footer-text:#475569;--footer-heading:#0f172a;--footer-muted:#64748b;
+    }
+    [data-theme="dark"]{--bg:#0f172a;--surface:#1e293b;--text:#f1f5f9;--text2:#94a3b8;--primary:#3b82f6;--primary2:#60a5fa;--border:#334155;--shadow:0 1px 3px rgba(0,0,0,0.3);      --footer-bg:#0f172a;--footer-border:#1e293b;--footer-text:#94a3b8;--footer-heading:#f1f5f9;--footer-muted:#64748b;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{will-change:background,color;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;transition:background .2s,color .2s}
+    header{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+    .h-inner{max-width:1100px;margin:0 auto;padding:.75rem 1rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem}.h-nav{justify-self:center;display:flex;align-items:center}.h-nav a{color:var(--text2);text-decoration:none;font-weight:600;font-size:.9rem;white-space:nowrap}.h-nav a:hover{color:var(--primary)}
+    .logo{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.25rem;color:var(--primary);text-decoration:none}
+    .logo svg{width:28px;height:28px}
+    .h-actions{display:flex;align-items:center;gap:.5rem;justify-self:end}
+    .theme-btn{width:36px;height:36px;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center}
+    .theme-btn:hover{background:var(--border)}
+    .back-btn{display:flex;align-items:center;gap:.4rem;padding:.4rem .8rem;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text2);text-decoration:none;font-size:.875rem}
+    .back-btn:hover{border-color:var(--primary);color:var(--primary)}
+    main{max-width:1100px;margin:0 auto;padding:1.5rem 1rem}
+    h1{font-size:1.5rem;font-weight:700;margin-bottom:1.5rem}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:1rem;box-shadow:var(--shadow)}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    @media(max-width:640px){.grid-2{grid-template-columns:1fr}}
+    label{display:block;font-size:.875rem;font-weight:600;color:var(--text2);margin-bottom:.25rem}
+    input,textarea,select{width:100%;padding:.6rem .75rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);color:var(--text);font-size:.9375rem;transition:border-color .2s}
+    input:focus,textarea:focus,select:focus{outline:none;border-color:var(--primary)}
+    textarea{resize:vertical;min-height:60px}
+    .row{display:flex;gap:.5rem;align-items:flex-end;margin-bottom:.75rem}
+    .row input{flex:1}
+    .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.6rem 1.2rem;border-radius:var(--radius);border:none;background:var(--primary);color:#fff;font-weight:600;cursor:pointer;transition:background .2s;font-size:.875rem}
+    .btn:hover{background:var(--primary2)}
+    .btn-secondary{background:var(--surface);color:var(--text);border:1px solid var(--border)}
+    .btn-secondary:hover{background:var(--border)}
+    .btn-danger{background:#dc2626}
+    .btn-danger:hover{background:#b91c1c}
+    .actions{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
+    .preview-area{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;margin-top:1.5rem;min-height:400px}
+    .doc-preview{background:#fff;color:#000;padding:2rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);max-width:800px;margin:0 auto}
+    .hidden{display:none}
+    .site-footer{content-visibility:auto;contain-intrinsic-size:0 500px;background:var(--footer-bg);color:var(--footer-text);border-top:1px solid var(--footer-border);margin-top:3rem}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:3rem 1.5rem;display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:start}
+    .footer-brand{max-width:280px}
+    .footer-logo{display:flex;align-items:center;gap:.75rem;font-weight:800;font-size:1.25rem;color:var(--footer-heading);text-decoration:none;margin-bottom:1rem}
+    .footer-logo svg{width:32px;height:32px}
+    .footer-tagline{font-size:.875rem;line-height:1.6;color:var(--footer-muted)}
+    .footer-links{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+    .footer-col h4{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--footer-heading);margin-bottom:1rem}
+    .footer-col ul{list-style:none}
+    .footer-col li{margin-bottom:.75rem}
+    .footer-col a{color:var(--footer-text);text-decoration:none;font-size:.875rem;transition:color .2s}
+    .footer-col a:hover{color:#3b82f6}
+    .footer-bottom{border-top:1px solid var(--footer-border);text-align:center;padding:1.5rem;font-size:.875rem;color:var(--footer-muted)}
+    @media(max-width:768px){.footer-inner{grid-template-columns:1fr;gap:2rem}.footer-links{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:480px){.footer-links{grid-template-columns:1fr}}
+  
+    /* Hide empty/unfilled ad slots so no blank space shows */
+    .ad-placeholder:has(ins.adsbygoogle[data-ad-status="unfilled"]),ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!important}
+    .ad-placeholder{min-height:0}
+  </style>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9121502081229374" crossorigin="anonymous"></script>
+  <style>
+    .ad-placeholder { width:100%; max-width:100%; overflow:hidden; text-align:center; background:transparent; }
+    .ad-top { margin: 0.75rem 0 1.25rem; }
+    .ad-bottom { margin: 1.25rem 0 0.75rem; }
+  </style>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GT-55X3TZ2M');</script>
+  <!-- End Google Tag Manager -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/design.css?v=1">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-55X3TZ2M"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="h-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fetchpriority="high"><rect width="100" height="100" rx="20" fill="#2563eb"/><text x="50" y="68" font-size="55" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">Q</text></svg>
+        QueckBiz
+      </a>
+      <nav class="h-nav"><a href="/blog/">Blog</a></nav>
+      <div class="h-actions">
+        <details class="lang-select-wrap"><summary class="lang-switch" title="Choose language">EN</summary><div class="lang-menu"><a href="/margin-calculator" class="active">English</a><a href="/ar/margin-calculator">العربية</a><a href="/fr/margin-calculator">Français</a></div></details>
+        <a href="/" class="back-btn"><span>← Home</span></a><button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+          <svg id="moon" width="18" height="18" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg id="sun" width="18" height="18" style="display:none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+  <!-- Ad Placeholder Top -->
+  <div class="ad-placeholder ad-top">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9121502081229374"
+         data-ad-slot="2222333344"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+<h1>Margin &amp; Selling Price Calculator</h1>
+    <div class="card"><div class="grid-2"><div style="grid-column:1/-1"><label>What do you want to calculate?</label><select id="mMode"><option value="price">Selling price from cost and target margin</option><option value="margin">Margin from cost and selling price</option></select></div><div><label>Cost price (excl. VAT)</label><input type="number" id="mCost" min="0" step="0.01" inputmode="decimal" placeholder="100"></div><div><label>Currency</label><select id="mCur"><option value="MAD">MAD</option><option value="EUR">EUR</option><option value="USD">USD</option></select></div><div id="mPctWrap"><label>Target margin (%)</label><input type="number" id="mPct" min="0" step="0.01" inputmode="decimal" placeholder="40"></div><div id="mPriceWrap" style="display:none"><label>Selling price (excl. VAT)</label><input type="number" id="mPrice" min="0" step="0.01" inputmode="decimal" placeholder="150"></div><div id="mBasisWrap" style="grid-column:1/-1"><label>Margin calculated on</label><select id="mBasis"><option value="price">selling price (profit margin)</option><option value="cost">cost (markup)</option></select></div><div><label>Quantity</label><input type="number" id="mQty" min="1" step="1" value="1"></div></div></div>
+    <div class="card" id="mOut" style="display:none"><div style="display:grid;gap:.6rem;font-size:1.02rem"><div style="display:flex;justify-content:space-between;gap:1rem;"><span>Selling price excl. VAT</span><strong id="m_rPrice"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>Profit per unit</span><strong id="m_rProfit"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>Profit margin (profit ÷ price)</span><strong id="m_rMargin"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>Markup (profit ÷ cost)</span><strong id="m_rMarkup"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>Price multiplier</span><strong id="m_rCoef"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;border-top:2px solid var(--primary);padding-top:.6rem"><span>Total profit</span><strong id="m_rTotal"></strong></div></div><div class="actions" style="margin-top:1rem"><button class="btn" id="mCopy"><span>Copy result</span></button><a class="btn btn-secondary" href="/moroccan-invoice"><span>Create an invoice</span></a></div></div>
+    <p id="mHint" style="text-align:center;color:var(--text2)">Enter your amounts to see the result.</p>
+  <script>
+    const themeToggle = document.getElementById('themeToggle'), moon = document.getElementById('moon'), sun = document.getElementById('sun');
+    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (savedTheme === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); moon.style.display='none'; sun.style.display='block'; }
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (isDark) { document.documentElement.removeAttribute('data-theme'); moon.style.display='block'; sun.style.display='none'; localStorage.setItem('theme','light'); }
+      else { document.documentElement.setAttribute('data-theme','dark'); moon.style.display='none'; sun.style.display='block'; localStorage.setItem('theme','dark'); }
+    });
+    var COPIED = "Copied ✓", last = '';
+    function g(id) { return document.getElementById(id); }
+    function fmt(x, cur) { return x.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' ' + cur; }
+    function pc(x) { return (Math.round(x*100)/100).toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' %'; }
+    function calc() {
+      var mode = g('mMode').value, cur = g('mCur').value, cost = parseFloat(g('mCost').value), qty = parseFloat(g('mQty').value) || 1;
+      g('mPctWrap').style.display = mode === 'price' ? '' : 'none'; g('mPriceWrap').style.display = mode === 'margin' ? '' : 'none'; g('mBasisWrap').style.display = mode === 'price' ? '' : 'none';
+      var price, ok = isFinite(cost) && cost > 0;
+      if (ok && mode === 'price') { var p = parseFloat(g('mPct').value); ok = isFinite(p) && p >= 0; if (ok) { if (g('mBasis').value === 'price') { ok = p < 100; price = ok ? cost / (1 - p/100) : 0; } else price = cost * (1 + p/100); } }
+      else if (ok) { price = parseFloat(g('mPrice').value); ok = isFinite(price) && price > 0; }
+      g('mOut').style.display = ok ? '' : 'none'; g('mHint').style.display = ok ? 'none' : '';
+      if (!ok) return;
+      var profit = price - cost;
+      g('m_rPrice').textContent = fmt(price, cur); g('m_rProfit').textContent = fmt(profit, cur);
+      g('m_rMargin').textContent = pc(profit / price * 100); g('m_rMarkup').textContent = pc(profit / cost * 100);
+      g('m_rCoef').textContent = (Math.round(price / cost * 1000) / 1000).toString(); g('m_rTotal').textContent = fmt(profit * qty, cur);
+      last = fmt(price, cur) + ' | ' + g('m_rMargin').textContent + ' | ' + g('m_rMarkup').textContent;
+    }
+    ['mMode','mCost','mCur','mPct','mPrice','mBasis','mQty'].forEach(function (id) { g(id).addEventListener('input', calc); g(id).addEventListener('change', calc); });
+    g('mCopy').addEventListener('click', function () { var b = this.querySelector('span'), old = b.textContent; var done = function () { b.textContent = COPIED; setTimeout(function () { b.textContent = old; }, 1500); }; if (navigator.clipboard) navigator.clipboard.writeText(last).then(done, done); else done(); });
+  </script>
+
+<section class="card" style="margin-top:1.5rem">
+      <h2 style="font-size:1.3rem;margin-bottom:.75rem">Margin &amp; Selling Price Calculator</h2>
+      <p style="color:var(--text2);margin-bottom:1rem;line-height:1.7">Setting a price without knowing the margin is the fastest way to sell at a loss. From your cost, this calculator gives the selling price for a target margin, or the real margin of an existing price. It separates profit margin (profit divided by price) from markup (profit divided by cost), two notions that are often confused. Everything runs in your browser.</p>
+      <h3 style="font-size:1.05rem;margin-bottom:.5rem">How to use it</h3>
+      <ol style="color:var(--text2);line-height:1.8;margin:0 0 1rem 1.25rem;padding:0"><li>Choose: find a selling price, or calculate the margin of a price.</li><li>Enter the cost price excluding VAT and the target margin (or the price).</li><li>Say whether the margin is based on the selling price or on the cost.</li><li>Read the price, profit, margin, markup and multiplier.</li></ol>
+      <h3 style="font-size:1.05rem;margin-bottom:.5rem">Margin or markup: don’t mix them up</h3>
+      <p style="color:var(--text2);margin-bottom:1rem;line-height:1.7">Profit margin = (price − cost) ÷ price. Markup = (price − cost) ÷ cost. For a cost of 100 sold at 150, profit is 50: the margin is 33.3% and the markup 50%. A 50% margin on price requires a price of 200 (multiplier 2), whereas a 50% markup gives 150 (multiplier 1.5). Always say which base you mean.</p>
+      <h3 style="font-size:1.05rem;margin-bottom:.5rem">Worked examples</h3>
+      <ul style="color:var(--text2);line-height:1.8;margin:0 0 1rem 1.25rem;padding:0"><li>Cost 100 MAD, target 40% margin on price: price = 100 ÷ (1 − 0.40) = 166.67 MAD; profit = 66.67 MAD.</li><li>Cost 100 MAD, 40% markup: price = 140 MAD; profit = 40 MAD; margin = 28.6%.</li><li>Cost 80 MAD, price 120 MAD: profit = 40 MAD; margin = 33.3%; markup = 50%; multiplier = 1.5.</li></ul>
+      <p style="color:var(--text2);margin-bottom:1rem;line-height:1.7">This calculator works excluding VAT. Subtract your other costs (shipping, packaging, commissions, overheads) to get true profitability, then add VAT with our VAT calculator.</p>
+      <h3 style="font-size:1.05rem;margin-bottom:.5rem">Frequently asked questions</h3>
+      <div style="color:var(--text2);line-height:1.7">
+        <p style="margin-bottom:.75rem"><strong style="color:var(--text)">What is the difference between margin and markup?</strong><br>Margin is calculated on the selling price; markup on the cost. For the same profit, markup is always higher than margin.</p>
+        <p style="margin-bottom:.75rem"><strong style="color:var(--text)">How do I price for a 30% margin?</strong><br>Divide the cost by (1 − 0.30), i.e. by 0.70. For a cost of 70, the price is 100.</p>
+        <p style="margin-bottom:.75rem"><strong style="color:var(--text)">What is the price multiplier?</strong><br>It is the selling price divided by the cost. A multiplier of 1.5 means you sell at 1.5 times your cost.</p>
+        <p style="margin-bottom:.75rem"><strong style="color:var(--text)">Does the calculated price include VAT?</strong><br>No, it is excluding VAT. Add VAT afterwards with the VAT calculator.</p>
+      </div>
+    </section>
+
+
+    <!-- Ad Placeholder Bottom -->
+  <div class="ad-placeholder ad-bottom">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9121502081229374"
+         data-ad-slot="2222333344"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="20" fill="#3b82f6"/><text x="50" y="68" font-size="55" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">Q</text></svg>
+          <span>QueckBiz</span>
+        </a>
+        <p class="footer-tagline">Free online tools for invoices, receipts, estimates, and more.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>TOOLS</h4>
+          <ul>
+            <li><a href="/invoice">Invoice</a></li>
+            <li><a href="/receipt">Receipt</a></li>
+            <li><a href="/estimate">Estimate</a></li>
+            <li><a href="/proforma">Proforma</a></li>
+            <li><a href="/creditnote">Credit Note</a></li>
+            <li><a href="/purchaseorder">Purchase Order</a></li>
+            <li><a href="/moroccan-invoice">Moroccan Invoice</a></li>
+            <li><a href="/deliverynote">Delivery Note</a></li>
+            <li><a href="/vat-calculator">VAT Calculator</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>COMPANY</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>LEGAL</h4>
+          <ul>
+            <li><a href="/cookies">Cookies</a></li>
+            <li><a href="/adsettings">Ad Settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 QueckBiz. All rights reserved.</p>
+    </div>
+  </footer>
+<script>
+// Auto-sanitize all text inputs on this page before generate/print
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('input[type="text"], textarea').forEach(function(el) {
+    el.addEventListener('blur', function() {
+      this.value = sanitizeInput(this.value);
+    });
+  });
+});
+</script>
+  <!-- Cookie Consent + Consent Mode v2 -->
+  <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:1000;font-size:.875rem;box-shadow:0 -4px 6px rgba(0,0,0,0.1);">
+    <p style="margin:0;flex:1;min-width:200px;">We use cookies and Google AdSense to improve your experience and support our free tools. <a href="/cookies" style="color:#60a5fa;text-decoration:underline;">Learn more</a></p>
+    <div style="display:flex;gap:.75rem;flex-shrink:0;">
+      <button onclick="declineCookies()" style="padding:.5rem 1rem;border-radius:8px;border:1px solid #475569;background:transparent;color:#94a3b8;cursor:pointer;font-size:.875rem;">Decline</button>
+      <button onclick="acceptCookies()" style="padding:.5rem 1.25rem;border-radius:8px;border:none;background:#2563eb;color:#fff;cursor:pointer;font-size:.875rem;font-weight:600;">Accept</button>
+    </div>
+  </div>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{
+      ad_storage:'denied',
+      analytics_storage:'denied',
+      ad_user_data:'denied',
+      ad_personalization:'denied',
+      wait_for_update:500
+    });
+    function acceptCookies(){
+      document.getElementById('cookieBanner').style.display='none';
+      localStorage.setItem('cookiesAccepted','true');
+      gtag('consent','update',{
+        ad_storage:'granted',
+        analytics_storage:'granted',
+        ad_user_data:'granted',
+        ad_personalization:'granted'
+      });
+    }
+    function declineCookies(){
+      document.getElementById('cookieBanner').style.display='none';
+      localStorage.setItem('cookiesAccepted','false');
+    }
+    (function(){
+      var v=localStorage.getItem('cookiesAccepted');
+      if(v!==null){
+        document.getElementById('cookieBanner').style.display='none';
+        if(v==='true'){
+          gtag('consent','update',{
+            ad_storage:'granted',analytics_storage:'granted',
+            ad_user_data:'granted',ad_personalization:'granted'
+          });
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
