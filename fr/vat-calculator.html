@@ -196,7 +196,7 @@
   </div>
 
 <h1>Calculateur de TVA Maroc</h1>
-    <div class="card"><div class="grid-2"><div style="grid-column:1/-1"><label>Que voulez-vous calculer ?</label><select id="vMode"><option value="add">Prix HT → TTC (ajouter la TVA)</option><option value="remove">Prix TTC → HT (retirer la TVA)</option></select></div><div><label>Montant</label><input type="number" id="vAmount" min="0" step="0.01" inputmode="decimal" placeholder="1000"></div><div><label>Devise</label><select id="vCur"><option value="MAD">MAD</option><option value="EUR">EUR</option><option value="USD">USD</option></select></div><div><label>Taux de TVA</label><select id="vRate"><option>20</option><option>14</option><option>10</option><option>7</option><option value="0">0</option><option value="custom">Autre taux (%)</option></select></div><div id="vCustomWrap" style="display:none"><label>Autre taux (%)</label><input type="number" id="vCustom" min="0" max="100" step="0.01" value="20"></div></div></div>
+    <div class="card"><div class="grid-2"><div style="grid-column:1/-1"><label for="vMode">Que voulez-vous calculer ?</label><select id="vMode"><option value="add">Prix HT → TTC (ajouter la TVA)</option><option value="remove">Prix TTC → HT (retirer la TVA)</option></select></div><div><label for="vAmount">Montant</label><input type="number" id="vAmount" min="0" step="0.01" inputmode="decimal" placeholder="1000"></div><div><label for="vCur">Devise</label><select id="vCur"><option value="MAD">MAD</option><option value="EUR">EUR</option><option value="USD">USD</option></select></div><div><label for="vRate">Taux de TVA</label><select id="vRate"><option>20</option><option>14</option><option>10</option><option>7</option><option value="0">0</option><option value="custom">Autre taux (%)</option></select></div><div id="vCustomWrap" style="display:none"><label for="vCustom">Autre taux (%)</label><input type="number" id="vCustom" min="0" max="100" step="0.01" value="20"></div></div></div>
     <div class="card" id="vOut" style="display:none"><div style="display:grid;gap:.6rem;font-size:1.05rem"><div style="display:flex;justify-content:space-between;gap:1rem;"><span>Montant HT</span><strong id="v_ht"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>TVA</span><strong id="v_vat"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;border-top:2px solid var(--primary);padding-top:.6rem;font-size:1.25rem"><span>Montant TTC</span><strong id="v_ttc"></strong></div><div id="vWordsRow" style="color:var(--text2);font-size:.9rem"><em>En lettres :</em> <span id="v_words"></span></div></div><div class="actions" style="margin-top:1rem"><button class="btn" id="vCopy"><span>Copier le résultat</span></button><a class="btn btn-secondary" href="/fr/moroccan-invoice"><span>Créer une facture avec TVA</span></a></div></div>
     <p id="vHint" style="text-align:center;color:var(--text2)">Saisissez un montant pour voir le résultat.</p>
   <script>
@@ -315,17 +315,7 @@
       <p>© 2026 QueckBiz. Tous droits réservés.</p>
     </div>
   </footer>
-<script>
-// Auto-sanitize all text inputs on this page before generate/print
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('input[type="text"], textarea').forEach(function(el) {
-    el.addEventListener('blur', function() {
-      this.value = sanitizeInput(this.value);
-    });
-  });
-});
-</script>
-  <!-- Cookie Consent + Consent Mode v2 -->
+<!-- Cookie Consent + Consent Mode v2 -->
   <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:1000;font-size:.875rem;box-shadow:0 -4px 6px rgba(0,0,0,0.1);">
     <p style="margin:0;flex:1;min-width:200px;">Nous utilisons des cookies et Google AdSense pour améliorer votre expérience et soutenir nos outils gratuits. <a href="/fr/cookies" style="color:#60a5fa;text-decoration:underline;">En savoir plus</a></p>
     <div style="display:flex;gap:.75rem;flex-shrink:0;">

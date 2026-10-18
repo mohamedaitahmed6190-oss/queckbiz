@@ -193,7 +193,7 @@
 
 <h1>Freelance Hourly Rate Calculator</h1>
     <p style="color:var(--text2);line-height:1.7;margin:-.5rem 0 1.25rem">Most new freelancers pick an hourly rate by looking at what a salaried job pays per hour. That undercounts almost everything: you pay your own taxes and benefits, you have business expenses, you take unpaid time off, and a large share of your week is not billable. This calculator starts from the income you want and works backwards to the rate you actually need.</p>
-    <div class="card"><div class="grid-2"><div><label>Desired yearly take-home income ($)</label><input type="number" id="income" min="0" step="100" inputmode="decimal" placeholder="75000" value="75000" ></div><div><label>Estimated tax rate (%)</label><input type="number" id="tax" min="0" step="0.1" inputmode="decimal" placeholder="25" value="25" ></div><div><label>Yearly business expenses ($)</label><input type="number" id="exp" min="0" step="100" inputmode="decimal" placeholder="6000" value="6000" ></div><div><label>Weeks worked per year</label><input type="number" id="weeks" min="0" step="1" inputmode="decimal" placeholder="48" value="48" ></div><div><label>Work hours per week</label><input type="number" id="hours" min="0" step="1" inputmode="decimal" placeholder="40" value="40" ></div><div><label>Billable share of those hours (%)</label><input type="number" id="bill" min="0" step="1" inputmode="decimal" placeholder="65" value="65" ></div></div></div>
+    <div class="card"><div class="grid-2"><div><label for="income">Desired yearly take-home income ($)</label><input type="number" id="income" min="0" step="100" inputmode="decimal" placeholder="75000" value="75000" ></div><div><label for="tax">Estimated tax rate (%)</label><input type="number" id="tax" min="0" step="0.1" inputmode="decimal" placeholder="25" value="25" ></div><div><label for="exp">Yearly business expenses ($)</label><input type="number" id="exp" min="0" step="100" inputmode="decimal" placeholder="6000" value="6000" ></div><div><label for="weeks">Weeks worked per year</label><input type="number" id="weeks" min="0" step="1" inputmode="decimal" placeholder="48" value="48" ></div><div><label for="hours">Work hours per week</label><input type="number" id="hours" min="0" step="1" inputmode="decimal" placeholder="40" value="40" ></div><div><label for="bill">Billable share of those hours (%)</label><input type="number" id="bill" min="0" step="1" inputmode="decimal" placeholder="65" value="65" ></div></div></div>
     <div class="card" id="res" style="display:none"><div style="display:grid;gap:.6rem;font-size:1.02rem"><div style="display:flex;justify-content:space-between;gap:1rem;border-top:2px solid var(--primary);padding-top:.6rem;font-size:1.15rem"><span>Hourly rate you need</span><strong id="o_rate"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>Gross revenue needed per year</span><strong id="o_gross"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>Billable hours per year</span><strong id="o_bill"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>Day rate (8 billable hours)</span><strong id="o_day"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>Average monthly revenue target</span><strong id="o_month"></strong></div></div></div>
     <p id="hint" style="text-align:center;color:var(--text2)">Enter your numbers to see the result.</p>
   <script>
@@ -291,17 +291,7 @@ function calc(){var inc=num('income'),tx=num('tax'),ex=num('exp'),wk=num('weeks'
       <p>© 2026 QueckBiz. All rights reserved.</p>
     </div>
   </footer>
-<script>
-// Auto-sanitize all text inputs on this page before generate/print
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('input[type="text"], textarea').forEach(function(el) {
-    el.addEventListener('blur', function() {
-      this.value = sanitizeInput(this.value);
-    });
-  });
-});
-</script>
-  <!-- Cookie Consent + Consent Mode v2 -->
+<!-- Cookie Consent + Consent Mode v2 -->
   <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:1000;font-size:.875rem;box-shadow:0 -4px 6px rgba(0,0,0,0.1);">
     <p style="margin:0;flex:1;min-width:200px;">We use cookies and Google AdSense to improve your experience and support our free tools. <a href="/cookies" style="color:#60a5fa;text-decoration:underline;">Learn more</a></p>
     <div style="display:flex;gap:.75rem;flex-shrink:0;">

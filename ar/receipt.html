@@ -174,11 +174,11 @@
 <h1>منشئ الإيصالات</h1>
     <div class="card">
       <div class="grid-2">
-        <div><label>اسم النشاط التجاري</label><input type="text" id="bizName" placeholder="Your Store"></div><div><label>شعار النشاط التجاري (اختياري)</label><div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap"><input type="file" id="logoInput" accept="image/png,image/jpeg,image/webp,image/svg+xml" style="display:none" onchange="handleLogoUpload(event)"><button type="button" class="btn btn-secondary" onclick="document.getElementById('logoInput').click()"><span>📁 رفع الشعار</span></button><img id="logoPreviewImg" alt="Logo" style="display:none;max-height:56px;max-width:160px;border-radius:6px;border:1px solid var(--border);object-fit:contain;background:#fff;padding:2px"><button type="button" class="btn btn-danger" id="logoRemoveBtn" style="display:none" onclick="removeLogo()">✕</button></div><small style="color:var(--text2);font-size:.75rem;display:block;margin-top:.35rem">PNG أو JPG أو SVG أو WebP، بحد أقصى 1 ميجابايت. يُحفظ في متصفحك فقط ويُستخدم تلقائيًا في جميع أدوات QueckBiz.</small></div>
-        <div><label>عنوان النشاط التجاري</label><textarea id="bizAddress" placeholder="Store address..."></textarea></div>
-        <div><label>رقم الإيصال</label><input type="text" id="recNumber" placeholder="R-001"></div>
-        <div><label>التاريخ والوقت</label><input type="datetime-local" id="recDate"></div>
-        <div><label>اسم الزبون</label><input type="text" id="customer" placeholder="Customer name"></div>
+        <div><label for="bizName">اسم النشاط التجاري</label><input type="text" id="bizName" placeholder="Your Store"></div><div><label>شعار النشاط التجاري (اختياري)</label><div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap"><input type="file" id="logoInput" accept="image/png,image/jpeg,image/webp,image/svg+xml" style="display:none" onchange="handleLogoUpload(event)"><button type="button" class="btn btn-secondary" onclick="document.getElementById('logoInput').click()"><span>📁 رفع الشعار</span></button><img id="logoPreviewImg" alt="Logo" style="display:none;max-height:56px;max-width:160px;border-radius:6px;border:1px solid var(--border);object-fit:contain;background:#fff;padding:2px"><button type="button" class="btn btn-danger" id="logoRemoveBtn" style="display:none" onclick="removeLogo()">✕</button></div><small style="color:var(--text2);font-size:.75rem;display:block;margin-top:.35rem">PNG أو JPG أو SVG أو WebP، بحد أقصى 1 ميجابايت. يُحفظ في متصفحك فقط ويُستخدم تلقائيًا في جميع أدوات QueckBiz.</small></div>
+        <div><label for="bizAddress">عنوان النشاط التجاري</label><textarea id="bizAddress" placeholder="Store address..."></textarea></div>
+        <div><label for="recNumber">رقم الإيصال</label><input type="text" id="recNumber" placeholder="R-001"></div>
+        <div><label for="recDate">التاريخ والوقت</label><input type="datetime-local" id="recDate"></div>
+        <div><label for="customer">اسم الزبون</label><input type="text" id="customer" placeholder="Customer name"></div>
         <div><label>طريقة الدفع</label>
           <select id="payment">
             <option>نقدا</option><option>بطاقة ائتمان</option><option>بطاقة خصم</option><option>تحويل بنكي</option><option>شيك</option><option>دفع عبر الهاتف</option><option>أخرى</option>
@@ -188,8 +188,8 @@
           <select id="currency">
           </select>
         </div>
-        <div><label>نسبة الضريبة (%)</label><input type="number" id="taxRate" value="0" min="0" max="100" step="0.01"></div>
-        <div><label>رسالة الشكر</label><input type="text" id="thanks" value="شكرا لتعاملكم معنا!"></div>
+        <div><label for="taxRate">نسبة الضريبة (%)</label><input type="number" id="taxRate" value="0" min="0" max="100" step="0.01"></div>
+        <div><label for="thanks">رسالة الشكر</label><input type="text" id="thanks" value="شكرا لتعاملكم معنا!"></div>
       </div>
     </div>
     <div class="card">
@@ -419,17 +419,7 @@
       <p>© 2026 QueckBiz. جميع الحقوق محفوظة.</p>
     </div>
   </footer>
-<script>
-// Auto-sanitize all text inputs on this page before generate/print
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('input[type="text"], textarea').forEach(function(el) {
-    el.addEventListener('blur', function() {
-      this.value = sanitizeInput(this.value);
-    });
-  });
-});
-</script>
-  <!-- Cookie Consent + Consent Mode v2 -->
+<!-- Cookie Consent + Consent Mode v2 -->
   <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:1000;font-size:.875rem;box-shadow:0 -4px 6px rgba(0,0,0,0.1);">
     <p style="margin:0;flex:1;min-width:200px;">نستخدم ملفات تعريف الارتباط وGoogle AdSense لتحسين تجربتك ودعم أدواتنا المجانية. <a href="/ar/cookies" style="color:#60a5fa;text-decoration:underline;">اعرف المزيد</a></p>
     <div style="display:flex;gap:.75rem;flex-shrink:0;">

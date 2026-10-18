@@ -198,20 +198,20 @@
 <h1>Delivery Note Generator</h1>
     <div class="card">
       <div class="grid-2">
-        <div><label>Sender (your business)</label><input type="text" id="bizName"></div><div><label>Business Logo (optional)</label><div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap"><input type="file" id="logoInput" accept="image/png,image/jpeg,image/webp,image/svg+xml" style="display:none" onchange="handleLogoUpload(event)"><button type="button" class="btn btn-secondary" onclick="document.getElementById('logoInput').click()"><span>📁 Upload Logo</span></button><img id="logoPreviewImg" alt="Logo" style="display:none;max-height:56px;max-width:160px;border-radius:6px;border:1px solid var(--border);object-fit:contain;background:#fff;padding:2px"><button type="button" class="btn btn-danger" id="logoRemoveBtn" style="display:none" onclick="removeLogo()">✕</button></div><small style="color:var(--text2);font-size:.75rem;display:block;margin-top:.35rem">PNG, JPG, SVG or WebP, max 1MB. Saved only in your browser and reused automatically across all QueckBiz tools.</small></div>
-        <div><label>Email / phone</label><input type="text" id="bizContact" placeholder="contact@example.ma"></div>
-        <div><label>Address</label><textarea id="bizAddress"></textarea></div>
-        <div><label>ICE</label><input type="text" id="bizIce" inputmode="numeric" placeholder="001234567000089"></div>
-        <div><label>Tax ID (IF)</label><input type="text" id="bizIf"></div>
-        <div><label>Trade register (RC)</label><input type="text" id="bizRc"></div>
-        <div><label>Patente</label><input type="text" id="bizTp"></div>
-        <div><label>Recipient</label><input type="text" id="clientName"></div>
-        <div><label>Delivery address</label><textarea id="clientAddress"></textarea></div>
-        <div><label>Delivery note #</label><input type="text" id="dnNumber" placeholder="BL-001"></div>
-        <div><label>Delivery date</label><input type="date" id="dnDate"></div>
-        <div><label>Order reference</label><input type="text" id="orderRef"></div>
-        <div><label>Carrier / vehicle</label><input type="text" id="transport"></div>
-        <div><label>Remarks</label><textarea id="notes" placeholder="Reservations, missing parcels, return conditions…"></textarea></div>
+        <div><label for="bizName">Sender (your business)</label><input type="text" id="bizName"></div><div><label>Business Logo (optional)</label><div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap"><input type="file" id="logoInput" accept="image/png,image/jpeg,image/webp,image/svg+xml" style="display:none" onchange="handleLogoUpload(event)"><button type="button" class="btn btn-secondary" onclick="document.getElementById('logoInput').click()"><span>📁 Upload Logo</span></button><img id="logoPreviewImg" alt="Logo" style="display:none;max-height:56px;max-width:160px;border-radius:6px;border:1px solid var(--border);object-fit:contain;background:#fff;padding:2px"><button type="button" class="btn btn-danger" id="logoRemoveBtn" style="display:none" onclick="removeLogo()">✕</button></div><small style="color:var(--text2);font-size:.75rem;display:block;margin-top:.35rem">PNG, JPG, SVG or WebP, max 1MB. Saved only in your browser and reused automatically across all QueckBiz tools.</small></div>
+        <div><label for="bizContact">Email / phone</label><input type="text" id="bizContact" placeholder="contact@example.ma"></div>
+        <div><label for="bizAddress">Address</label><textarea id="bizAddress"></textarea></div>
+        <div><label for="bizIce">ICE</label><input type="text" id="bizIce" inputmode="numeric" placeholder="001234567000089"></div>
+        <div><label for="bizIf">Tax ID (IF)</label><input type="text" id="bizIf"></div>
+        <div><label for="bizRc">Trade register (RC)</label><input type="text" id="bizRc"></div>
+        <div><label for="bizTp">Patente</label><input type="text" id="bizTp"></div>
+        <div><label for="clientName">Recipient</label><input type="text" id="clientName"></div>
+        <div><label for="clientAddress">Delivery address</label><textarea id="clientAddress"></textarea></div>
+        <div><label for="dnNumber">Delivery note #</label><input type="text" id="dnNumber" placeholder="BL-001"></div>
+        <div><label for="dnDate">Delivery date</label><input type="date" id="dnDate"></div>
+        <div><label for="orderRef">Order reference</label><input type="text" id="orderRef"></div>
+        <div><label for="transport">Carrier / vehicle</label><input type="text" id="transport"></div>
+        <div><label for="notes">Remarks</label><textarea id="notes" placeholder="Reservations, missing parcels, return conditions…"></textarea></div>
       </div>
     </div>
     <div class="card">
@@ -374,17 +374,7 @@
       <p>© 2026 QueckBiz. All rights reserved.</p>
     </div>
   </footer>
-<script>
-// Auto-sanitize all text inputs on this page before generate/print
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('input[type="text"], textarea').forEach(function(el) {
-    el.addEventListener('blur', function() {
-      this.value = sanitizeInput(this.value);
-    });
-  });
-});
-</script>
-  <!-- Cookie Consent + Consent Mode v2 -->
+<!-- Cookie Consent + Consent Mode v2 -->
   <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:1000;font-size:.875rem;box-shadow:0 -4px 6px rgba(0,0,0,0.1);">
     <p style="margin:0;flex:1;min-width:200px;">We use cookies and Google AdSense to improve your experience and support our free tools. <a href="/cookies" style="color:#60a5fa;text-decoration:underline;">Learn more</a></p>
     <div style="display:flex;gap:.75rem;flex-shrink:0;">

@@ -198,23 +198,23 @@
 <h1>Facture Maroc — Générateur avec ICE, IF, RC et TVA</h1>
     <div class="card">
       <div class="grid-2">
-        <div><label>Raison sociale / nom de l’entreprise</label><input type="text" id="bizName"></div><div><label>Logo de l’Entreprise (optionnel)</label><div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap"><input type="file" id="logoInput" accept="image/png,image/jpeg,image/webp,image/svg+xml" style="display:none" onchange="handleLogoUpload(event)"><button type="button" class="btn btn-secondary" onclick="document.getElementById('logoInput').click()"><span>📁 Téléverser le Logo</span></button><img id="logoPreviewImg" alt="Logo" style="display:none;max-height:56px;max-width:160px;border-radius:6px;border:1px solid var(--border);object-fit:contain;background:#fff;padding:2px"><button type="button" class="btn btn-danger" id="logoRemoveBtn" style="display:none" onclick="removeLogo()">✕</button></div><small style="color:var(--text2);font-size:.75rem;display:block;margin-top:.35rem">PNG, JPG, SVG ou WebP, 1 Mo maximum. Enregistré uniquement dans votre navigateur et réutilisé automatiquement sur tous les outils QueckBiz.</small></div>
-        <div><label>Email / téléphone</label><input type="text" id="bizContact" placeholder="contact@example.ma"></div>
-        <div><label>Adresse</label><textarea id="bizAddress"></textarea></div>
-        <div><label>ICE</label><input type="text" id="bizIce" inputmode="numeric" placeholder="001234567000089"></div>
-        <div><label>Identifiant fiscal (IF)</label><input type="text" id="bizIf"></div>
-        <div><label>Registre de commerce (RC)</label><input type="text" id="bizRc"></div>
-        <div><label>Patente</label><input type="text" id="bizTp"></div>
-        <div><label>Nom ou raison sociale du client</label><input type="text" id="clientName"></div>
-        <div><label>Adresse du client</label><textarea id="clientAddress"></textarea></div>
-        <div><label>ICE du client</label><input type="text" id="clientIce" inputmode="numeric"></div>
-        <div><label>Facture n°</label><input type="text" id="invNumber" placeholder="FAC-001"></div>
-        <div><label>Date de facture</label><input type="date" id="invDate"></div>
-        <div><label>Date d’échéance</label><input type="date" id="dueDate"></div>
-        <div><label>Devise</label><select id="currency"></select></div>
-        <div><label>TVA</label><select id="taxRate"><option value="20">20%</option><option value="14">14%</option><option value="10">10%</option><option value="7">7%</option><option value="0">0 % (exonéré / non assujetti)</option></select></div>
-        <div><label>Remise (%)</label><input type="number" id="discountRate" value="0" min="0" max="100" step="0.01"></div>
-        <div><label>Conditions de règlement / mentions</label><textarea id="notes" placeholder="Ex. Paiement à 30 jours par virement. Pénalités de retard…"></textarea></div>
+        <div><label for="bizName">Raison sociale / nom de l’entreprise</label><input type="text" id="bizName"></div><div><label>Logo de l’Entreprise (optionnel)</label><div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap"><input type="file" id="logoInput" accept="image/png,image/jpeg,image/webp,image/svg+xml" style="display:none" onchange="handleLogoUpload(event)"><button type="button" class="btn btn-secondary" onclick="document.getElementById('logoInput').click()"><span>📁 Téléverser le Logo</span></button><img id="logoPreviewImg" alt="Logo" style="display:none;max-height:56px;max-width:160px;border-radius:6px;border:1px solid var(--border);object-fit:contain;background:#fff;padding:2px"><button type="button" class="btn btn-danger" id="logoRemoveBtn" style="display:none" onclick="removeLogo()">✕</button></div><small style="color:var(--text2);font-size:.75rem;display:block;margin-top:.35rem">PNG, JPG, SVG ou WebP, 1 Mo maximum. Enregistré uniquement dans votre navigateur et réutilisé automatiquement sur tous les outils QueckBiz.</small></div>
+        <div><label for="bizContact">Email / téléphone</label><input type="text" id="bizContact" placeholder="contact@example.ma"></div>
+        <div><label for="bizAddress">Adresse</label><textarea id="bizAddress"></textarea></div>
+        <div><label for="bizIce">ICE</label><input type="text" id="bizIce" inputmode="numeric" placeholder="001234567000089"></div>
+        <div><label for="bizIf">Identifiant fiscal (IF)</label><input type="text" id="bizIf"></div>
+        <div><label for="bizRc">Registre de commerce (RC)</label><input type="text" id="bizRc"></div>
+        <div><label for="bizTp">Patente</label><input type="text" id="bizTp"></div>
+        <div><label for="clientName">Nom ou raison sociale du client</label><input type="text" id="clientName"></div>
+        <div><label for="clientAddress">Adresse du client</label><textarea id="clientAddress"></textarea></div>
+        <div><label for="clientIce">ICE du client</label><input type="text" id="clientIce" inputmode="numeric"></div>
+        <div><label for="invNumber">Facture n°</label><input type="text" id="invNumber" placeholder="FAC-001"></div>
+        <div><label for="invDate">Date de facture</label><input type="date" id="invDate"></div>
+        <div><label for="dueDate">Date d’échéance</label><input type="date" id="dueDate"></div>
+        <div><label for="currency">Devise</label><select id="currency"></select></div>
+        <div><label for="taxRate">TVA</label><select id="taxRate"><option value="20">20%</option><option value="14">14%</option><option value="10">10%</option><option value="7">7%</option><option value="0">0 % (exonéré / non assujetti)</option></select></div>
+        <div><label for="discountRate">Remise (%)</label><input type="number" id="discountRate" value="0" min="0" max="100" step="0.01"></div>
+        <div><label for="notes">Conditions de règlement / mentions</label><textarea id="notes" placeholder="Ex. Paiement à 30 jours par virement. Pénalités de retard…"></textarea></div>
       </div>
     </div>
     <div class="card">
@@ -376,17 +376,7 @@
       <p>© 2026 QueckBiz. Tous droits réservés.</p>
     </div>
   </footer>
-<script>
-// Auto-sanitize all text inputs on this page before generate/print
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('input[type="text"], textarea').forEach(function(el) {
-    el.addEventListener('blur', function() {
-      this.value = sanitizeInput(this.value);
-    });
-  });
-});
-</script>
-  <!-- Cookie Consent + Consent Mode v2 -->
+<!-- Cookie Consent + Consent Mode v2 -->
   <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:1000;font-size:.875rem;box-shadow:0 -4px 6px rgba(0,0,0,0.1);">
     <p style="margin:0;flex:1;min-width:200px;">Nous utilisons des cookies et Google AdSense pour améliorer votre expérience et soutenir nos outils gratuits. <a href="/fr/cookies" style="color:#60a5fa;text-decoration:underline;">En savoir plus</a></p>
     <div style="display:flex;gap:.75rem;flex-shrink:0;">

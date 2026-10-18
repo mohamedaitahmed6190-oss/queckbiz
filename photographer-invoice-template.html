@@ -196,21 +196,21 @@
     <p style="color:var(--text2);line-height:1.7;margin:-.5rem 0 1.25rem">A photography invoice usually covers more than the shoot: editing time, usage rights and prints all need their own line. This template keeps them apart so your pricing is clear and your licensing terms are on record.</p>
     <div class="card">
       <div class="grid-2">
-        <div><label>Your Business Name</label><input type="text" id="bizName" placeholder="Acme Corp"></div><div><label>Business Logo (optional)</label><div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap"><input type="file" id="logoInput" accept="image/png,image/jpeg,image/webp,image/svg+xml" style="display:none" onchange="handleLogoUpload(event)"><button type="button" class="btn btn-secondary" onclick="document.getElementById('logoInput').click()"><span>📁 Upload Logo</span></button><img id="logoPreviewImg" alt="Logo" style="display:none;max-height:56px;max-width:160px;border-radius:6px;border:1px solid var(--border);object-fit:contain;background:#fff;padding:2px"><button type="button" class="btn btn-danger" id="logoRemoveBtn" style="display:none" onclick="removeLogo()">✕</button></div><small style="color:var(--text2);font-size:.75rem;display:block;margin-top:.35rem">PNG, JPG, SVG or WebP, max 1MB. Saved only in your browser and reused automatically across all QueckBiz tools.</small></div>
-        <div><label>Your Email / Phone</label><input type="text" id="bizContact" placeholder="contact@acme.com"></div>
-        <div><label>Your Address</label><textarea id="bizAddress" placeholder="123 Main St, City, Country"></textarea></div>
-        <div><label>Client Name</label><input type="text" id="clientName" placeholder="John Doe"></div>
-        <div><label>Client Address</label><textarea id="clientAddress" placeholder="Client address..."></textarea></div>
-        <div><label>Invoice #</label><input type="text" id="invNumber" placeholder="INV-001"></div>
-        <div><label>Invoice Date</label><input type="date" id="invDate"></div>
-        <div><label>Due Date</label><input type="date" id="dueDate"></div>
+        <div><label for="bizName">Your Business Name</label><input type="text" id="bizName" placeholder="Acme Corp"></div><div><label>Business Logo (optional)</label><div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap"><input type="file" id="logoInput" accept="image/png,image/jpeg,image/webp,image/svg+xml" style="display:none" onchange="handleLogoUpload(event)"><button type="button" class="btn btn-secondary" onclick="document.getElementById('logoInput').click()"><span>📁 Upload Logo</span></button><img id="logoPreviewImg" alt="Logo" style="display:none;max-height:56px;max-width:160px;border-radius:6px;border:1px solid var(--border);object-fit:contain;background:#fff;padding:2px"><button type="button" class="btn btn-danger" id="logoRemoveBtn" style="display:none" onclick="removeLogo()">✕</button></div><small style="color:var(--text2);font-size:.75rem;display:block;margin-top:.35rem">PNG, JPG, SVG or WebP, max 1MB. Saved only in your browser and reused automatically across all QueckBiz tools.</small></div>
+        <div><label for="bizContact">Your Email / Phone</label><input type="text" id="bizContact" placeholder="contact@acme.com"></div>
+        <div><label for="bizAddress">Your Address</label><textarea id="bizAddress" placeholder="123 Main St, City, Country"></textarea></div>
+        <div><label for="clientName">Client Name</label><input type="text" id="clientName" placeholder="John Doe"></div>
+        <div><label for="clientAddress">Client Address</label><textarea id="clientAddress" placeholder="Client address..."></textarea></div>
+        <div><label for="invNumber">Invoice #</label><input type="text" id="invNumber" placeholder="INV-001"></div>
+        <div><label for="invDate">Invoice Date</label><input type="date" id="invDate"></div>
+        <div><label for="dueDate">Due Date</label><input type="date" id="dueDate"></div>
         <div><label>Currency</label>
           <select id="currency">
           </select>
         </div>
-        <div><label>Tax Rate (%)</label><input type="number" id="taxRate" value="0" min="0" max="100" step="0.01"></div>
-        <div><label>Discount (%)</label><input type="number" id="discountRate" value="0" min="0" max="100" step="0.01"></div>
-        <div><label>Notes / Terms</label><textarea id="notes" placeholder="Payment terms, bank details, thank you message...">50% retainer is non-refundable and reserves the date; balance due before image delivery. Images are licensed for the stated use only. Copyright remains with the photographer.</textarea></div>
+        <div><label for="taxRate">Tax Rate (%)</label><input type="number" id="taxRate" value="0" min="0" max="100" step="0.01"></div>
+        <div><label for="discountRate">Discount (%)</label><input type="number" id="discountRate" value="0" min="0" max="100" step="0.01"></div>
+        <div><label for="notes">Notes / Terms</label><textarea id="notes" placeholder="Payment terms, bank details, thank you message...">50% retainer is non-refundable and reserves the date; balance due before image delivery. Images are licensed for the stated use only. Copyright remains with the photographer.</textarea></div>
       </div>
     </div>
 
@@ -464,17 +464,7 @@
       <p>© 2026 QueckBiz. All rights reserved.</p>
     </div>
   </footer>
-<script>
-// Auto-sanitize all text inputs on this page before generate/print
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('input[type="text"], textarea').forEach(function(el) {
-    el.addEventListener('blur', function() {
-      this.value = sanitizeInput(this.value);
-    });
-  });
-});
-</script>
-  <!-- Cookie Consent + Consent Mode v2 -->
+<!-- Cookie Consent + Consent Mode v2 -->
   <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:1000;font-size:.875rem;box-shadow:0 -4px 6px rgba(0,0,0,0.1);">
     <p style="margin:0;flex:1;min-width:200px;">We use cookies and Google AdSense to improve your experience and support our free tools. <a href="/cookies" style="color:#60a5fa;text-decoration:underline;">Learn more</a></p>
     <div style="display:flex;gap:.75rem;flex-shrink:0;">

@@ -196,7 +196,7 @@
   </div>
 
 <h1>Margin &amp; Selling Price Calculator</h1>
-    <div class="card"><div class="grid-2"><div style="grid-column:1/-1"><label>What do you want to calculate?</label><select id="mMode"><option value="price">Selling price from cost and target margin</option><option value="margin">Margin from cost and selling price</option></select></div><div><label>Cost price (excl. VAT)</label><input type="number" id="mCost" min="0" step="0.01" inputmode="decimal" placeholder="100"></div><div><label>Currency</label><select id="mCur"><option value="MAD">MAD</option><option value="EUR">EUR</option><option value="USD">USD</option></select></div><div id="mPctWrap"><label>Target margin (%)</label><input type="number" id="mPct" min="0" step="0.01" inputmode="decimal" placeholder="40"></div><div id="mPriceWrap" style="display:none"><label>Selling price (excl. VAT)</label><input type="number" id="mPrice" min="0" step="0.01" inputmode="decimal" placeholder="150"></div><div id="mBasisWrap" style="grid-column:1/-1"><label>Margin calculated on</label><select id="mBasis"><option value="price">selling price (profit margin)</option><option value="cost">cost (markup)</option></select></div><div><label>Quantity</label><input type="number" id="mQty" min="1" step="1" value="1"></div></div></div>
+    <div class="card"><div class="grid-2"><div style="grid-column:1/-1"><label for="mMode">What do you want to calculate?</label><select id="mMode"><option value="price">Selling price from cost and target margin</option><option value="margin">Margin from cost and selling price</option></select></div><div><label for="mCost">Cost price (excl. VAT)</label><input type="number" id="mCost" min="0" step="0.01" inputmode="decimal" placeholder="100"></div><div><label for="mCur">Currency</label><select id="mCur"><option value="MAD">MAD</option><option value="EUR">EUR</option><option value="USD">USD</option></select></div><div id="mPctWrap"><label for="mPct">Target margin (%)</label><input type="number" id="mPct" min="0" step="0.01" inputmode="decimal" placeholder="40"></div><div id="mPriceWrap" style="display:none"><label for="mPrice">Selling price (excl. VAT)</label><input type="number" id="mPrice" min="0" step="0.01" inputmode="decimal" placeholder="150"></div><div id="mBasisWrap" style="grid-column:1/-1"><label for="mBasis">Margin calculated on</label><select id="mBasis"><option value="price">selling price (profit margin)</option><option value="cost">cost (markup)</option></select></div><div><label for="mQty">Quantity</label><input type="number" id="mQty" min="1" step="1" value="1"></div></div></div>
     <div class="card" id="mOut" style="display:none"><div style="display:grid;gap:.6rem;font-size:1.02rem"><div style="display:flex;justify-content:space-between;gap:1rem;"><span>Selling price excl. VAT</span><strong id="m_rPrice"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>Profit per unit</span><strong id="m_rProfit"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>Profit margin (profit ÷ price)</span><strong id="m_rMargin"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>Markup (profit ÷ cost)</span><strong id="m_rMarkup"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>Price multiplier</span><strong id="m_rCoef"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;border-top:2px solid var(--primary);padding-top:.6rem"><span>Total profit</span><strong id="m_rTotal"></strong></div></div><div class="actions" style="margin-top:1rem"><button class="btn" id="mCopy"><span>Copy result</span></button><a class="btn btn-secondary" href="/moroccan-invoice"><span>Create an invoice</span></a></div></div>
     <p id="mHint" style="text-align:center;color:var(--text2)">Enter your amounts to see the result.</p>
   <script>
@@ -314,17 +314,7 @@
       <p>© 2026 QueckBiz. All rights reserved.</p>
     </div>
   </footer>
-<script>
-// Auto-sanitize all text inputs on this page before generate/print
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('input[type="text"], textarea').forEach(function(el) {
-    el.addEventListener('blur', function() {
-      this.value = sanitizeInput(this.value);
-    });
-  });
-});
-</script>
-  <!-- Cookie Consent + Consent Mode v2 -->
+<!-- Cookie Consent + Consent Mode v2 -->
   <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:1000;font-size:.875rem;box-shadow:0 -4px 6px rgba(0,0,0,0.1);">
     <p style="margin:0;flex:1;min-width:200px;">We use cookies and Google AdSense to improve your experience and support our free tools. <a href="/cookies" style="color:#60a5fa;text-decoration:underline;">Learn more</a></p>
     <div style="display:flex;gap:.75rem;flex-shrink:0;">

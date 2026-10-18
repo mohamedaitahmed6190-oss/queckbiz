@@ -193,7 +193,7 @@
 
 <h1>Hourly to Salary Calculator</h1>
     <p style="color:var(--text2);line-height:1.7;margin:-.5rem 0 1.25rem">Comparing a job paid by the hour with a salaried offer, or turning a salary into a rate for freelance quotes, takes a few multiplications that are easy to get wrong. This calculator converts both ways and lets you account for unpaid weeks off.</p>
-    <div class="card"><div class="grid-2"><div><label>Hourly rate ($)</label><input type="number" id="hr" min="0" step="0.01" inputmode="decimal" placeholder="30" value="30" ></div><div><label>Hours per week</label><input type="number" id="hpw" min="0" step="0.5" inputmode="decimal" placeholder="40" value="40" ></div><div><label>Paid weeks per year</label><input type="number" id="wk" min="0" step="1" inputmode="decimal" placeholder="52" value="52" ></div><div><label>Or yearly salary ($) to convert to hourly</label><input type="number" id="sal" min="0" step="100" inputmode="decimal" placeholder="" value="" ></div></div></div>
+    <div class="card"><div class="grid-2"><div><label for="hr">Hourly rate ($)</label><input type="number" id="hr" min="0" step="0.01" inputmode="decimal" placeholder="30" value="30" ></div><div><label for="hpw">Hours per week</label><input type="number" id="hpw" min="0" step="0.5" inputmode="decimal" placeholder="40" value="40" ></div><div><label for="wk">Paid weeks per year</label><input type="number" id="wk" min="0" step="1" inputmode="decimal" placeholder="52" value="52" ></div><div><label for="sal">Or yearly salary ($) to convert to hourly</label><input type="number" id="sal" min="0" step="100" inputmode="decimal" placeholder="" value="" ></div></div></div>
     <div class="card" id="res" style="display:none"><div style="display:grid;gap:.6rem;font-size:1.02rem"><div style="display:flex;justify-content:space-between;gap:1rem;border-top:2px solid var(--primary);padding-top:.6rem;font-size:1.15rem"><span>Yearly pay</span><strong id="o_year"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>Monthly pay</span><strong id="o_month"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>Weekly pay</span><strong id="o_week"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>Daily pay (5-day week)</span><strong id="o_day"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>Hourly rate from salary</span><strong id="o_hr"></strong></div></div></div>
     <p id="hint" style="text-align:center;color:var(--text2)">Enter your numbers to see the result.</p>
   <script>
@@ -290,17 +290,7 @@ function calc(){var h=num('hr'),w=num('hpw'),k=num('wk'),s=num('sal');var okA=is
       <p>© 2026 QueckBiz. All rights reserved.</p>
     </div>
   </footer>
-<script>
-// Auto-sanitize all text inputs on this page before generate/print
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('input[type="text"], textarea').forEach(function(el) {
-    el.addEventListener('blur', function() {
-      this.value = sanitizeInput(this.value);
-    });
-  });
-});
-</script>
-  <!-- Cookie Consent + Consent Mode v2 -->
+<!-- Cookie Consent + Consent Mode v2 -->
   <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:1000;font-size:.875rem;box-shadow:0 -4px 6px rgba(0,0,0,0.1);">
     <p style="margin:0;flex:1;min-width:200px;">We use cookies and Google AdSense to improve your experience and support our free tools. <a href="/cookies" style="color:#60a5fa;text-decoration:underline;">Learn more</a></p>
     <div style="display:flex;gap:.75rem;flex-shrink:0;">

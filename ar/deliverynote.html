@@ -198,20 +198,20 @@
 <h1>مولّد سند التسليم</h1>
     <div class="card">
       <div class="grid-2">
-        <div><label>المرسل (شركتك)</label><input type="text" id="bizName"></div><div><label>شعار النشاط التجاري (اختياري)</label><div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap"><input type="file" id="logoInput" accept="image/png,image/jpeg,image/webp,image/svg+xml" style="display:none" onchange="handleLogoUpload(event)"><button type="button" class="btn btn-secondary" onclick="document.getElementById('logoInput').click()"><span>📁 رفع الشعار</span></button><img id="logoPreviewImg" alt="Logo" style="display:none;max-height:56px;max-width:160px;border-radius:6px;border:1px solid var(--border);object-fit:contain;background:#fff;padding:2px"><button type="button" class="btn btn-danger" id="logoRemoveBtn" style="display:none" onclick="removeLogo()">✕</button></div><small style="color:var(--text2);font-size:.75rem;display:block;margin-top:.35rem">PNG أو JPG أو SVG أو WebP، بحد أقصى 1 ميجابايت. يُحفظ في متصفحك فقط ويُستخدم تلقائيًا في جميع أدوات QueckBiz.</small></div>
-        <div><label>البريد الإلكتروني / الهاتف</label><input type="text" id="bizContact" placeholder="contact@example.ma"></div>
-        <div><label>العنوان</label><textarea id="bizAddress"></textarea></div>
-        <div><label>ICE</label><input type="text" id="bizIce" inputmode="numeric" placeholder="001234567000089"></div>
-        <div><label>التعريف الجبائي (IF)</label><input type="text" id="bizIf"></div>
-        <div><label>السجل التجاري (RC)</label><input type="text" id="bizRc"></div>
-        <div><label>الضريبة المهنية</label><input type="text" id="bizTp"></div>
-        <div><label>المستلِم</label><input type="text" id="clientName"></div>
-        <div><label>عنوان التسليم</label><textarea id="clientAddress"></textarea></div>
-        <div><label>رقم سند التسليم</label><input type="text" id="dnNumber" placeholder="BL-001"></div>
-        <div><label>تاريخ التسليم</label><input type="date" id="dnDate"></div>
-        <div><label>مرجع الطلب</label><input type="text" id="orderRef"></div>
-        <div><label>الناقل / المركبة</label><input type="text" id="transport"></div>
-        <div><label>ملاحظات</label><textarea id="notes" placeholder="تحفظات، طرود ناقصة، شروط الإرجاع…"></textarea></div>
+        <div><label for="bizName">المرسل (شركتك)</label><input type="text" id="bizName"></div><div><label>شعار النشاط التجاري (اختياري)</label><div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap"><input type="file" id="logoInput" accept="image/png,image/jpeg,image/webp,image/svg+xml" style="display:none" onchange="handleLogoUpload(event)"><button type="button" class="btn btn-secondary" onclick="document.getElementById('logoInput').click()"><span>📁 رفع الشعار</span></button><img id="logoPreviewImg" alt="Logo" style="display:none;max-height:56px;max-width:160px;border-radius:6px;border:1px solid var(--border);object-fit:contain;background:#fff;padding:2px"><button type="button" class="btn btn-danger" id="logoRemoveBtn" style="display:none" onclick="removeLogo()">✕</button></div><small style="color:var(--text2);font-size:.75rem;display:block;margin-top:.35rem">PNG أو JPG أو SVG أو WebP، بحد أقصى 1 ميجابايت. يُحفظ في متصفحك فقط ويُستخدم تلقائيًا في جميع أدوات QueckBiz.</small></div>
+        <div><label for="bizContact">البريد الإلكتروني / الهاتف</label><input type="text" id="bizContact" placeholder="contact@example.ma"></div>
+        <div><label for="bizAddress">العنوان</label><textarea id="bizAddress"></textarea></div>
+        <div><label for="bizIce">ICE</label><input type="text" id="bizIce" inputmode="numeric" placeholder="001234567000089"></div>
+        <div><label for="bizIf">التعريف الجبائي (IF)</label><input type="text" id="bizIf"></div>
+        <div><label for="bizRc">السجل التجاري (RC)</label><input type="text" id="bizRc"></div>
+        <div><label for="bizTp">الضريبة المهنية</label><input type="text" id="bizTp"></div>
+        <div><label for="clientName">المستلِم</label><input type="text" id="clientName"></div>
+        <div><label for="clientAddress">عنوان التسليم</label><textarea id="clientAddress"></textarea></div>
+        <div><label for="dnNumber">رقم سند التسليم</label><input type="text" id="dnNumber" placeholder="BL-001"></div>
+        <div><label for="dnDate">تاريخ التسليم</label><input type="date" id="dnDate"></div>
+        <div><label for="orderRef">مرجع الطلب</label><input type="text" id="orderRef"></div>
+        <div><label for="transport">الناقل / المركبة</label><input type="text" id="transport"></div>
+        <div><label for="notes">ملاحظات</label><textarea id="notes" placeholder="تحفظات، طرود ناقصة، شروط الإرجاع…"></textarea></div>
       </div>
     </div>
     <div class="card">
@@ -373,17 +373,7 @@
       <p>© 2026 QueckBiz. جميع الحقوق محفوظة.</p>
     </div>
   </footer>
-<script>
-// Auto-sanitize all text inputs on this page before generate/print
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('input[type="text"], textarea').forEach(function(el) {
-    el.addEventListener('blur', function() {
-      this.value = sanitizeInput(this.value);
-    });
-  });
-});
-</script>
-  <!-- Cookie Consent + Consent Mode v2 -->
+<!-- Cookie Consent + Consent Mode v2 -->
   <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:1000;font-size:.875rem;box-shadow:0 -4px 6px rgba(0,0,0,0.1);">
     <p style="margin:0;flex:1;min-width:200px;">نستخدم ملفات تعريف الارتباط وGoogle AdSense لتحسين تجربتك ودعم أدواتنا المجانية. <a href="/ar/cookies" style="color:#60a5fa;text-decoration:underline;">اعرف المزيد</a></p>
     <div style="display:flex;gap:.75rem;flex-shrink:0;">

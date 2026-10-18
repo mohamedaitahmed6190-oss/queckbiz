@@ -196,7 +196,7 @@
   </div>
 
 <h1>حاسبة الضريبة على القيمة المضافة (TVA) في المغرب</h1>
-    <div class="card"><div class="grid-2"><div style="grid-column:1/-1"><label>ماذا تريد أن تحسب؟</label><select id="vMode"><option value="add">من دون ضريبة ← مع الضريبة (إضافة TVA)</option><option value="remove">مع الضريبة ← دون ضريبة (إزالة TVA)</option></select></div><div><label>المبلغ</label><input type="number" id="vAmount" min="0" step="0.01" inputmode="decimal" placeholder="1000"></div><div><label>العملة</label><select id="vCur"><option value="MAD">MAD</option><option value="EUR">EUR</option><option value="USD">USD</option></select></div><div><label>نسبة الضريبة</label><select id="vRate"><option>20</option><option>14</option><option>10</option><option>7</option><option value="0">0</option><option value="custom">نسبة أخرى (٪)</option></select></div><div id="vCustomWrap" style="display:none"><label>نسبة أخرى (٪)</label><input type="number" id="vCustom" min="0" max="100" step="0.01" value="20"></div></div></div>
+    <div class="card"><div class="grid-2"><div style="grid-column:1/-1"><label for="vMode">ماذا تريد أن تحسب؟</label><select id="vMode"><option value="add">من دون ضريبة ← مع الضريبة (إضافة TVA)</option><option value="remove">مع الضريبة ← دون ضريبة (إزالة TVA)</option></select></div><div><label for="vAmount">المبلغ</label><input type="number" id="vAmount" min="0" step="0.01" inputmode="decimal" placeholder="1000"></div><div><label for="vCur">العملة</label><select id="vCur"><option value="MAD">MAD</option><option value="EUR">EUR</option><option value="USD">USD</option></select></div><div><label for="vRate">نسبة الضريبة</label><select id="vRate"><option>20</option><option>14</option><option>10</option><option>7</option><option value="0">0</option><option value="custom">نسبة أخرى (٪)</option></select></div><div id="vCustomWrap" style="display:none"><label for="vCustom">نسبة أخرى (٪)</label><input type="number" id="vCustom" min="0" max="100" step="0.01" value="20"></div></div></div>
     <div class="card" id="vOut" style="display:none"><div style="display:grid;gap:.6rem;font-size:1.05rem"><div style="display:flex;justify-content:space-between;gap:1rem;"><span>المبلغ دون ضريبة</span><strong id="v_ht"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>الضريبة</span><strong id="v_vat"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;border-top:2px solid var(--primary);padding-top:.6rem;font-size:1.25rem"><span>المبلغ مع الضريبة</span><strong id="v_ttc"></strong></div><div id="vWordsRow" style="color:var(--text2);font-size:.9rem"><em>بالحروف (بالفرنسية) :</em> <span id="v_words"></span></div></div><div class="actions" style="margin-top:1rem"><button class="btn" id="vCopy"><span>نسخ النتيجة</span></button><a class="btn btn-secondary" href="/ar/moroccan-invoice"><span>أنشئ فاتورة بالضريبة</span></a></div></div>
     <p id="vHint" style="text-align:center;color:var(--text2)">أدخل مبلغاً لتظهر النتيجة.</p>
   <script>
@@ -315,17 +315,7 @@
       <p>© 2026 QueckBiz. جميع الحقوق محفوظة.</p>
     </div>
   </footer>
-<script>
-// Auto-sanitize all text inputs on this page before generate/print
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('input[type="text"], textarea').forEach(function(el) {
-    el.addEventListener('blur', function() {
-      this.value = sanitizeInput(this.value);
-    });
-  });
-});
-</script>
-  <!-- Cookie Consent + Consent Mode v2 -->
+<!-- Cookie Consent + Consent Mode v2 -->
   <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:1000;font-size:.875rem;box-shadow:0 -4px 6px rgba(0,0,0,0.1);">
     <p style="margin:0;flex:1;min-width:200px;">نستخدم ملفات تعريف الارتباط وGoogle AdSense لتحسين تجربتك ودعم أدواتنا المجانية. <a href="/ar/cookies" style="color:#60a5fa;text-decoration:underline;">اعرف المزيد</a></p>
     <div style="display:flex;gap:.75rem;flex-shrink:0;">

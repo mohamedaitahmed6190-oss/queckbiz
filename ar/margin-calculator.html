@@ -196,7 +196,7 @@
   </div>
 
 <h1>حاسبة هامش الربح وثمن البيع</h1>
-    <div class="card"><div class="grid-2"><div style="grid-column:1/-1"><label>ماذا تريد أن تحسب؟</label><select id="mMode"><option value="price">ثمن البيع انطلاقاً من التكلفة والهامش المرغوب</option><option value="margin">الهامش انطلاقاً من التكلفة وثمن البيع</option></select></div><div><label>ثمن التكلفة (دون ضريبة)</label><input type="number" id="mCost" min="0" step="0.01" inputmode="decimal" placeholder="100"></div><div><label>العملة</label><select id="mCur"><option value="MAD">MAD</option><option value="EUR">EUR</option><option value="USD">USD</option></select></div><div id="mPctWrap"><label>الهامش المرغوب (٪)</label><input type="number" id="mPct" min="0" step="0.01" inputmode="decimal" placeholder="40"></div><div id="mPriceWrap" style="display:none"><label>ثمن البيع (دون ضريبة)</label><input type="number" id="mPrice" min="0" step="0.01" inputmode="decimal" placeholder="150"></div><div id="mBasisWrap" style="grid-column:1/-1"><label>يُحسب الهامش على</label><select id="mBasis"><option value="price">ثمن البيع (هامش الربح)</option><option value="cost">التكلفة (نسبة الزيادة)</option></select></div><div><label>الكمية</label><input type="number" id="mQty" min="1" step="1" value="1"></div></div></div>
+    <div class="card"><div class="grid-2"><div style="grid-column:1/-1"><label for="mMode">ماذا تريد أن تحسب؟</label><select id="mMode"><option value="price">ثمن البيع انطلاقاً من التكلفة والهامش المرغوب</option><option value="margin">الهامش انطلاقاً من التكلفة وثمن البيع</option></select></div><div><label for="mCost">ثمن التكلفة (دون ضريبة)</label><input type="number" id="mCost" min="0" step="0.01" inputmode="decimal" placeholder="100"></div><div><label for="mCur">العملة</label><select id="mCur"><option value="MAD">MAD</option><option value="EUR">EUR</option><option value="USD">USD</option></select></div><div id="mPctWrap"><label for="mPct">الهامش المرغوب (٪)</label><input type="number" id="mPct" min="0" step="0.01" inputmode="decimal" placeholder="40"></div><div id="mPriceWrap" style="display:none"><label for="mPrice">ثمن البيع (دون ضريبة)</label><input type="number" id="mPrice" min="0" step="0.01" inputmode="decimal" placeholder="150"></div><div id="mBasisWrap" style="grid-column:1/-1"><label for="mBasis">يُحسب الهامش على</label><select id="mBasis"><option value="price">ثمن البيع (هامش الربح)</option><option value="cost">التكلفة (نسبة الزيادة)</option></select></div><div><label for="mQty">الكمية</label><input type="number" id="mQty" min="1" step="1" value="1"></div></div></div>
     <div class="card" id="mOut" style="display:none"><div style="display:grid;gap:.6rem;font-size:1.02rem"><div style="display:flex;justify-content:space-between;gap:1rem;"><span>ثمن البيع دون ضريبة</span><strong id="m_rPrice"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>الربح للوحدة</span><strong id="m_rProfit"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>هامش الربح (الربح ÷ ثمن البيع)</span><strong id="m_rMargin"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>نسبة الزيادة (الربح ÷ التكلفة)</span><strong id="m_rMarkup"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;"><span>المعامل المضاعف</span><strong id="m_rCoef"></strong></div><div style="display:flex;justify-content:space-between;gap:1rem;border-top:2px solid var(--primary);padding-top:.6rem"><span>الربح الإجمالي</span><strong id="m_rTotal"></strong></div></div><div class="actions" style="margin-top:1rem"><button class="btn" id="mCopy"><span>نسخ النتيجة</span></button><a class="btn btn-secondary" href="/ar/moroccan-invoice"><span>أنشئ فاتورة</span></a></div></div>
     <p id="mHint" style="text-align:center;color:var(--text2)">أدخل المبالغ لتظهر النتيجة.</p>
   <script>
@@ -313,17 +313,7 @@
       <p>© 2026 QueckBiz. جميع الحقوق محفوظة.</p>
     </div>
   </footer>
-<script>
-// Auto-sanitize all text inputs on this page before generate/print
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('input[type="text"], textarea').forEach(function(el) {
-    el.addEventListener('blur', function() {
-      this.value = sanitizeInput(this.value);
-    });
-  });
-});
-</script>
-  <!-- Cookie Consent + Consent Mode v2 -->
+<!-- Cookie Consent + Consent Mode v2 -->
   <div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:1000;font-size:.875rem;box-shadow:0 -4px 6px rgba(0,0,0,0.1);">
     <p style="margin:0;flex:1;min-width:200px;">نستخدم ملفات تعريف الارتباط وGoogle AdSense لتحسين تجربتك ودعم أدواتنا المجانية. <a href="/ar/cookies" style="color:#60a5fa;text-decoration:underline;">اعرف المزيد</a></p>
     <div style="display:flex;gap:.75rem;flex-shrink:0;">
