@@ -322,6 +322,47 @@
       w.document.close(); w.focus(); setTimeout(function () { w.print(); }, 300);
     }, 150);
   }
+
+  /* ---------- Word / Excel export (runs in the browser, nothing is uploaded) ---------- */
+  var XL = { en: { word: 'Word (.doc)', excel: 'Excel (.xls)' }, fr: { word: 'Word (.doc)', excel: 'Excel (.xls)' }, ar: { word: 'Word (.doc)', excel: 'Excel (.xls)' } }[LANG];
+  function simpleHtml(d, forExcel) {
+    var cur = d.cur, th = 'style="background:#e2e8f0;border:1px solid #94a3b8;padding:4px;white-space:nowrap;text-align:' + (RTL ? 'right' : 'left') + '"', tdS = 'style="border:1px solid #cbd5e1;padding:4px"';
+    var num = function (v) { return forExcel ? '<td ' + tdS + ' x:num="' + v + '" style="mso-number-format:\'0.00\'">' + v.toFixed(2) + '</td>' : '<td ' + tdS + ' align="' + (RTL ? 'left' : 'right') + '">' + money(v, cur) + '</td>'; };
+    var head = '<tr>' + [C.receipt ? T.item : T.desc].concat(C.sku ? [T.sku] : []).concat([T.qty]).concat(C.noPrice ? [] : [T.price, T.amount]).map(function (h) { return '<th ' + th + '>' + esc(h) + '</th>'; }).join('') + '</tr>';
+    var rows = d.items.map(function (it) {
+      return '<tr><td ' + tdS + '>' + esc(it.d) + '</td>' + (C.sku ? '<td ' + tdS + '>' + esc(it.sku) + '</td>' : '') + '<td ' + tdS + '>' + it.q + '</td>' + (C.noPrice ? '' : num(it.p) + num(it.t)) + '</tr>';
+    }).join('');
+    var span = 2 + (C.sku ? 1 : 0), blank = function (n) { return n > 0 ? '<td colspan="' + n + '"></td>' : ''; };
+    var tot = function (l, v, bold) { return '<tr>' + blank(span) + '<td ' + tdS + '>' + (bold ? '<b>' : '') + esc(l) + (bold ? '</b>' : '') + '</td>' + num(v) + '</tr>'; };
+    var totals = C.noPrice ? '' : tot(T.subtotal, d.sub) + (d.disc > 0 ? tot(T.discount + ' (' + d.disc + '%)', -d.discAmt) : '') + ((d.tax > 0 || C.ht) ? tot((C.ht ? T.taxMA : T.tax) + ' (' + d.tax + '%)', d.taxAmt) : '') + (d.ship > 0 ? tot(T.shipping, d.ship) : '') + tot(C.ht ? T.totalTTC : T[C.totalKey || 'total'], d.total, true) + (d.paid > 0 ? tot(T.paid, -d.paid) + tot(T.balance, d.balance, true) : '');
+    var line = function (a, b) { return b ? '<p style="margin:2px 0"><b>' + esc(a) + ':</b> ' + esc(b) + '</p>' : ''; };
+    var meta = line(T.noLbl[TYPE], d.no) + line(T.date, d.date) + d.extra.map(function (x) { return line(x[0], x[1]); }).join('');
+    var party = '<p style="margin:8px 0 2px"><b>' + esc(T[C.from]) + ':</b> ' + esc(d.biz) + (d.contact ? ' / ' + esc(d.contact) : '') + (d.addr ? '<br>' + nl2br(d.addr) : '') + (d.legal.length ? '<br>' + d.legal.map(function (x) { return esc(x[0]) + ': ' + esc(x[1]); }).join(' · ') : '') + '</p>' +
+      '<p style="margin:2px 0 8px"><b>' + esc(T[C.to]) + ':</b> ' + esc(d.party) + (d.pAddr ? '<br>' + nl2br(d.pAddr) : '') + '</p>';
+    var after = (d.pay.trim() ? '<p><b>' + esc(T.payDetails) + '</b><br>' + nl2br(d.pay) + '</p>' : '') + (d.notes.trim() ? '<p><b>' + esc(T[C.notesLbl] || T.notes) + '</b><br>' + nl2br(d.notes) + '</p>' : '');
+    return '<h1 style="font-size:20pt;margin:0 0 6px">' + esc(T.title[TYPE]) + '</h1>' + meta + party + '<table style="border-collapse:collapse;width:100%">' + head + rows + totals + '</table>' + after;
+  }
+  function exportDoc(kind) {
+    var d = collect(), ex = kind === 'excel';
+    var no = (val(C.no) || C.prefix).trim().replace(/[^\w.-]+/g, '_');
+    var body = simpleHtml(d, ex);
+    var ns = ex ? 'xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"'
+                : 'xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"';
+    var xml = ex ? '<!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>' + esc(T.title[TYPE]) + '</x:Name><x:WorksheetOptions>' + (RTL ? '<x:DisplayRightToLeft/>' : '') + '</x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]-->' : '';
+    var html = '<html ' + ns + '><head><meta charset="utf-8">' + xml + '<style>body{font-family:Calibri,Arial,sans-serif;font-size:11pt}</style></head><body dir="' + (RTL ? 'rtl' : 'ltr') + '">' + body + '</body></html>';
+    var blob = new Blob(['﻿', html], { type: ex ? 'application/vnd.ms-excel' : 'application/msword' });
+    var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = TYPE + '-' + no + (ex ? '.xls' : '.doc');
+    document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+    var n = val(C.no).trim(); if (n && remembering()) lsSet(K.last, n);
+  }
+  function addExportButtons() {
+    var printBtn = document.querySelector('button[onclick^="' + C.print + '("]'); if (!printBtn || $('qbExportWord')) return;
+    [['qbExportWord', 'word', '📄 '], ['qbExportExcel', 'excel', '📊 ']].reverse().forEach(function (b) {
+      var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'btn btn-secondary'; btn.id = b[0];
+      btn.innerHTML = '<span>' + b[2] + XL[b[1]] + '</span>'; btn.addEventListener('click', function () { exportDoc(b[1]); });
+      printBtn.parentNode.insertBefore(btn, printBtn.nextSibling);
+    });
+  }
   var origReset = window.resetForm;
   function resetAll() {
     var keep = {}, ids = ['tplSelect', 'accentColor', 'payDetails', 'currency', 'bizIce', 'bizIf', 'bizRc', 'bizTp'].concat(Object.keys(C.biz).map(function (k) { return C.biz[k]; }));
@@ -339,7 +380,7 @@
   window.qbPro = { persist: persist, amountWords: amountWords };
 
   function start() {
-    buildCard(); sigInit(); renderClients(); loadPrefs();
+    buildCard(); sigInit(); renderClients(); loadPrefs(); addExportButtons();
     var on = function (id, ev, fn) { var e = $(id); if (e) e.addEventListener(ev, fn); };
     on('qbSaveClient', 'click', saveClient); on('qbDelClient', 'click', deleteClient); on('savedClients', 'change', pickClient);
     on('qbSigClear', 'click', sigClear); on('qbSigUp', 'click', function () { $('sigFile').click(); }); on('sigFile', 'change', sigUpload);
