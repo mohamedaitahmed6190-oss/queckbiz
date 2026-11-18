@@ -323,36 +323,125 @@
     }, 150);
   }
 
-  /* ---------- Word / Excel export (runs in the browser, nothing is uploaded) ---------- */
-  var XL = { en: { word: 'Word (.doc)', excel: 'Excel (.xls)' }, fr: { word: 'Word (.doc)', excel: 'Excel (.xls)' }, ar: { word: 'Word (.doc)', excel: 'Excel (.xls)' } }[LANG];
-  function simpleHtml(d, forExcel) {
-    var cur = d.cur, th = 'style="background:#e2e8f0;border:1px solid #94a3b8;padding:4px;white-space:nowrap;text-align:' + (RTL ? 'right' : 'left') + '"', tdS = 'style="border:1px solid #cbd5e1;padding:4px"';
-    var num = function (v) { return forExcel ? '<td ' + tdS + ' x:num="' + v + '" style="mso-number-format:\'0.00\'">' + v.toFixed(2) + '</td>' : '<td ' + tdS + ' align="' + (RTL ? 'left' : 'right') + '">' + money(v, cur) + '</td>'; };
-    var head = '<tr>' + [C.receipt ? T.item : T.desc].concat(C.sku ? [T.sku] : []).concat([T.qty]).concat(C.noPrice ? [] : [T.price, T.amount]).map(function (h) { return '<th ' + th + '>' + esc(h) + '</th>'; }).join('') + '</tr>';
-    var rows = d.items.map(function (it) {
-      return '<tr><td ' + tdS + '>' + esc(it.d) + '</td>' + (C.sku ? '<td ' + tdS + '>' + esc(it.sku) + '</td>' : '') + '<td ' + tdS + '>' + it.q + '</td>' + (C.noPrice ? '' : num(it.p) + num(it.t)) + '</tr>';
-    }).join('');
-    var span = 2 + (C.sku ? 1 : 0), blank = function (n) { return n > 0 ? '<td colspan="' + n + '"></td>' : ''; };
-    var tot = function (l, v, bold) { return '<tr>' + blank(span) + '<td ' + tdS + '>' + (bold ? '<b>' : '') + esc(l) + (bold ? '</b>' : '') + '</td>' + num(v) + '</tr>'; };
-    var totals = C.noPrice ? '' : tot(T.subtotal, d.sub) + (d.disc > 0 ? tot(T.discount + ' (' + d.disc + '%)', -d.discAmt) : '') + ((d.tax > 0 || C.ht) ? tot((C.ht ? T.taxMA : T.tax) + ' (' + d.tax + '%)', d.taxAmt) : '') + (d.ship > 0 ? tot(T.shipping, d.ship) : '') + tot(C.ht ? T.totalTTC : T[C.totalKey || 'total'], d.total, true) + (d.paid > 0 ? tot(T.paid, -d.paid) + tot(T.balance, d.balance, true) : '');
-    var line = function (a, b) { return b ? '<p style="margin:2px 0"><b>' + esc(a) + ':</b> ' + esc(b) + '</p>' : ''; };
-    var meta = line(T.noLbl[TYPE], d.no) + line(T.date, d.date) + d.extra.map(function (x) { return line(x[0], x[1]); }).join('');
-    var party = '<p style="margin:8px 0 2px"><b>' + esc(T[C.from]) + ':</b> ' + esc(d.biz) + (d.contact ? ' / ' + esc(d.contact) : '') + (d.addr ? '<br>' + nl2br(d.addr) : '') + (d.legal.length ? '<br>' + d.legal.map(function (x) { return esc(x[0]) + ': ' + esc(x[1]); }).join(' · ') : '') + '</p>' +
-      '<p style="margin:2px 0 8px"><b>' + esc(T[C.to]) + ':</b> ' + esc(d.party) + (d.pAddr ? '<br>' + nl2br(d.pAddr) : '') + '</p>';
-    var after = (d.pay.trim() ? '<p><b>' + esc(T.payDetails) + '</b><br>' + nl2br(d.pay) + '</p>' : '') + (d.notes.trim() ? '<p><b>' + esc(T[C.notesLbl] || T.notes) + '</b><br>' + nl2br(d.notes) + '</p>' : '');
-    return '<h1 style="font-size:20pt;margin:0 0 6px">' + esc(T.title[TYPE]) + '</h1>' + meta + party + '<table style="border-collapse:collapse;width:100%">' + head + rows + totals + '</table>' + after;
+  /* ---------- Word / Excel export: real .docx / .xlsx built in the browser (nothing is uploaded) ---------- */
+  var XL = { word: 'Word (.docx)', excel: 'Excel (.xlsx)' };
+  var CRCT = (function () { var t = [], c, n, k; for (n = 0; n < 256; n++) { c = n; for (k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+  function crc32(b) { var c = 0xFFFFFFFF; for (var i = 0; i < b.length; i++) c = CRCT[(c ^ b[i]) & 255] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; }
+  function zipParts(files) {
+    var enc = new TextEncoder(), parts = [], cd = [], off = 0;
+    files.forEach(function (f) {
+      var nm = enc.encode(f[0]), data = enc.encode(f[1]), crc = crc32(data);
+      var h = new DataView(new ArrayBuffer(30));
+      h.setUint32(0, 0x04034b50, true); h.setUint16(4, 20, true); h.setUint16(6, 0x0800, true); h.setUint16(12, 0x21, true);
+      h.setUint32(14, crc, true); h.setUint32(18, data.length, true); h.setUint32(22, data.length, true); h.setUint16(26, nm.length, true);
+      parts.push(new Uint8Array(h.buffer), nm, data);
+      var c = new DataView(new ArrayBuffer(46));
+      c.setUint32(0, 0x02014b50, true); c.setUint16(4, 20, true); c.setUint16(6, 20, true); c.setUint16(8, 0x0800, true); c.setUint16(14, 0x21, true);
+      c.setUint32(16, crc, true); c.setUint32(20, data.length, true); c.setUint32(24, data.length, true); c.setUint16(28, nm.length, true); c.setUint32(42, off, true);
+      cd.push(new Uint8Array(c.buffer), nm);
+      off += 30 + nm.length + data.length;
+    });
+    var size = cd.reduce(function (a, p) { return a + p.length; }, 0);
+    var e = new DataView(new ArrayBuffer(22));
+    e.setUint32(0, 0x06054b50, true); e.setUint16(8, files.length, true); e.setUint16(10, files.length, true); e.setUint32(12, size, true); e.setUint32(16, off, true);
+    return parts.concat(cd, [new Uint8Array(e.buffer)]);
+  }
+  function xe(s) { return esc(String(s == null ? '' : s).replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, '')); }
+  function model(d) {
+    var hdr = [C.receipt ? T.item : T.desc].concat(C.sku ? [T.sku] : []).concat([T.qty]).concat(C.noPrice ? [] : [T.price, T.amount]);
+    var items = d.items.map(function (it) { return [it.d].concat(C.sku ? [it.sku] : []).concat([it.q]).concat(C.noPrice ? [] : [it.p, it.t]); });
+    var totals = [];
+    if (!C.noPrice) {
+      totals.push([T.subtotal, d.sub, 0]);
+      if (d.disc > 0) totals.push([T.discount + ' (' + d.disc + '%)', -d.discAmt, 0]);
+      if (d.tax > 0 || C.ht) totals.push([(C.ht ? T.taxMA : T.tax) + ' (' + d.tax + '%)', d.taxAmt, 0]);
+      if (d.ship > 0) totals.push([T.shipping, d.ship, 0]);
+      totals.push([C.ht ? T.totalTTC : T[C.totalKey || 'total'], d.total, 1]);
+      if (d.paid > 0) { totals.push([T.paid, -d.paid, 0]); totals.push([T.balance, d.balance, 1]); }
+    }
+    var info = [[T.noLbl[TYPE], d.no], [T.date, d.date]].concat(d.extra);
+    var who = [[T[C.from], [d.biz, d.contact, d.addr].concat(d.legal.map(function (x) { return x[0] + ': ' + x[1]; })).filter(Boolean).join('\n')],
+               [T[C.to], [d.party, d.pAddr].filter(Boolean).join('\n')]];
+    var after = [];
+    if (d.pay.trim()) after.push([T.payDetails, d.pay]);
+    if (d.notes.trim()) after.push([T[C.notesLbl] || T.notes, d.notes]);
+    return { title: T.title[TYPE], info: info, who: who, hdr: hdr, items: items, totals: totals, after: after, nc: hdr.length };
+  }
+  function makeXlsx(m, d) {
+    var col = function (i) { return String.fromCharCode(65 + i); }, r = 0, rows = '';
+    var S = function (i, t, st) { return '<c r="' + col(i) + r + '" t="inlineStr"' + (st ? ' s="' + st + '"' : '') + '><is><t xml:space="preserve">' + xe(t) + '</t></is></c>'; };
+    var N = function (i, v, st) { return '<c r="' + col(i) + r + '" s="' + (st || 2) + '"><v>' + (isFinite(v) ? v : 0) + '</v></c>'; };
+    var row = function (cells) { r++; rows += '<row r="' + r + '">' + cells.call(null) + '</row>'; };
+    var blank = function () { r++; };
+    r++; rows += '<row r="' + r + '">' + S(0, m.title, 1) + '</row>';
+    m.info.forEach(function (x) { r++; rows += '<row r="' + r + '">' + S(0, x[0], 1) + S(1, x[1]) + '</row>'; });
+    blank();
+    m.who.forEach(function (x) { r++; rows += '<row r="' + r + '">' + S(0, x[0], 1) + S(1, x[1]) + '</row>'; });
+    blank();
+    r++; rows += '<row r="' + r + '">' + m.hdr.map(function (h, i) { return S(i, h, 1); }).join('') + '</row>';
+    m.items.forEach(function (it) {
+      r++; rows += '<row r="' + r + '">' + it.map(function (v, i) { var isText = (i === 0) || (C.sku && i === 1); return isText ? S(i, v) : (i === m.nc - 3 && !C.noPrice || i === m.nc - 1 && C.noPrice) ? N(i, v, 0) : N(i, v, 2); }).join('') + '</row>';
+    });
+    m.totals.forEach(function (x) { r++; rows += '<row r="' + r + '">' + S(m.nc - 2, x[0], x[2] ? 1 : 0) + N(m.nc - 1, x[1], x[2] ? 3 : 2) + '</row>'; });
+    blank();
+    m.after.forEach(function (x) { r++; rows += '<row r="' + r + '">' + S(0, x[0], 1) + '</row>'; r++; rows += '<row r="' + r + '">' + S(0, x[1]) + '</row>'; });
+    var cols = '<cols><col min="1" max="1" width="48" customWidth="1"/><col min="2" max="' + Math.max(m.nc, 2) + '" width="16" customWidth="1"/></cols>';
+    var NS = 'http://schemas.openxmlformats.org/spreadsheetml/2006/main', RN = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships';
+    var name = xe(String(m.title).replace(/[\\\/?*\[\]:]/g, '').slice(0, 31) || 'Sheet1');
+    var P = 'http://schemas.openxmlformats.org/package/2006/relationships';
+    return zipParts([
+      ['[Content_Types].xml', '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/></Types>'],
+      ['_rels/.rels', '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="' + P + '"><Relationship Id="rId1" Type="' + RN + '/officeDocument" Target="xl/workbook.xml"/></Relationships>'],
+      ['xl/workbook.xml', '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="' + NS + '" xmlns:r="' + RN + '"><sheets><sheet name="' + name + '" sheetId="1" r:id="rId1"/></sheets></workbook>'],
+      ['xl/_rels/workbook.xml.rels', '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="' + P + '"><Relationship Id="rId1" Type="' + RN + '/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="' + RN + '/styles" Target="styles.xml"/></Relationships>'],
+      ['xl/styles.xml', '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><styleSheet xmlns="' + NS + '"><fonts count="2"><font><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="11"/><name val="Calibri"/></font></fonts><fills count="2"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill></fills><borders count="1"><border><left/><right/><top/><bottom/><diagonal/></border></borders><cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs><cellXfs count="4"><xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/><xf numFmtId="0" fontId="1" fillId="0" borderId="0" xfId="0" applyFont="1"/><xf numFmtId="2" fontId="0" fillId="0" borderId="0" xfId="0" applyNumberFormat="1"/><xf numFmtId="2" fontId="1" fillId="0" borderId="0" xfId="0" applyNumberFormat="1" applyFont="1"/></cellXfs><cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles></styleSheet>'],
+      ['xl/worksheets/sheet1.xml', '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="' + NS + '"><sheetViews><sheetView workbookViewId="0"' + (RTL ? ' rightToLeft="1"' : '') + '/></sheetViews>' + cols + '<sheetData>' + rows + '</sheetData></worksheet>']
+    ]);
+  }
+  function makeDocx(m, d) {
+    var W = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main', bidi = RTL ? '<w:bidi/>' : '';
+    var run = function (t, b, sz) {
+      return String(t == null ? '' : t).split('\n').map(function (ln, i) {
+        return '<w:r><w:rPr>' + (b ? '<w:b/>' : '') + (sz ? '<w:sz w:val="' + sz + '"/>' : '') + (RTL ? '<w:rtl/>' : '') + '</w:rPr>' + (i ? '<w:br/>' : '') + '<w:t xml:space="preserve">' + xe(ln) + '</w:t></w:r>';
+      }).join('');
+    };
+    var para = function (inner, jc) { return '<w:p><w:pPr>' + bidi + (jc ? '<w:jc w:val="' + jc + '"/>' : '') + '</w:pPr>' + inner + '</w:p>'; };
+    var body = para(run(m.title, 1, 40));
+    m.info.forEach(function (x) { body += para(run(x[0] + ': ', 1) + run(x[1])); });
+    body += para('');
+    m.who.forEach(function (x) { body += para(run(x[0] + ': ', 1) + run(x[1])); });
+    body += para('');
+    var widths = [], rest = m.nc - 1, first = m.nc <= 2 ? 6000 : 4000, each = Math.floor((9000 - first) / Math.max(rest, 1));
+    for (var i = 0; i < m.nc; i++) widths.push(i === 0 ? first : each);
+    var bd = ['top', 'left', 'bottom', 'right', 'insideH', 'insideV'].map(function (k) { return '<w:' + k + ' w:val="single" w:sz="4" w:space="0" w:color="CBD5E1"/>'; }).join('');
+    var numJc = RTL ? 'left' : 'right';
+    var cell = function (w, inner, fill, span) { return '<w:tc><w:tcPr><w:tcW w:w="' + w + '" w:type="dxa"/>' + (span ? '<w:gridSpan w:val="' + span + '"/>' : '') + (fill ? '<w:shd w:val="clear" w:color="auto" w:fill="' + fill + '"/>' : '') + '</w:tcPr>' + inner + '</w:tc>'; };
+    var tbl = '<w:tbl><w:tblPr>' + (RTL ? '<w:bidiVisual/>' : '') + '<w:tblW w:w="9000" w:type="dxa"/><w:tblBorders>' + bd + '</w:tblBorders></w:tblPr><w:tblGrid>' + widths.map(function (w) { return '<w:gridCol w:w="' + w + '"/>'; }).join('') + '</w:tblGrid>';
+    tbl += '<w:tr>' + m.hdr.map(function (h, i) { return cell(widths[i], para(run(h, 1)), 'E2E8F0'); }).join('') + '</w:tr>';
+    m.items.forEach(function (it) {
+      tbl += '<w:tr>' + it.map(function (v, i) { var txt = (i === 0 || (C.sku && i === 1)); return cell(widths[i], para(run(txt ? v : (i >= m.nc - 2 && !C.noPrice ? money(v, d.cur) : String(v))), txt ? null : numJc)); }).join('') + '</w:tr>';
+    });
+    m.totals.forEach(function (x) {
+      var span = m.nc - 1, w1 = widths.slice(0, span).reduce(function (a, b) { return a + b; }, 0);
+      tbl += '<w:tr>' + cell(w1, para(run(x[0], x[2]), numJc), null, span) + cell(widths[m.nc - 1], para(run(money(x[1], d.cur), x[2]), numJc)) + '</w:tr>';
+    });
+    tbl += '</w:tbl>';
+    body += tbl + para('');
+    m.after.forEach(function (x) { body += para(run(x[0], 1)) + para(run(x[1])); });
+    var P = 'http://schemas.openxmlformats.org/package/2006/relationships', RN = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships';
+    return zipParts([
+      ['[Content_Types].xml', '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>'],
+      ['_rels/.rels', '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="' + P + '"><Relationship Id="rId1" Type="' + RN + '/officeDocument" Target="word/document.xml"/></Relationships>'],
+      ['word/document.xml', '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="' + W + '"><w:body>' + body + '<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" w:header="708" w:footer="708" w:gutter="0"/></w:sectPr></w:body></w:document>']
+    ]);
   }
   function exportDoc(kind) {
-    var d = collect(), ex = kind === 'excel';
+    var d = collect(), ex = kind === 'excel', m = model(d);
     var no = (val(C.no) || C.prefix).trim().replace(/[^\w.-]+/g, '_');
-    var body = simpleHtml(d, ex);
-    var ns = ex ? 'xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"'
-                : 'xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"';
-    var xml = ex ? '<!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>' + esc(T.title[TYPE]) + '</x:Name><x:WorksheetOptions>' + (RTL ? '<x:DisplayRightToLeft/>' : '') + '</x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]-->' : '';
-    var html = '<html ' + ns + '><head><meta charset="utf-8">' + xml + '<style>body{font-family:Calibri,Arial,sans-serif;font-size:11pt}</style></head><body dir="' + (RTL ? 'rtl' : 'ltr') + '">' + body + '</body></html>';
-    var blob = new Blob(['﻿', html], { type: ex ? 'application/vnd.ms-excel' : 'application/msword' });
-    var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = TYPE + '-' + no + (ex ? '.xls' : '.doc');
-    document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+    var parts = ex ? makeXlsx(m, d) : makeDocx(m, d);
+    var blob = new Blob(parts, { type: ex ? 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' : 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
+    var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = TYPE + '-' + no + (ex ? '.xlsx' : '.docx');
+    document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
     var n = val(C.no).trim(); if (n && remembering()) lsSet(K.last, n);
   }
   function addExportButtons() {
