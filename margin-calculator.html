@@ -159,7 +159,7 @@
   <!-- End Google Tag Manager -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"></noscript>
   <link rel="stylesheet" href="/design.css?v=5">
 </head>
 <body>
@@ -184,16 +184,6 @@
     </div>
   </header>
   <main>
-  <!-- Ad Placeholder Top -->
-  <div class="ad-placeholder ad-top">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-9121502081229374"
-         data-ad-slot="2222333344"
-         data-ad-format="horizontal"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
 
 <h1>Margin &amp; Selling Price Calculator</h1>
     <div class="card"><div class="grid-2"><div style="grid-column:1/-1"><label for="mMode">What do you want to calculate?</label><select id="mMode"><option value="price">Selling price from cost and target margin</option><option value="margin">Margin from cost and selling price</option></select></div><div><label for="mCost">Cost price (excl. VAT)</label><input type="number" id="mCost" min="0" step="0.01" inputmode="decimal" placeholder="100"></div><div><label for="mCur">Currency</label><select id="mCur"><option value="MAD">MAD</option><option value="EUR">EUR</option><option value="USD">USD</option></select></div><div id="mPctWrap"><label for="mPct">Target margin (%)</label><input type="number" id="mPct" min="0" step="0.01" inputmode="decimal" placeholder="40"></div><div id="mPriceWrap" style="display:none"><label for="mPrice">Selling price (excl. VAT)</label><input type="number" id="mPrice" min="0" step="0.01" inputmode="decimal" placeholder="150"></div><div id="mBasisWrap" style="grid-column:1/-1"><label for="mBasis">Margin calculated on</label><select id="mBasis"><option value="price">selling price (profit margin)</option><option value="cost">cost (markup)</option></select></div><div><label for="mQty">Quantity</label><input type="number" id="mQty" min="1" step="1" value="1"></div></div></div>
@@ -230,7 +220,17 @@
     g('mCopy').addEventListener('click', function () { var b = this.querySelector('span'), old = b.textContent; var done = function () { b.textContent = COPIED; setTimeout(function () { b.textContent = old; }, 1500); }; if (navigator.clipboard) navigator.clipboard.writeText(last).then(done, done); else done(); });
   </script>
 
-<section class="card" style="margin-top:1.5rem">
+  <!-- Ad Placeholder Top -->
+  <div class="ad-placeholder ad-top">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9121502081229374"
+         data-ad-slot="2222333344"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  <section class="card" style="margin-top:1.5rem">
       <h2 style="font-size:1.3rem;margin-bottom:.75rem">Margin &amp; Selling Price Calculator</h2>
       <p style="color:var(--text2);margin-bottom:1rem;line-height:1.7">Setting a price without knowing the margin is the fastest way to sell at a loss. From your cost, this calculator gives the selling price for a target margin, or the real margin of an existing price. It separates profit margin (profit divided by price) from markup (profit divided by cost), two notions that are often confused. Everything runs in your browser.</p>
       <h3 style="font-size:1.05rem;margin-bottom:.5rem">How to use it</h3>
