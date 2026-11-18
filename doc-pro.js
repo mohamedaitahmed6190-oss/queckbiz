@@ -114,7 +114,7 @@
     h += '<div style="grid-column:1/-1"><label>' + esc(T.sigUi) + '</label><canvas id="sigCanvas" width="480" height="140" style="width:100%;max-width:480px;height:auto;border:1px dashed #94a3b8;border-radius:8px;background:#fff;touch-action:none;display:block"></canvas><div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem;align-items:center"><button type="button" class="btn btn-secondary" id="qbSigClear"><span>' + esc(T.clear) + '</span></button><input type="file" id="sigFile" accept="image/png,image/jpeg,image/webp" style="display:none"><button type="button" class="btn btn-secondary" id="qbSigUp"><span>&#128193; ' + esc(T.upSig) + '</span></button></div></div>';
     h += '<div style="grid-column:1/-1;display:flex;gap:.75rem;flex-wrap:wrap;align-items:center"><label style="display:flex;align-items:center;gap:.5rem;margin:0;cursor:pointer"><input type="checkbox" id="rememberChk" checked style="width:auto;margin:0"> ' + esc(T.remember) + '</label><button type="button" class="btn btn-danger" id="qbForget"><span>' + esc(T.forget) + '</span></button></div>';
     h += '</div></div>';
-    card.insertAdjacentHTML('beforebegin', h);
+    card.insertAdjacentHTML('afterend', h);
   }
 
   /* ---------- signature ---------- */
@@ -452,6 +452,41 @@
       printBtn.parentNode.insertBefore(btn, printBtn.nextSibling);
     });
   }
+
+  /* ---------- layout: collapsible style card, sticky action bar, live preview ---------- */
+  function setupLayout() {
+    if (!$('qbLayoutCss')) {
+      var st = document.createElement('style'); st.id = 'qbLayoutCss';
+      st.textContent = '#proCard>h3{cursor:pointer;display:flex;align-items:center;justify-content:space-between;margin-bottom:0!important;user-select:none}' +
+        '#proCard>h3:after{content:"\\25BE";font-size:1.1rem;color:var(--text2,#475569);transition:transform .2s}' +
+        '#proCard.qb-collapsed>h3:after{transform:rotate(-90deg)}' +
+        '#proCard>.grid-2{margin-top:1rem}#proCard.qb-collapsed>.grid-2{display:none}' +
+        '.actions.qb-sticky{position:sticky;bottom:0;z-index:30;background:var(--bg,#f8fafc);padding:.6rem 0;margin-top:.5rem;border-top:1px solid var(--border,#e2e8f0)}';
+      document.head.appendChild(st);
+    }
+    var pc = $('proCard');
+    if (pc) {
+      pc.classList.add('qb-collapsed');
+      var h = pc.querySelector('h3'); h.setAttribute('role', 'button'); h.setAttribute('tabindex', '0'); h.setAttribute('aria-expanded', 'false');
+      var tg = function () { var c = pc.classList.toggle('qb-collapsed'); h.setAttribute('aria-expanded', c ? 'false' : 'true'); };
+      h.addEventListener('click', tg); h.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tg(); } });
+    }
+    var pb = document.querySelector('button[onclick^="' + C.print + '("]');
+    if (pb && pb.parentNode.classList.contains('actions')) pb.parentNode.classList.add('qb-sticky');
+  }
+  var liveT;
+  function live() { clearTimeout(liveT); liveT = setTimeout(function () { try { preview(); } catch (e) {} }, 350); }
+  function setupLive() {
+    ['input', 'change'].forEach(function (ev) {
+      document.addEventListener(ev, function (e) {
+        var t = e.target; if (!t || !t.closest || !t.closest('.card') || t.type === 'file') return;
+        if (t.closest('.qb-related') || t.closest('[data-qbskip]')) return;
+        live();
+      });
+    });
+    document.addEventListener('click', function (e) { var b = e.target.closest && e.target.closest('#itemsContainer .btn-danger, .btn-secondary[onclick^="addRow"]'); if (b) live(); });
+  }
+
   var origReset = window.resetForm;
   function resetAll() {
     var keep = {}, ids = ['tplSelect', 'accentColor', 'payDetails', 'currency', 'bizIce', 'bizIf', 'bizRc', 'bizTp'].concat(Object.keys(C.biz).map(function (k) { return C.biz[k]; }));
@@ -469,7 +504,7 @@
   window.qbPro = { persist: persist, amountWords: amountWords };
 
   function start() {
-    buildCard(); sigInit(); renderClients(); loadPrefs(); addExportButtons();
+    buildCard(); sigInit(); renderClients(); loadPrefs(); addExportButtons(); setupLayout(); setupLive();
     var on = function (id, ev, fn) { var e = $(id); if (e) e.addEventListener(ev, fn); };
     on('qbSaveClient', 'click', saveClient); on('qbDelClient', 'click', deleteClient); on('savedClients', 'change', pickClient);
     on('qbSigClear', 'click', sigClear); on('qbSigUp', 'click', function () { $('sigFile').click(); }); on('sigFile', 'change', sigUpload);
