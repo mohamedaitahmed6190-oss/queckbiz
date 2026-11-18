@@ -232,3 +232,14 @@ html[dir="rtl"] .lang-select {
  .h-actions .back-btn{padding:.35rem .6rem;font-size:.8rem}
  .h-actions a.back-btn[href$="/blog/"]{display:none}
 }
+
+/* Document tools on mobile: short fields in two columns, items rows wrap (pure CSS so there is no layout shift) */
+@media(max-width:640px){
+main:has(#itemsContainer) .card:not(#proCard)>.grid-2{grid-template-columns:1fr 1fr!important;gap:.75rem!important}
+main:has(#itemsContainer) .card:not(#proCard)>.grid-2>div{grid-column:1/-1;min-width:0}
+main:has(#itemsContainer) .card:not(#proCard)>.grid-2>div:has(>#bizIce),main:has(#itemsContainer) .card:not(#proCard)>.grid-2>div:has(>#bizIf),main:has(#itemsContainer) .card:not(#proCard)>.grid-2>div:has(>#bizRc),main:has(#itemsContainer) .card:not(#proCard)>.grid-2>div:has(>#bizTp),main:has(#itemsContainer) .card:not(#proCard)>.grid-2>div:has(>#clientIce),main:has(#itemsContainer) .card:not(#proCard)>.grid-2>div:has(>#cnNumber),main:has(#itemsContainer) .card:not(#proCard)>.grid-2>div:has(>#dnNumber),main:has(#itemsContainer) .card:not(#proCard)>.grid-2>div:has(>#estNumber),main:has(#itemsContainer) .card:not(#proCard)>.grid-2>div:has(>#invNumber),main:has(#itemsContainer) .card:not(#proCard)>.grid-2>div:has(>#poNumber),main:has(#itemsContainer) .card:not(#proCard)>.grid-2>div:has(>#profNumber),main:has(#itemsContainer) .card:not(#proCard)>.grid-2>div:has(>#recNumber),main:has(#itemsContainer) .card:not(#proCard)>.grid-2>div:has(>select),main:has(#itemsContainer) .card:not(#proCard)>.grid-2>div:has(>input[type=date]),main:has(#itemsContainer) .card:not(#proCard)>.grid-2>div:has(>input[type=number]){grid-column:auto}
+main:has(#itemsContainer) .card:not(#proCard)>.grid-2 input,main:has(#itemsContainer) .card:not(#proCard)>.grid-2 select,main:has(#itemsContainer) .card:not(#proCard)>.grid-2 textarea{min-width:0;max-width:100%;box-sizing:border-box}
+#itemsContainer .row{flex-wrap:wrap}
+#itemsContainer .row .item-desc{flex:1 1 100%!important;width:100%!important}
+#itemsContainer .row input:not(.item-desc){flex:1 1 0;min-width:0;width:auto!important}
+}
