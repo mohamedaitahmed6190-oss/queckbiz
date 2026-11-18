@@ -137,23 +137,12 @@
   </style>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9121502081229374" crossorigin="anonymous"></script>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GT-55X3TZ2M');</script>
-  <!-- End Google Tag Manager -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;600&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;600&display=swap"></noscript>
   <link rel="stylesheet" href="/design.css?v=6">
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-55X3TZ2M"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
   <header>
     <div class="h-inner">
       <a href="/ar/" class="logo">
@@ -300,13 +289,6 @@
     // Consent Mode v2 — default denied until user chooses
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('consent','default',{
-      ad_storage:'denied',
-      analytics_storage:'denied',
-      ad_user_data:'denied',
-      ad_personalization:'denied',
-      wait_for_update:500
-    });
     function acceptCookies(){
       document.getElementById('cookieBanner').style.display='none';
       localStorage.setItem('cookiesAccepted','true');
@@ -335,12 +317,13 @@
     })();
   </script>
   <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BS0FSQVQ9V"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-69NGYE9520"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});
     gtag('js', new Date());
-    gtag('config','G-BS0FSQVQ9V');
+    gtag('config', 'G-69NGYE9520');
   </script>
   <script>/*theme-toggle*/(function(){var b=document.getElementById('themeToggle');if(!b)return;var moon=document.getElementById('moon'),sun=document.getElementById('sun');function sync(){var d=document.documentElement.getAttribute('data-theme')==='dark';if(moon)moon.style.display=d?'none':'block';if(sun)sun.style.display=d?'block':'none';}sync();b.addEventListener('click',function(){var d=document.documentElement.getAttribute('data-theme')==='dark';if(d){document.documentElement.removeAttribute('data-theme');localStorage.setItem('theme','light');}else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme','dark');}sync();});})();</script>
 </body>
